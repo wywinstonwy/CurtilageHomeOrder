@@ -13,7 +13,12 @@
 @end
 
 @implementation OrderMealViewController
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self rdv_tabBarController] setTabBarHidden:NO animated:YES];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.

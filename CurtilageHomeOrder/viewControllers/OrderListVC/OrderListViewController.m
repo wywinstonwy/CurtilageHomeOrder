@@ -2,24 +2,41 @@
 //  OrderListViewController.m
 //  CurtilageHomeOrder
 //
-//  Created by WangYun on 15-6-3.
+//  Created by wy on 15/6/4.
 //  Copyright (c) 2015年 WangYun. All rights reserved.
 //
 
 #import "OrderListViewController.h"
-
+#import "LoginViewController.h"
 @interface OrderListViewController ()
 
 @end
 
 @implementation OrderListViewController
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self rdv_tabBarController] setTabBarHidden:NO animated:YES];
 
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"订单";
-    // Do any additional setup after loading the view from its nib.
+  //  self.view.backgroundColor = setNaviColor;
+    self.btnLogin.cornerRadius = 5.0f;
+    self.btnLogin.backgroundColor = setNaviColor;
+    self.btnLogin.layer.cornerRadius = 5.0f;
 }
+- (IBAction)login
+{
+    LoginViewController *viewFlag = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:viewFlag];
+    navi.navigationBar.tintColor = setNaviColor;
+    [self presentViewController:navi animated:YES completion:^{
+        
+    }];
 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

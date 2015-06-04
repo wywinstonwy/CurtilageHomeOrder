@@ -9,5 +9,9 @@
 #import "BaseViewController.h"
 
 @interface MyViewController : BaseViewController
+@property (nonatomic ,weak) IBOutlet UITableView *tableview;
 
+@property (nonatomic, weak) IBOutlet UIView *viewHeader;
+@property (nonatomic, weak) IBOutlet UIView *viewFooter;
+@property (nonatomic, weak) IBOutlet UIButton *btnLogin;
 @end

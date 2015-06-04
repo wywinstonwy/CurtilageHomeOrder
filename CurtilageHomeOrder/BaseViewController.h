@@ -10,5 +10,29 @@
 #import "RDVTabBarController.h"
 #import "RDVTabBarItem.h"
 @interface BaseViewController : UIViewController
+/**
+ *  设置导航栏左边按钮功能
+ *
+ *  @param leftImage  图片
+ *  @param leftAction 点击事件
+ */
+- (void)setLeftBarWithLeftImage:(NSString *)leftImage action:(SEL)leftAction;
+/**
+ *  设置导航栏右边的按钮功能
+ *
+ *  @param rightImage  图片
+ *  @param rightAction 方法名 点击事件
+ */
+- (void)setRightBarWithRightImage:(NSString *)rightImage action:(SEL)rightAction;
+/**
+ *  设置导航栏右边按钮
+ *
+ *  @param title       标题
+ *  @param target      目标对象
+ *  @param rightAction 点击事件
+ */
+- (void)setRightBarTitle:(NSString *)title target:(id)target action:(SEL)rightAction;
 
+- (void)popBack;
+-(void)pushToViewController:(UIViewController *)vc anmation:(BOOL) anmation;
 @end

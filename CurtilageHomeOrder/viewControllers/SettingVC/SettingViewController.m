@@ -8,15 +8,23 @@
 
 #import "SettingViewController.h"
 
-@interface SettingViewController ()
+@interface SettingViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
 @implementation SettingViewController
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self rdv_tabBarController] setTabBarHidden:NO animated:YES];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"设置";
+    
+  //  [self.tableview registerNib:[UINib nibWithNibName:@"" bundle:nil] forCellReuseIdentifier:@"cellid"];
+    
     // Do any additional setup after loading the view from its nib.
 }
 

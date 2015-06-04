@@ -69,7 +69,7 @@
     UINavigationController *navi1 = [[UINavigationController alloc]
                                                    initWithRootViewController:firstViewController];
     
-    UIViewController *secondViewController = [[OrderListViewController alloc] init];
+    OrderListViewController *secondViewController = [[OrderListViewController alloc] initWithNibName:@"OrderListViewController" bundle:nil];
     UINavigationController *navi2 = [[UINavigationController alloc]
                                                     initWithRootViewController:secondViewController];
     
@@ -83,8 +83,7 @@
     navi1.navigationBar.barTintColor =
     navi2.navigationBar.barTintColor =
     navi3.navigationBar.barTintColor =
-    navi4.navigationBar.barTintColor =
-    [UIColor colorWithRed:0.898 green:0.208 blue:0.431 alpha:1.000];
+    navi4.navigationBar.barTintColor = setNaviColor;
     
     RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
     [tabBarController setViewControllers:@[navi1, navi2,navi3,navi4]];

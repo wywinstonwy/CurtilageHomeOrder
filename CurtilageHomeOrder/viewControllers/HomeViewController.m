@@ -13,13 +13,12 @@
 @end
 
 @implementation HomeViewController
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
+- (void)viewWillAppear:(BOOL)animated
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = @"First";
-    }
-    return self;
+    [super viewWillAppear:animated];
+    [[self rdv_tabBarController] setTabBarHidden:YES animated:YES];
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
