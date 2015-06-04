@@ -65,7 +65,7 @@
 #pragma mark - Methods
 
 - (void)setupViewControllers {
-    OrderMealViewController *firstViewController = [[OrderMealViewController alloc] init];
+    HomeViewController *firstViewController = [[HomeViewController alloc] init];
     UINavigationController *navi1 = [[UINavigationController alloc]
                                                    initWithRootViewController:firstViewController];
     
