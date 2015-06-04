@@ -112,6 +112,8 @@
 		182348391B1FBA8700DD04BE /* third_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182348251B1FBA8700DD04BE /* third_normal@2x.png */; };
 		1823483A1B1FBA8700DD04BE /* third_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 182348261B1FBA8700DD04BE /* third_selected.png */; };
 		1823483B1B1FBA8700DD04BE /* third_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182348271B1FBA8700DD04BE /* third_selected@2x.png */; };
+		18A8D7181B21025000615933 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A8D7161B21025000615933 /* RegisterViewController.m */; };
+		18A8D7191B21025000615933 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D7171B21025000615933 /* RegisterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -307,6 +309,9 @@
 		182348251B1FBA8700DD04BE /* third_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third_normal@2x.png"; sourceTree = "<group>"; };
 		182348261B1FBA8700DD04BE /* third_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third_selected.png; sourceTree = "<group>"; };
 		182348271B1FBA8700DD04BE /* third_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third_selected@2x.png"; sourceTree = "<group>"; };
+		18A8D7151B21025000615933 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		18A8D7161B21025000615933 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		18A8D7171B21025000615933 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -495,6 +500,9 @@
 				1584AFAE1B1FF04400A4E300 /* LoginViewController.h */,
 				1584AFAF1B1FF04400A4E300 /* LoginViewController.m */,
 				1584AFB01B1FF04400A4E300 /* LoginViewController.xib */,
+				18A8D7151B21025000615933 /* RegisterViewController.h */,
+				18A8D7161B21025000615933 /* RegisterViewController.m */,
+				18A8D7171B21025000615933 /* RegisterViewController.xib */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -836,6 +844,7 @@
 				1823482C1B1FBA8700DD04BE /* navigationbar_background.png in Resources */,
 				182348331B1FBA8700DD04BE /* second_selected@2x.png in Resources */,
 				182348321B1FBA8700DD04BE /* second_selected.png in Resources */,
+				18A8D7191B21025000615933 /* RegisterViewController.xib in Resources */,
 				182348281B1FBA8700DD04BE /* first_normal.png in Resources */,
 				1584AFC71B20136800A4E300 /* MyCell.xib in Resources */,
 				182348311B1FBA8700DD04BE /* second_normal@2x.png in Resources */,
@@ -900,6 +909,7 @@
 				1584AFA01B1FEBB000A4E300 /* UIImageView+WebCache.m in Sources */,
 				1584AF9D1B1FEBB000A4E300 /* UIImage+MultiFormat.m in Sources */,
 				1584AFA41B1FEBB000A4E300 /* SVProgressHUD.m in Sources */,
+				18A8D7181B21025000615933 /* RegisterViewController.m in Sources */,
 				1584AF711B1FEBB000A4E300 /* AFHTTPRequestOperationManager.m in Sources */,
 				1584AF9B1B1FEBB000A4E300 /* UIButton+WebCache.m in Sources */,
 				182347C31B1FAE3800DD04BE /* main.m in Sources */,

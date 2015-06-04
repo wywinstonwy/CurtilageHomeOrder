@@ -7,9 +7,11 @@
 //
 
 #import "SettingViewController.h"
-
+#import "MyCell.h"
 @interface SettingViewController ()<UITableViewDataSource,UITableViewDelegate>
-
+{
+    NSMutableArray *arraySource;
+}
 @end
 
 @implementation SettingViewController
@@ -22,12 +24,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"设置";
-    
-  //  [self.tableview registerNib:[UINib nibWithNibName:@"" bundle:nil] forCellReuseIdentifier:@"cellid"];
+    arraySource = [[NSMutableArray alloc] initWithObjects:@"意见反馈",@"服务条款",@"检查更新",@"关于我们",nil];
+    [self.tableview registerNib:[UINib nibWithNibName:@"MyCell" bundle:nil] forCellReuseIdentifier:@"MyCell"];
     
     // Do any additional setup after loading the view from its nib.
 }
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return arraySource.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell"];
+    
+    cell.lbltitle.text = [arraySource objectAtIndex:indexPath.row];
+    return cell;
+}
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

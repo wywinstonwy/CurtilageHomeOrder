@@ -9,7 +9,8 @@
 #import "HomeViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-@interface HomeViewController ()<UITextFieldDelegate,CLLocationManagerDelegate,MKReverseGeocoderDelegate>
+#import "HomeCell.h"
+@interface HomeViewController ()<UITextFieldDelegate,CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     CLLocationManager *locationManager;
 }
@@ -27,12 +28,34 @@
     [super viewDidLoad];
     self.title = @"订餐";
     [[self rdv_tabBarItem] setBadgeValue:@"3"];
+    
+    [self.tableview registerNib:[UINib nibWithNibName:@"HomeCell" bundle:nil] forCellReuseIdentifier:@"HomeCell"];
     [self setNaviStyle];
     
     [self startLocation];
     // Do any additional setup after loading the view from its nib.
 }
+#pragma mark UITableViewDelegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 116;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell"];
+    
+    
+    return cell;
 
+}
 //设置导航栏样式
 - (void)setNaviStyle
 {

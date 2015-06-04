@@ -18,10 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"登录";
     self.navigationController.navigationBar.tintColor = setNaviColor;
     self.btnLogin.layer.cornerRadius = self.btnRegister.layer.cornerRadius = 4.0f;
     self.btnLogin.backgroundColor = self.btnRegister.backgroundColor = setNaviColor;
     [self setLeftBarWithLeftImage:@"back" action:@selector(popBack)];
+    
+    self.btnRegister.top = SCREEN_HEIGHT - 128;
     
     
     // Do any additional setup after loading the view from its nib.

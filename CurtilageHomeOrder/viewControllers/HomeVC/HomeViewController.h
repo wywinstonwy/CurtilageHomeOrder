@@ -10,4 +10,5 @@
 
 @interface HomeViewController : BaseViewController
 @property (nonatomic, strong) UITextField *textSearch;
+@property (nonatomic, strong) IBOutlet UITableView *tableview;
 @end
