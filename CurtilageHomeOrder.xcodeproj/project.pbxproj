@@ -114,6 +114,10 @@
 		1823483B1B1FBA8700DD04BE /* third_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182348271B1FBA8700DD04BE /* third_selected@2x.png */; };
 		18A8D7181B21025000615933 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A8D7161B21025000615933 /* RegisterViewController.m */; };
 		18A8D7191B21025000615933 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D7171B21025000615933 /* RegisterViewController.xib */; };
+		18A8D71D1B210A8300615933 /* ForgetPdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A8D71B1B210A8300615933 /* ForgetPdViewController.m */; };
+		18A8D71E1B210A8300615933 /* ForgetPdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D71C1B210A8300615933 /* ForgetPdViewController.xib */; };
+		18A8D7221B210D0100615933 /* ModifyPdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A8D7201B210D0100615933 /* ModifyPdViewController.m */; };
+		18A8D7231B210D0100615933 /* ModifyPdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D7211B210D0100615933 /* ModifyPdViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -312,6 +316,12 @@
 		18A8D7151B21025000615933 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		18A8D7161B21025000615933 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		18A8D7171B21025000615933 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		18A8D71A1B210A8300615933 /* ForgetPdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPdViewController.h; sourceTree = "<group>"; };
+		18A8D71B1B210A8300615933 /* ForgetPdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPdViewController.m; sourceTree = "<group>"; };
+		18A8D71C1B210A8300615933 /* ForgetPdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPdViewController.xib; sourceTree = "<group>"; };
+		18A8D71F1B210D0100615933 /* ModifyPdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPdViewController.h; sourceTree = "<group>"; };
+		18A8D7201B210D0100615933 /* ModifyPdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPdViewController.m; sourceTree = "<group>"; };
+		18A8D7211B210D0100615933 /* ModifyPdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyPdViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -503,6 +513,12 @@
 				18A8D7151B21025000615933 /* RegisterViewController.h */,
 				18A8D7161B21025000615933 /* RegisterViewController.m */,
 				18A8D7171B21025000615933 /* RegisterViewController.xib */,
+				18A8D71A1B210A8300615933 /* ForgetPdViewController.h */,
+				18A8D71B1B210A8300615933 /* ForgetPdViewController.m */,
+				18A8D71C1B210A8300615933 /* ForgetPdViewController.xib */,
+				18A8D71F1B210D0100615933 /* ModifyPdViewController.h */,
+				18A8D7201B210D0100615933 /* ModifyPdViewController.m */,
+				18A8D7211B210D0100615933 /* ModifyPdViewController.xib */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -845,11 +861,13 @@
 				182348331B1FBA8700DD04BE /* second_selected@2x.png in Resources */,
 				182348321B1FBA8700DD04BE /* second_selected.png in Resources */,
 				18A8D7191B21025000615933 /* RegisterViewController.xib in Resources */,
+				18A8D71E1B210A8300615933 /* ForgetPdViewController.xib in Resources */,
 				182348281B1FBA8700DD04BE /* first_normal.png in Resources */,
 				1584AFC71B20136800A4E300 /* MyCell.xib in Resources */,
 				182348311B1FBA8700DD04BE /* second_normal@2x.png in Resources */,
 				182348351B1FBA8700DD04BE /* tabbar_normal_background@2x.png in Resources */,
 				182348371B1FBA8700DD04BE /* tabbar_selected_background@2x.png in Resources */,
+				18A8D7231B210D0100615933 /* ModifyPdViewController.xib in Resources */,
 				1584AFC01B20025200A4E300 /* back@2x.png in Resources */,
 				1584AFA31B1FEBB000A4E300 /* SVProgressHUD.bundle in Resources */,
 				1823482E1B1FBA8700DD04BE /* navigationbar_background_tall.png in Resources */,
@@ -922,6 +940,7 @@
 				1584AFD21B2042C500A4E300 /* HomeCell.m in Sources */,
 				1584AF9C1B1FEBB000A4E300 /* UIImage+GIF.m in Sources */,
 				1584AFBC1B20002300A4E300 /* BaseNetWork.m in Sources */,
+				18A8D7221B210D0100615933 /* ModifyPdViewController.m in Sources */,
 				182347F81B1FB70600DD04BE /* RDVTabBar.m in Sources */,
 				1584AF761B1FEBB000A4E300 /* AFURLRequestSerialization.m in Sources */,
 				1584AF831B1FEBB000A4E300 /* MJRefreshConst.m in Sources */,
@@ -937,6 +956,7 @@
 				1584AFA11B1FEBB000A4E300 /* UIView+WebCacheOperation.m in Sources */,
 				1584AF801B1FEBB000A4E300 /* UIWebView+AFNetworking.m in Sources */,
 				1584AF921B1FEBB000A4E300 /* NSData+GIF.m in Sources */,
+				18A8D71D1B210A8300615933 /* ForgetPdViewController.m in Sources */,
 				1584AF891B1FEBB000A4E300 /* MJRefreshLegendHeader.m in Sources */,
 				1584AF721B1FEBB000A4E300 /* AFHTTPSessionManager.m in Sources */,
 				182348111B1FB89A00DD04BE /* SettingViewController.m in Sources */,

@@ -7,7 +7,8 @@
 //
 
 #import "LoginViewController.h"
-
+#import "RegisterViewController.h"
+#import "ForgetPdViewController.h"
 @interface LoginViewController ()
 {
     
@@ -46,12 +47,15 @@
 }
 - (IBAction)btnClickforgetPd:(id)sender
 {
-
+    ForgetPdViewController *viewFlag = [[ForgetPdViewController alloc] init];
+    [self pushToViewController:viewFlag anmation:YES];
 }
 
 - (IBAction)btnClickRegister:(id)sender
 {
 
+    RegisterViewController *viewFlag = [RegisterViewController new];
+    [self pushToViewController:viewFlag anmation:YES];
 }
 
 
