@@ -73,6 +73,10 @@
 		1584AFC71B20136800A4E300 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584AFC51B20136800A4E300 /* MyCell.xib */; };
 		1584AFCC1B2041E500A4E300 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584AFCA1B2041E500A4E300 /* HomeViewController.m */; };
 		1584AFCD1B2041E500A4E300 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584AFCB1B2041E500A4E300 /* HomeViewController.xib */; };
+		1584AFD21B2042C500A4E300 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584AFD01B2042C500A4E300 /* HomeCell.m */; };
+		1584AFD31B2042C500A4E300 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584AFD11B2042C500A4E300 /* HomeCell.xib */; };
+		1584AFD51B20462100A4E300 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1584AFD41B20462100A4E300 /* MapKit.framework */; };
+		1584AFD71B20467F00A4E300 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1584AFD61B20467F00A4E300 /* CoreLocation.framework */; };
 		182347C31B1FAE3800DD04BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C21B1FAE3800DD04BE /* main.m */; };
 		182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C51B1FAE3800DD04BE /* AppDelegate.m */; };
 		182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182347CD1B1FAE3800DD04BE /* Images.xcassets */; };
@@ -251,6 +255,11 @@
 		1584AFC91B2041E500A4E300 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		1584AFCA1B2041E500A4E300 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		1584AFCB1B2041E500A4E300 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		1584AFCF1B2042C500A4E300 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		1584AFD01B2042C500A4E300 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		1584AFD11B2042C500A4E300 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		1584AFD41B20462100A4E300 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1584AFD61B20467F00A4E300 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		182347BD1B1FAE3800DD04BE /* CurtilageHomeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurtilageHomeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182347C11B1FAE3800DD04BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182347C21B1FAE3800DD04BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -305,6 +314,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1584AFD71B20467F00A4E300 /* CoreLocation.framework in Frameworks */,
+				1584AFD51B20462100A4E300 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +540,7 @@
 		1584AFC81B2041E500A4E300 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				1584AFCE1B20427E00A4E300 /* views */,
 				1584AFC91B2041E500A4E300 /* HomeViewController.h */,
 				1584AFCA1B2041E500A4E300 /* HomeViewController.m */,
 				1584AFCB1B2041E500A4E300 /* HomeViewController.xib */,
@@ -536,9 +548,21 @@
 			path = HomeVC;
 			sourceTree = "<group>";
 		};
+		1584AFCE1B20427E00A4E300 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				1584AFCF1B2042C500A4E300 /* HomeCell.h */,
+				1584AFD01B2042C500A4E300 /* HomeCell.m */,
+				1584AFD11B2042C500A4E300 /* HomeCell.xib */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		182347B41B1FAE3800DD04BE = {
 			isa = PBXGroup;
 			children = (
+				1584AFD61B20467F00A4E300 /* CoreLocation.framework */,
+				1584AFD41B20462100A4E300 /* MapKit.framework */,
 				182347BF1B1FAE3800DD04BE /* CurtilageHomeOrder */,
 				182347D91B1FAE3800DD04BE /* CurtilageHomeOrderTests */,
 				182347BE1B1FAE3800DD04BE /* Products */,
@@ -803,6 +827,7 @@
 				182348361B1FBA8700DD04BE /* tabbar_selected_background.png in Resources */,
 				1823483A1B1FBA8700DD04BE /* third_selected.png in Resources */,
 				1584AFCD1B2041E500A4E300 /* HomeViewController.xib in Resources */,
+				1584AFD31B2042C500A4E300 /* HomeCell.xib in Resources */,
 				1823482A1B1FBA8700DD04BE /* first_selected.png in Resources */,
 				1584AFC11B20025200A4E300 /* back@3x.png in Resources */,
 				182348031B1FB85F00DD04BE /* OrderMealViewController.xib in Resources */,
@@ -884,6 +909,7 @@
 				182348071B1FB87200DD04BE /* MyViewController.m in Sources */,
 				1584AFB11B1FF04400A4E300 /* LoginViewController.m in Sources */,
 				1584AF741B1FEBB000A4E300 /* AFSecurityPolicy.m in Sources */,
+				1584AFD21B2042C500A4E300 /* HomeCell.m in Sources */,
 				1584AF9C1B1FEBB000A4E300 /* UIImage+GIF.m in Sources */,
 				1584AFBC1B20002300A4E300 /* BaseNetWork.m in Sources */,
 				182347F81B1FB70600DD04BE /* RDVTabBar.m in Sources */,

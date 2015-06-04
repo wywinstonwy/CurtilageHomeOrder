@@ -17,6 +17,8 @@
  *  @param leftAction 点击事件
  */
 - (void)setLeftBarWithLeftImage:(NSString *)leftImage action:(SEL)leftAction;
+- (void)setLeftBarWithLeftTitle:(NSString *)leftTitle action:(SEL)leftAction
+;
 /**
  *  设置导航栏右边的按钮功能
  *

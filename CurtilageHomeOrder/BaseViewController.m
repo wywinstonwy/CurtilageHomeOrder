@@ -62,6 +62,27 @@
     //  backItem.customView.backgroundColor = setCyanColor;
     self.navigationItem.leftBarButtonItem = backItem;
 }
+
+- (void)setLeftBarWithLeftTitle:(NSString *)leftTitle action:(SEL)leftAction
+{
+    UIButton *btn_back = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_back.frame = CGRectMake(0, 0, 60, 22);
+    if (leftTitle) {
+        [btn_back setTitle:leftTitle forState:UIControlStateNormal];
+    }
+    
+    
+    if (leftAction) {
+        [btn_back addTarget:self action:leftAction forControlEvents:UIControlEventTouchUpInside];
+    } else {
+        [btn_back addTarget:self action:@selector(popBack) forControlEvents:UIControlEventTouchUpInside];
+    }
+    // btn_back.backgroundColor = [UIColor greenColor];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:btn_back];
+    //  backItem.customView.backgroundColor = setCyanColor;
+    self.navigationItem.leftBarButtonItem = backItem;
+}
 /**
  *  设置导航栏右边的按钮功能
  *
