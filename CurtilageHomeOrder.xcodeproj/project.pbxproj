@@ -77,6 +77,8 @@
 		1584AFD31B2042C500A4E300 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584AFD11B2042C500A4E300 /* HomeCell.xib */; };
 		1584AFD51B20462100A4E300 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1584AFD41B20462100A4E300 /* MapKit.framework */; };
 		1584AFD71B20467F00A4E300 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1584AFD61B20467F00A4E300 /* CoreLocation.framework */; };
+		1584AFDB1B213F8400A4E300 /* viewSelectList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584AFDA1B213F8400A4E300 /* viewSelectList.m */; };
+		1584AFDE1B214D0600A4E300 /* CKPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584AFDD1B214D0600A4E300 /* CKPageScrollView.m */; };
 		182347C31B1FAE3800DD04BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C21B1FAE3800DD04BE /* main.m */; };
 		182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C51B1FAE3800DD04BE /* AppDelegate.m */; };
 		182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182347CD1B1FAE3800DD04BE /* Images.xcassets */; };
@@ -266,6 +268,10 @@
 		1584AFD11B2042C500A4E300 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		1584AFD41B20462100A4E300 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1584AFD61B20467F00A4E300 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1584AFD91B213F8400A4E300 /* viewSelectList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewSelectList.h; sourceTree = "<group>"; };
+		1584AFDA1B213F8400A4E300 /* viewSelectList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = viewSelectList.m; sourceTree = "<group>"; };
+		1584AFDC1B214D0600A4E300 /* CKPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKPageScrollView.h; sourceTree = "<group>"; };
+		1584AFDD1B214D0600A4E300 /* CKPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKPageScrollView.m; sourceTree = "<group>"; };
 		182347BD1B1FAE3800DD04BE /* CurtilageHomeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurtilageHomeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182347C11B1FAE3800DD04BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182347C21B1FAE3800DD04BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -582,6 +588,17 @@
 			name = views;
 			sourceTree = "<group>";
 		};
+		1584AFD81B213F4F00A4E300 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				1584AFD91B213F8400A4E300 /* viewSelectList.h */,
+				1584AFDA1B213F8400A4E300 /* viewSelectList.m */,
+				1584AFDC1B214D0600A4E300 /* CKPageScrollView.h */,
+				1584AFDD1B214D0600A4E300 /* CKPageScrollView.m */,
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
 		182347B41B1FAE3800DD04BE = {
 			isa = PBXGroup;
 			children = (
@@ -605,6 +622,7 @@
 		182347BF1B1FAE3800DD04BE /* CurtilageHomeOrder */ = {
 			isa = PBXGroup;
 			children = (
+				1584AFD81B213F4F00A4E300 /* CommonView */,
 				1584AFB91B20002200A4E300 /* NetWorkAndModel */,
 				182347E61B1FAF7D00DD04BE /* ImagesSource */,
 				182347E71B1FAF7D00DD04BE /* Util */,
@@ -950,6 +968,7 @@
 				1584AF7A1B1FEBB000A4E300 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				1584AF8C1B1FEBB000A4E300 /* UIView+MJExtension.m in Sources */,
 				1584AF7F1B1FEBB000A4E300 /* UIRefreshControl+AFNetworking.m in Sources */,
+				1584AFDE1B214D0600A4E300 /* CKPageScrollView.m in Sources */,
 				1584AF7E1B1FEBB000A4E300 /* UIProgressView+AFNetworking.m in Sources */,
 				1584AF981B1FEBB000A4E300 /* SDWebImageDownloaderOperation.m in Sources */,
 				182348021B1FB85F00DD04BE /* OrderMealViewController.m in Sources */,
@@ -958,6 +977,7 @@
 				1584AF921B1FEBB000A4E300 /* NSData+GIF.m in Sources */,
 				18A8D71D1B210A8300615933 /* ForgetPdViewController.m in Sources */,
 				1584AF891B1FEBB000A4E300 /* MJRefreshLegendHeader.m in Sources */,
+				1584AFDB1B213F8400A4E300 /* viewSelectList.m in Sources */,
 				1584AF721B1FEBB000A4E300 /* AFHTTPSessionManager.m in Sources */,
 				182348111B1FB89A00DD04BE /* SettingViewController.m in Sources */,
 				1584AF941B1FEBB000A4E300 /* SDImageCache.m in Sources */,
