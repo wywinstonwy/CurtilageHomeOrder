@@ -15,4 +15,6 @@
 #import "MacroDefinition.h"
 #import "UIView+Extend.h"
 #import "BaseNetWork.h"
+#import "Tools.h"
+#import "CKUserManager.h"
 #endif

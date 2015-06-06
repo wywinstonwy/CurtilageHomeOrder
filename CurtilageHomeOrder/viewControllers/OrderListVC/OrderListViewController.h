@@ -10,4 +10,6 @@
 
 @interface OrderListViewController : BaseViewController
 @property (nonatomic, weak) IBOutlet UIButton *btnLogin;
+@property (nonatomic ,weak) IBOutlet UITableView *tableview;
+@property (nonatomic,weak) IBOutlet UIView *viewLogin;
 @end

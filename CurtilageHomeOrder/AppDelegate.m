@@ -85,6 +85,12 @@
     navi3.navigationBar.barTintColor =
     navi4.navigationBar.barTintColor = setNaviColor;
     
+    navi1.navigationBar.translucent =
+    navi2.navigationBar.translucent =
+    navi3.navigationBar.translucent =
+    navi4.navigationBar.translucent = NO;
+    
+    
     RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
     [tabBarController setViewControllers:@[navi1, navi2,navi3,navi4]];
     self.viewController = tabBarController;

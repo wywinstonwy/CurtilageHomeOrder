@@ -8,7 +8,10 @@
 
 #import "OrderListViewController.h"
 #import "LoginViewController.h"
-@interface OrderListViewController ()
+#import "CKOrderListCell.h"
+#import "OrderDetailViewController.h"
+
+@interface OrderListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -17,14 +20,54 @@
 {
     [super viewWillAppear:animated];
     [[self rdv_tabBarController] setTabBarHidden:NO animated:YES];
+    
+    if([CKUserManager isLogin])
+    {
+        self.tableview.hidden = NO;
+        self.viewLogin.hidden = YES;
+        [CKUserManager saveValue:@"" ForKey:USER_ID];
+    }
+    else
+    {
+        self.tableview.hidden = YES;
+        self.viewLogin.hidden = NO;
+        [CKUserManager saveValue:@"1" ForKey:USER_ID];
+
+    }
 
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"订单";
   //  self.view.backgroundColor = setNaviColor;
     self.btnLogin.cornerRadius = 5.0f;
     self.btnLogin.backgroundColor = setNaviColor;
     self.btnLogin.layer.cornerRadius = 5.0f;
+    [self.tableview registerNib:[UINib nibWithNibName:@"CKOrderListCell" bundle:nil] forCellReuseIdentifier:@"CKOrderListCell"];
+
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 20;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CKOrderListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKOrderListCell"];
+//    NSInteger section = [indexPath section];
+    
+   // cell.lbltitle.text = [arr objectAtIndex:indexPath.row];
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    OrderDetailViewController *viewFlag = [OrderDetailViewController new];
+    [self pushToViewController:viewFlag anmation:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 - (IBAction)login
 {
@@ -32,6 +75,9 @@
     
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:viewFlag];
     navi.navigationBar.tintColor = setNaviColor;
+    navi.navigationBar.translucent = NO;
+    [navi.navigationBar setBarStyle:(UIBarStyleDefault)];
+
     [self presentViewController:navi animated:YES completion:^{
         
     }];

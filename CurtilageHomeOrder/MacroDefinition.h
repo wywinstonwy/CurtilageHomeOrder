@@ -29,9 +29,9 @@
 #define setSeparatorColor    [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1]
 //设置大标题颜色
 #define setTitlecolor    [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1]
-#define ImagePlaceholder21  [UIImage imageNamed:@"Default21"]
-#define ImagePlaceholder32  [UIImage imageNamed:@"Default32"]
-#define ImagePlaceholder11  [UIImage imageNamed:@"Default11"]
+//#define ImagePlaceholder21  [UIImage imageNamed:@"Default21"]
+//#define ImagePlaceholder32  [UIImage imageNamed:@"Default32"]
+//#define ImagePlaceholder11  [UIImage imageNamed:@"Default11"]
 
 //字体
 #define Font15          [UIFont systemFontOfSize:15]
