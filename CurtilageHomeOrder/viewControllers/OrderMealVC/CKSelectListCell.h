@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CKSelectListCell : UITableViewCell
-
+@property (nonatomic, weak) IBOutlet UIImageView *imageV;
+@property (nonatomic, weak) IBOutlet UILabel *lblTitle;
 @end

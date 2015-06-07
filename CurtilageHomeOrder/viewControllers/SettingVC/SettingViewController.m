@@ -26,7 +26,8 @@
     self.title = @"设置";
     arraySource = [[NSMutableArray alloc] initWithObjects:@"意见反馈",@"服务条款",@"检查更新",@"关于我们",nil];
     [self.tableview registerNib:[UINib nibWithNibName:@"MyCell" bundle:nil] forCellReuseIdentifier:@"MyCell"];
-    
+    [self setLeftBarWithLeftImage:@"back" action:@selector(popBack)];
+
     // Do any additional setup after loading the view from its nib.
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

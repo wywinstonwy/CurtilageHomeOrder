@@ -13,7 +13,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        [self createView];
     }
     
     return self;
@@ -23,6 +23,16 @@
 {
     self.mainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
     [self.mainScrollView setContentSize:CGSizeMake(SCREEN_WIDTH*10, 200)];
+    
+    [self addSubview:self.mainScrollView];
+    
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, SCREEN_WIDTH, 200);
+    btn.backgroundColor = setMenuBack;
+    
+    [self.mainScrollView addSubview:btn];
+    
     
 }
 /*

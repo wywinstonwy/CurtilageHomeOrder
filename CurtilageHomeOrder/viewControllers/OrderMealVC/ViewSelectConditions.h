@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CKSelectListCell.h"
+typedef void (^TapCancelBlock)(id index);//点击空白执行取消点击事件
 
-@interface ViewSelectConditions : UIView
+@interface ViewSelectConditions : UIView<UITableViewDelegate ,UITableViewDataSource>
 
+@property (nonatomic, strong) IBOutlet UITableView *tableview;
+@property (nonatomic, strong) NSMutableArray *arraySource;
+@property (nonatomic, strong) TapCancelBlock tapCancelBlock;
 @end

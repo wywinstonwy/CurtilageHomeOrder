@@ -35,7 +35,8 @@
     NSArray *arr2 = @[@"我的收藏",@"我的评论",@"修改密码",@"我的信息"];
     [arraySource addObject:arr1];
     [arraySource addObject:arr2];
-    
+    [self setLeftBarWithLeftImage:@"back" action:@selector(popBack)];
+  
     // Do any additional setup after loading the view from its nib.
 }
 

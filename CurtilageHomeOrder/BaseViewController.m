@@ -28,7 +28,7 @@
                                                                      [UIColor whiteColor], UITextAttributeTextColor,
                                                                      [UIColor whiteColor], UITextAttributeTextShadowColor,
                                                                      [NSValue valueWithUIOffset:UIOffsetMake(0, 0)], UITextAttributeTextShadowOffset,
-                                                                     [UIFont systemFontOfSize:16], UITextAttributeFont,
+                                                                     [UIFont systemFontOfSize:18], UITextAttributeFont,
                                                                      nil]];
     
     [self setNeedsStatusBarAppearanceUpdate];

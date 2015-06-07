@@ -44,6 +44,7 @@
     self.btnLogin.backgroundColor = setNaviColor;
     self.btnLogin.layer.cornerRadius = 5.0f;
     [self.tableview registerNib:[UINib nibWithNibName:@"CKOrderListCell" bundle:nil] forCellReuseIdentifier:@"CKOrderListCell"];
+    [self setLeftBarWithLeftImage:@"back" action:@selector(popBack)];
 
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

@@ -28,15 +28,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     
-//    HomeViewController *viewFlag = [HomeViewController new];
-//    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:viewFlag];
-//    navi.navigationBar.barTintColor = [UIColor colorWithRed:229/255.0 green:52/255.0 blue:113/255.0 alpha:1];
-//    self.window.rootViewController = navi;
+    HomeViewController *viewFlag = [HomeViewController new];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:viewFlag];
+   // navi.navigationBar.barTintColor = [UIColor colorWithRed:229/255.0 green:52/255.0 blue:113/255.0 alpha:1];
+    navi.navigationBar.barTintColor = setNaviColor;
+    self.window.rootViewController = navi;
     
-    [self setupViewControllers];
-    [self.window setRootViewController:self.viewController];
+//    [self setupViewControllers];
+//    [self.window setRootViewController:self.viewController];
     [self.window  makeKeyAndVisible];
-    [self customizeInterface];
+   // [self customizeInterface];
     // Override point for customization after application launch.
     return YES;
 }
@@ -115,7 +116,7 @@
         index++;
     }
 }
-
+/*
 - (void)customizeInterface {
     return;
     UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
@@ -147,4 +148,5 @@
                                   forBarMetrics:UIBarMetricsDefault];
     [navigationBarAppearance setTitleTextAttributes:textAttributes];
 }
+ */
 @end

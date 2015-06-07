@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CurtilageHomeOrder/viewControllers/OrderListVC/OrderListViewController.m"
-            timestampString = "455277850.438916"
+            timestampString = "455381688.307309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "-didReceiveMemoryWarning"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CurtilageHomeOrder/viewControllers/HomeVC/HomeViewController.m"
-            timestampString = "455103277.267797"
+            timestampString = "455376323.800565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "-setNaviStyle"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CurtilageHomeOrder/viewControllers/HomeVC/HomeViewController.m"
-            timestampString = "455103302.746392"
+            timestampString = "455376323.800565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "-setNaviStyle"
             landmarkType = "5">
          </BreakpointContent>
