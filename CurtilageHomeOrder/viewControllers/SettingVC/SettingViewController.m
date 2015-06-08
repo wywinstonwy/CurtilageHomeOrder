@@ -43,6 +43,8 @@
     MyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell"];
     
     cell.lbltitle.text = [arraySource objectAtIndex:indexPath.row];
+    NSString *imageName = [NSString stringWithFormat:@"Set%ld",indexPath.row+1];
+    cell.imageViewHead.image =[UIImage imageNamed:imageName];
     return cell;
 }
 

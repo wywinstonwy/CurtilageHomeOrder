@@ -19,22 +19,24 @@
 #import "SettingViewController.h"
 #import "RDVTabBarController.h"
 #import "RDVTabBarItem.h"
-
+#import "viewSelectList.h"
 @interface HomeViewController ()<UITextFieldDelegate,CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
 {
-    CLLocationManager *locationManager;
-    RDVTabBarController *tabBarController;
+    CLLocationManager *locationManager;//地图定位
+    RDVTabBarController *tabBarController;//tabbar
+    viewSelectList *viewCityClist;//城市选择列表
 }
+@property (nonatomic,strong)UIButton *btnCity;
 @end
 
 @implementation HomeViewController
-
+@synthesize btnCity;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [[self rdv_tabBarController] setTabBarHidden:NO animated:YES];
     tabBarController.selectedIndex = 0;
-
+    [self.navigationController setNavigationBarHidden:NO];
     
 }
 - (void)viewDidLoad {
@@ -55,7 +57,8 @@
     NSArray *arrImages = @[@"GourmetDelivery",@"Lifeservice",@"OnlineBooking"];
     NSArray *arrTitles = @[@"美食外卖",@"生活服务",@"在线订房"];
     CGFloat with = 60;
-    for (int i = 0; i<3; i++) {
+    for (int i = 0; i<3; i++)
+    {
         UIButton*btnHead = [UIButton buttonWithType:UIButtonTypeCustom];
         btnHead.frame = CGRectMake((SCREEN_WIDTH-with*3)/4 +(with + (SCREEN_WIDTH-with*3)/4)*i, 210, with, with);
         [btnHead setImage:[UIImage imageNamed:[arrImages objectAtIndex:i]] forState:UIControlStateNormal];
@@ -108,33 +111,89 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
-    [self.navigationController pushViewController:tabBarController animated:YES];
+    [self pushToViewController:tabBarController anmation:YES];
+    [self.navigationController setNavigationBarHidden:YES];
+    
 }
 //设置导航栏样式
 - (void)setNaviStyle
 {
-    [self setLeftBarWithLeftTitle:@"北京" action:@selector(popBack)];
+  //  [self setLeftBarWithLeftTitle:@"北京" action:@selector(selectCity)];
     
-    UIView *viewNavi = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - 120, 30)];
+    UIView *viewNavi = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH , 44)];
     viewNavi.layer.cornerRadius = 4.0f;
-    viewNavi.backgroundColor = [UIColor whiteColor];
-    self.textSearch = [[UITextField alloc] initWithFrame:CGRectMake(5, 0, viewNavi.width-40, 30)];
-    self.textSearch.delegate = self;
-    self.textSearch.placeholder = @"搜索关键字";
-    self.textSearch.returnKeyType = UIReturnKeySearch;
+    viewNavi.backgroundColor = setNaviColor;
+//    self.textSearch = [[UITextField alloc] initWithFrame:CGRectMake(5, 0, viewNavi.width-40, 30)];
+//    self.textSearch.delegate = self;
+//    self.textSearch.placeholder = @"搜索关键字";
+//    self.textSearch.returnKeyType = UIReturnKeySearch;
    // [viewNavi addSubview:self.textSearch];
+    btnCity = [UIButton buttonWithType:UIButtonTypeCustom];
+    btnCity.frame = CGRectMake(0, 5, 100, 30);
+    [btnCity setTitle:@"定位中..." forState:UIControlStateNormal];
+    [btnCity setImage:[UIImage imageNamed:@"BottomArrow"] forState:UIControlStateNormal];
+    [btnCity addTarget:self action:@selector(selectCity) forControlEvents:UIControlEventTouchUpInside];
+    btnCity.backgroundColor = setNaviColor;
     
-    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(5, 0, viewNavi.width - 10, 30)];
+    [viewNavi addSubview:btnCity];
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(120, 5, viewNavi.width - 160, 30)];
     searchBar.placeholder = @"搜索";
-    searchBar.barTintColor = [UIColor whiteColor];
-    searchBar.backgroundColor = [UIColor whiteColor];
+    searchBar.barTintColor = setNaviColor;
     [viewNavi addSubview:searchBar];
+    searchBar.barStyle = UISearchBarStyleProminent;
+    searchBar.backgroundColor = [UIColor whiteColor];
+   
+    
     self.navigationItem.titleView  = viewNavi;
     
-   // [self setRightBarWithRightImage:@"back" action:@selector(popBack)];
     
     
+}
+- (void)selectCity
+{
+    if(viewCityClist == nil)
+    {
+        __weak HomeViewController *weakSelf = self;
+        viewCityClist = [[viewSelectList alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64)];
+        [self.view addSubview:viewCityClist];
+        viewCityClist.selectresultBlock = ^(id result)
+        {
+            [weakSelf.btnCity setTitle:result forState:UIControlStateNormal];
+            [weakSelf hidenCityList];
+        };
+        viewCityClist.bottom = 0;
+    }
+    viewCityClist.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    [UIView animateWithDuration:0.3 animations:^{
+        viewCityClist.top = 0;
+    } completion:^(BOOL finished) {
+        viewCityClist.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    }];
+}
+- (void)hidenCityList
+{
+    viewCityClist.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    [UIView animateWithDuration:0.3 animations:^{
+        viewCityClist.bottom = 0;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+- (void)setLeftBarWithLeftTitle:(NSString *)leftTitle action:(SEL)leftAction
+{
+    btnCity = [UIButton buttonWithType:UIButtonTypeCustom];
+    btnCity.frame = CGRectMake(0, 0, 60, 22);
+    if (leftTitle) {
+        [btnCity setTitle:leftTitle forState:UIControlStateNormal];
+    }
+    
+    [btnCity addTarget:self action:leftAction forControlEvents:UIControlEventTouchUpInside];
+ 
+    // btn_back.backgroundColor = [UIColor greenColor];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:btnCity];
+    backItem.customView.backgroundColor = setMenuBack;
+    self.navigationItem.leftBarButtonItem = backItem;
 }
 #pragma mark 地图定位
 - (void)startLocation
@@ -190,11 +249,13 @@
                            NSArray *arr = [place.locality componentsSeparatedByString:@"市"];
                            if(arr.count)
                            {
-                               [self setLeftBarWithLeftTitle:[arr objectAtIndex:0] action:@selector(popBack)];
+                               //[self setLeftBarWithLeftTitle:[arr objectAtIndex:0] action:@selector(popBack)];
+                               [btnCity setTitle:[arr objectAtIndex:0] forState:UIControlStateNormal];
 
                            }
                            else
-                               [self setLeftBarWithLeftTitle:place.locality action:@selector(popBack)];
+                               [btnCity setTitle:place.locality forState:UIControlStateNormal];
+
 
 
                            // 位置名
@@ -222,21 +283,21 @@
 #pragma mark - Methods Tabbar
 
 - (void)setupViewControllers {
-    OrderMealViewController *firstViewController = [[OrderMealViewController alloc] init];
+    OrderMealViewController *v1 = [[OrderMealViewController alloc] init];
     UINavigationController *navi1 = [[UINavigationController alloc]
-                                     initWithRootViewController:firstViewController];
+                                     initWithRootViewController:v1];
     
-    OrderListViewController *secondViewController = [[OrderListViewController alloc] initWithNibName:@"OrderListViewController" bundle:nil];
+    OrderListViewController *v2 = [[OrderListViewController alloc] initWithNibName:@"OrderListViewController" bundle:nil];
     UINavigationController *navi2 = [[UINavigationController alloc]
-                                     initWithRootViewController:secondViewController];
+                                     initWithRootViewController:v2];
     
-    UIViewController *thirdViewController = [[MyViewController alloc] init];
+    MyViewController *v3 = [[MyViewController alloc] init];
     UINavigationController *navi3 = [[UINavigationController alloc]
-                                     initWithRootViewController:thirdViewController];
+                                     initWithRootViewController:v3];
     
-    UIViewController *forthViewController = [[SettingViewController alloc] init];
+    SettingViewController *v4 = [[SettingViewController alloc] init];
     UINavigationController *navi4 = [[UINavigationController alloc]
-                                     initWithRootViewController:forthViewController];
+                                     initWithRootViewController:v4];
     navi1.navigationBar.barTintColor =
     navi2.navigationBar.barTintColor =
     navi3.navigationBar.barTintColor =
@@ -249,7 +310,7 @@
     
     
     tabBarController = [[RDVTabBarController alloc] init];
-    [tabBarController setViewControllers:@[navi1, navi2,navi3,navi4]];
+    [tabBarController setViewControllers:@[v1, v2,v3,v4]];
 //    self.viewController = tabBarController;
     
     [self customizeTabBarForController:tabBarController];

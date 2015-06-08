@@ -21,6 +21,20 @@
     [super viewWillAppear:animated];
     [[self rdv_tabBarController] setTabBarHidden:NO animated:YES];
     [self.navigationController setNavigationBarHidden:YES];
+    
+    if([CKUserManager isLogin])
+    {
+        self.btnLogin.hidden = YES;
+        self.imageHeader.hidden = NO;
+        self.lblUserName.hidden = NO;
+    }
+    else
+    {
+        self.btnLogin.hidden = NO;
+        self.imageHeader.hidden = YES;
+        self.lblUserName.hidden = YES;
+        
+    }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,6 +70,10 @@
     NSArray *arr = [arraySource objectAtIndex:section];
 
     cell.lbltitle.text = [arr objectAtIndex:indexPath.row];
+    
+    NSString *imageName = [NSString stringWithFormat:@"My%ld%ld",(long)section,(long)indexPath.row];
+    cell.imageViewHead.image = [UIImage imageNamed:imageName];
+    
     return cell;
 }
 

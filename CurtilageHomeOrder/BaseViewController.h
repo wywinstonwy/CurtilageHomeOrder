@@ -35,6 +35,6 @@
  */
 - (void)setRightBarTitle:(NSString *)title target:(id)target action:(SEL)rightAction;
 
-- (void)popBack;
+- (IBAction)popBack;
 -(void)pushToViewController:(UIViewController *)vc anmation:(BOOL) anmation;
 @end

@@ -14,4 +14,6 @@
 @property (nonatomic, weak) IBOutlet UIView *viewHeader;
 @property (nonatomic, weak) IBOutlet UIView *viewFooter;
 @property (nonatomic, weak) IBOutlet UIButton *btnLogin;
+@property (nonatomic, weak) IBOutlet UIImageView *imageHeader;
+@property (nonatomic, weak) IBOutlet UILabel *lblUserName;
 @end

@@ -9,6 +9,7 @@
 #import "BaseViewController.h"
 
 @interface OrderMealViewController : BaseViewController
+@property (nonatomic, weak) IBOutlet UILabel *lblNavititle;
 @property (nonatomic, weak) IBOutlet UITableView *tableview;
 @property (nonatomic, weak) IBOutlet UIButton *btnCanTClass;
 @property (nonatomic, weak) IBOutlet UIButton *btnPaixu;

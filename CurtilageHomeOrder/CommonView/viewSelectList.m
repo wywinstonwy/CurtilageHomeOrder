@@ -18,6 +18,8 @@
         [self createListViewWithFrame:frame];
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
         
+        self.arraySource = [[NSMutableArray alloc] initWithObjects:@"北京",@"上海",@"天津",@"南京",@"齐齐哈尔",@"哈尔滨", nil];
+        
     }
     
     
@@ -28,7 +30,10 @@
     tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 300) style:UITableViewStylePlain];
     tableview.delegate = self;
     tableview.dataSource = self;
+    
     [self addSubview:tableview];
+    
+    [tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
 }
 - (void)setSelectDataSource:(NSMutableArray *)arr
 {
@@ -57,7 +62,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   // self.selectresultBlock(@(indexPath.row));
+    self.selectresultBlock([self.arraySource objectAtIndex:indexPath.row]);
 
 }
 /*

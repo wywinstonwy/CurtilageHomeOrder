@@ -8,6 +8,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyViewController">
             <connections>
                 <outlet property="btnLogin" destination="6yT-MD-buS" id="5gn-cz-Rn0"/>
+                <outlet property="imageHeader" destination="Nim-GL-3AA" id="aQi-Wr-djs"/>
+                <outlet property="lblUserName" destination="jIf-vg-q1H" id="TLj-Qd-zTF"/>
                 <outlet property="tableview" destination="x3D-Kp-V0d" id="fzC-n9-E6k"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewFooter" destination="bXz-8E-n5d" id="EKt-Ay-wEJ"/>
@@ -45,6 +47,17 @@
                                 <action selector="login" destination="-1" eventType="touchUpInside" id="99B-hZ-9Cq"/>
                             </connections>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoLoginTips.png" id="Nim-GL-3AA">
+                            <rect key="frame" x="115" y="49" width="90" height="90"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15202591523" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jIf-vg-q1H">
+                            <rect key="frame" x="0.0" y="154" width="320" height="21"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.8980392157" green="0.20000000000000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -52,11 +65,11 @@
                     <rect key="frame" x="0.0" y="316" width="320" height="64"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="feB-5I-Bw8">
-                            <rect key="frame" x="0.0" y="10" width="320" height="44"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="feB-5I-Bw8">
+                            <rect key="frame" x="0.0" y="12" width="320" height="40"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <state key="normal" title="152-0269-1523">
+                            <state key="normal" title="152-0269-1523" image="Phone.png">
                                 <color key="titleColor" red="0.8980392157" green="0.20000000000000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -69,6 +82,10 @@
             <point key="canvasLocation" x="248" y="345"/>
         </view>
     </objects>
+    <resources>
+        <image name="NoLoginTips.png" width="190" height="190"/>
+        <image name="Phone.png" width="20" height="20"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

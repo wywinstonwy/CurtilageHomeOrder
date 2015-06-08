@@ -12,7 +12,7 @@ typedef void (^selectResultBlock)(id result);//block回调
 
 @property (nonatomic, strong)UITableView *tableview;
 @property (nonatomic, strong)NSMutableArray *arraySource;
-@property (nonatomic, weak) selectResultBlock selectresultBlock;
+@property (nonatomic, strong) selectResultBlock selectresultBlock;
 
 - (void)setSelectDataSource:(NSMutableArray *)arr;
 @end
