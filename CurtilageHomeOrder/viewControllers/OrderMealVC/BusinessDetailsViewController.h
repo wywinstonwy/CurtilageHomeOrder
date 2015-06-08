@@ -9,5 +9,8 @@
 #import "BaseViewController.h"
 
 @interface BusinessDetailsViewController : BaseViewController
-
+@property(nonatomic,weak)IBOutlet UILabel *lblLine;
+@property(nonatomic,weak)IBOutlet UIScrollView *mainScrollView;
+//菜单切换按钮
+- (IBAction)btnSelectMenuFunction:(UIButton *)sender;
 @end

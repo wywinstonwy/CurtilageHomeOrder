@@ -9,8 +9,9 @@
 #import "OrderMealViewController.h"
 #import "HomeCell.h"
 #import "ViewSelectConditions.h"
-#import <CoreLocation/CoreLocation.h>
 
+#import <CoreLocation/CoreLocation.h>
+#import "BusinessDetailsViewController.h"
 @interface OrderMealViewController ()<UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate>
 {
     ViewSelectConditions *viewSelectList;
@@ -76,6 +77,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    BusinessDetailsViewController *viewFlag = [BusinessDetailsViewController new];
+    [self pushToViewController:viewFlag anmation:YES];
+    
 }
 #pragma mark 地图定位
 - (void)startLocation

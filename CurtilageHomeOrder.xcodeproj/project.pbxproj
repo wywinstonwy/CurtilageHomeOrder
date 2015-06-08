@@ -151,6 +151,8 @@
 		18A8D71E1B210A8300615933 /* ForgetPdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D71C1B210A8300615933 /* ForgetPdViewController.xib */; };
 		18A8D7221B210D0100615933 /* ModifyPdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A8D7201B210D0100615933 /* ModifyPdViewController.m */; };
 		18A8D7231B210D0100615933 /* ModifyPdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D7211B210D0100615933 /* ModifyPdViewController.xib */; };
+		18B2A6D01B26480100F96B79 /* rightArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B2A6CF1B26480100F96B79 /* rightArrow@2x.png */; };
+		18B2A6D31B26545D00F96B79 /* BusinessCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2A6D21B26545D00F96B79 /* BusinessCommentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -397,6 +399,9 @@
 		18A8D71F1B210D0100615933 /* ModifyPdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPdViewController.h; sourceTree = "<group>"; };
 		18A8D7201B210D0100615933 /* ModifyPdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPdViewController.m; sourceTree = "<group>"; };
 		18A8D7211B210D0100615933 /* ModifyPdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyPdViewController.xib; sourceTree = "<group>"; };
+		18B2A6CF1B26480100F96B79 /* rightArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightArrow@2x.png"; sourceTree = "<group>"; };
+		18B2A6D11B26545D00F96B79 /* BusinessCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCommentView.h; sourceTree = "<group>"; };
+		18B2A6D21B26545D00F96B79 /* BusinessCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCommentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -624,6 +629,7 @@
 		1584AFBD1B20025200A4E300 /* PublicImages */ = {
 			isa = PBXGroup;
 			children = (
+				18B2A6CF1B26480100F96B79 /* rightArrow@2x.png */,
 				1584B0431B25752100A4E300 /* BottomArrow@2x.png */,
 				1584B0251B2455E800A4E300 /* T2@2x.png */,
 				1584B0261B2455E800A4E300 /* T3@2x.png */,
@@ -896,6 +902,8 @@
 				1584B0611B2592A100A4E300 /* BusinessDetailsViewController.h */,
 				1584B0621B2592A100A4E300 /* BusinessDetailsViewController.m */,
 				1584B0631B2592A100A4E300 /* BusinessDetailsViewController.xib */,
+				18B2A6D11B26545D00F96B79 /* BusinessCommentView.h */,
+				18B2A6D21B26545D00F96B79 /* BusinessCommentView.m */,
 			);
 			path = OrderMealVC;
 			sourceTree = "<group>";
@@ -1052,6 +1060,7 @@
 				1584AFC71B20136800A4E300 /* MyCell.xib in Resources */,
 				1584B0041B23E49800A4E300 /* zhe.png in Resources */,
 				182348351B1FBA8700DD04BE /* tabbar_normal_background@2x.png in Resources */,
+				18B2A6D01B26480100F96B79 /* rightArrow@2x.png in Resources */,
 				182348371B1FBA8700DD04BE /* tabbar_selected_background@2x.png in Resources */,
 				1584B00A1B23E62D00A4E300 /* Lifeservice.png in Resources */,
 				1584B0591B258D4800A4E300 /* My10.png in Resources */,
@@ -1091,6 +1100,7 @@
 				1584AFED1B22FB9100A4E300 /* OrderDetailViewController.m in Sources */,
 				1584AFA21B1FEBB000A4E300 /* SVIndefiniteAnimatedView.m in Sources */,
 				1584AF991B1FEBB000A4E300 /* SDWebImageManager.m in Sources */,
+				18B2A6D31B26545D00F96B79 /* BusinessCommentView.m in Sources */,
 				1584AF851B1FEBB000A4E300 /* MJRefreshGifFooter.m in Sources */,
 				1584AF7D1B1FEBB000A4E300 /* UIImageView+AFNetworking.m in Sources */,
 				1584AF961B1FEBB000A4E300 /* SDWebImageDecoder.m in Sources */,

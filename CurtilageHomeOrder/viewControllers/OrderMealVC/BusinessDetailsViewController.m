@@ -16,9 +16,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.mainScrollView.width = SCREEN_WIDTH;
+    [self.mainScrollView setContentSize:CGSizeMake(SCREEN_WIDTH*3, SCREEN_HEIGHT-64)];
     // Do any additional setup after loading the view from its nib.
 }
-
+- (IBAction)btnSelectMenuFunction:(UIButton *)sender;
+{
+    for (int i = 0; i<3; i++)
+    {
+        UIButton *btn = (UIButton *)[self.view viewWithTag:100+i];
+        [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    }
+    [sender setTitleColor:setNaviColor forState:UIControlStateNormal];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.lblLine.centerX = sender.centerX;
+ 
+    } completion:^(BOOL finished) {
+        
+    }];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
