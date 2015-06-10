@@ -138,8 +138,6 @@
 		1584B07D1B26DA5400A4E300 /* CKFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584B07B1B26DA5400A4E300 /* CKFoodCell.xib */; };
 		1584B0811B27E69600A4E300 /* CKSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584B07F1B27E69600A4E300 /* CKSearchViewController.m */; };
 		1584B0821B27E69600A4E300 /* CKSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584B0801B27E69600A4E300 /* CKSearchViewController.xib */; };
-		15EEFFB61B280B8100B7E20E /* CKBusinessInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EEFFB51B280B8100B7E20E /* CKBusinessInfoView.m */; };
-		15EEFFB81B280BAD00B7E20E /* CKBusinessInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15EEFFB71B280BAD00B7E20E /* CKBusinessInfoView.xib */; };
 		182347C31B1FAE3800DD04BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C21B1FAE3800DD04BE /* main.m */; };
 		182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C51B1FAE3800DD04BE /* AppDelegate.m */; };
 		182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182347CD1B1FAE3800DD04BE /* Images.xcassets */; };
@@ -165,6 +163,10 @@
 		18A8D71E1B210A8300615933 /* ForgetPdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D71C1B210A8300615933 /* ForgetPdViewController.xib */; };
 		18A8D7221B210D0100615933 /* ModifyPdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A8D7201B210D0100615933 /* ModifyPdViewController.m */; };
 		18A8D7231B210D0100615933 /* ModifyPdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D7211B210D0100615933 /* ModifyPdViewController.xib */; };
+		18AA8F561B28ED1D00D565A2 /* CKBusinessInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AA8F541B28ED1D00D565A2 /* CKBusinessInfoViewController.m */; };
+		18AA8F571B28ED1D00D565A2 /* CKBusinessInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AA8F551B28ED1D00D565A2 /* CKBusinessInfoViewController.xib */; };
+		18AA8F5B1B28F1C700D565A2 /* CKBusinessCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AA8F591B28F1C700D565A2 /* CKBusinessCommentViewController.m */; };
+		18AA8F5C1B28F1C700D565A2 /* CKBusinessCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AA8F5A1B28F1C700D565A2 /* CKBusinessCommentViewController.xib */; };
 		18B2A6D01B26480100F96B79 /* rightArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B2A6CF1B26480100F96B79 /* rightArrow@2x.png */; };
 		18B2A6D31B26545D00F96B79 /* BusinessCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2A6D21B26545D00F96B79 /* BusinessCommentView.m */; };
 /* End PBXBuildFile section */
@@ -388,9 +390,6 @@
 		1584B07E1B27E69600A4E300 /* CKSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSearchViewController.h; sourceTree = "<group>"; };
 		1584B07F1B27E69600A4E300 /* CKSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSearchViewController.m; sourceTree = "<group>"; };
 		1584B0801B27E69600A4E300 /* CKSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKSearchViewController.xib; sourceTree = "<group>"; };
-		15EEFFB41B280B8100B7E20E /* CKBusinessInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKBusinessInfoView.h; sourceTree = "<group>"; };
-		15EEFFB51B280B8100B7E20E /* CKBusinessInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKBusinessInfoView.m; sourceTree = "<group>"; };
-		15EEFFB71B280BAD00B7E20E /* CKBusinessInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKBusinessInfoView.xib; sourceTree = "<group>"; };
 		182347BD1B1FAE3800DD04BE /* CurtilageHomeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurtilageHomeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182347C11B1FAE3800DD04BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182347C21B1FAE3800DD04BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -431,6 +430,12 @@
 		18A8D71F1B210D0100615933 /* ModifyPdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPdViewController.h; sourceTree = "<group>"; };
 		18A8D7201B210D0100615933 /* ModifyPdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPdViewController.m; sourceTree = "<group>"; };
 		18A8D7211B210D0100615933 /* ModifyPdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyPdViewController.xib; sourceTree = "<group>"; };
+		18AA8F531B28ED1D00D565A2 /* CKBusinessInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKBusinessInfoViewController.h; sourceTree = "<group>"; };
+		18AA8F541B28ED1D00D565A2 /* CKBusinessInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKBusinessInfoViewController.m; sourceTree = "<group>"; };
+		18AA8F551B28ED1D00D565A2 /* CKBusinessInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKBusinessInfoViewController.xib; sourceTree = "<group>"; };
+		18AA8F581B28F1C700D565A2 /* CKBusinessCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKBusinessCommentViewController.h; sourceTree = "<group>"; };
+		18AA8F591B28F1C700D565A2 /* CKBusinessCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKBusinessCommentViewController.m; sourceTree = "<group>"; };
+		18AA8F5A1B28F1C700D565A2 /* CKBusinessCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKBusinessCommentViewController.xib; sourceTree = "<group>"; };
 		18B2A6CF1B26480100F96B79 /* rightArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightArrow@2x.png"; sourceTree = "<group>"; };
 		18B2A6D11B26545D00F96B79 /* BusinessCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCommentView.h; sourceTree = "<group>"; };
 		18B2A6D21B26545D00F96B79 /* BusinessCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCommentView.m; sourceTree = "<group>"; };
@@ -773,9 +778,6 @@
 				1584B0791B26DA5400A4E300 /* CKFoodCell.h */,
 				1584B07A1B26DA5400A4E300 /* CKFoodCell.m */,
 				1584B07B1B26DA5400A4E300 /* CKFoodCell.xib */,
-				15EEFFB41B280B8100B7E20E /* CKBusinessInfoView.h */,
-				15EEFFB51B280B8100B7E20E /* CKBusinessInfoView.m */,
-				15EEFFB71B280BAD00B7E20E /* CKBusinessInfoView.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -954,6 +956,12 @@
 				1584B07E1B27E69600A4E300 /* CKSearchViewController.h */,
 				1584B07F1B27E69600A4E300 /* CKSearchViewController.m */,
 				1584B0801B27E69600A4E300 /* CKSearchViewController.xib */,
+				18AA8F581B28F1C700D565A2 /* CKBusinessCommentViewController.h */,
+				18AA8F591B28F1C700D565A2 /* CKBusinessCommentViewController.m */,
+				18AA8F5A1B28F1C700D565A2 /* CKBusinessCommentViewController.xib */,
+				18AA8F531B28ED1D00D565A2 /* CKBusinessInfoViewController.h */,
+				18AA8F541B28ED1D00D565A2 /* CKBusinessInfoViewController.m */,
+				18AA8F551B28ED1D00D565A2 /* CKBusinessInfoViewController.xib */,
 			);
 			path = OrderMealVC;
 			sourceTree = "<group>";
@@ -1089,6 +1097,7 @@
 				1584AF8F1B1FEBB000A4E300 /* MBProgressHUD.bundle in Resources */,
 				1584B05A1B258D4800A4E300 /* My11.png in Resources */,
 				1584B0701B26968800A4E300 /* Search@2x.png in Resources */,
+				18AA8F5C1B28F1C700D565A2 /* CKBusinessCommentViewController.xib in Resources */,
 				182348081B1FB87200DD04BE /* MyViewController.xib in Resources */,
 				1584B0301B2455E800A4E300 /* TS4@2x.png in Resources */,
 				1584B04B1B258AFC00A4E300 /* Set2.png in Resources */,
@@ -1097,6 +1106,7 @@
 				1584B07D1B26DA5400A4E300 /* CKFoodCell.xib in Resources */,
 				1584AFB21B1FF04400A4E300 /* LoginViewController.xib in Resources */,
 				182348361B1FBA8700DD04BE /* tabbar_selected_background.png in Resources */,
+				18AA8F571B28ED1D00D565A2 /* CKBusinessInfoViewController.xib in Resources */,
 				1584B04A1B258AFC00A4E300 /* Set1.png in Resources */,
 				1584AFCD1B2041E500A4E300 /* HomeViewController.xib in Resources */,
 				1584B0571B258D4800A4E300 /* My01.png in Resources */,
@@ -1116,7 +1126,6 @@
 				1584B0751B26B4BA00A4E300 /* naviBottom@2x.png in Resources */,
 				1584AFC71B20136800A4E300 /* MyCell.xib in Resources */,
 				1584B0041B23E49800A4E300 /* zhe.png in Resources */,
-				15EEFFB81B280BAD00B7E20E /* CKBusinessInfoView.xib in Resources */,
 				182348351B1FBA8700DD04BE /* tabbar_normal_background@2x.png in Resources */,
 				18B2A6D01B26480100F96B79 /* rightArrow@2x.png in Resources */,
 				182348371B1FBA8700DD04BE /* tabbar_selected_background@2x.png in Resources */,
@@ -1173,9 +1182,9 @@
 				1584AF9E1B1FEBB000A4E300 /* UIImage+WebP.m in Sources */,
 				1584AF7C1B1FEBB000A4E300 /* UIButton+AFNetworking.m in Sources */,
 				1584AF701B1FEBB000A4E300 /* AFHTTPRequestOperation.m in Sources */,
+				18AA8F5B1B28F1C700D565A2 /* CKBusinessCommentViewController.m in Sources */,
 				1584AF8B1B1FEBB000A4E300 /* UIScrollView+MJRefresh.m in Sources */,
 				1584AFCC1B2041E500A4E300 /* HomeViewController.m in Sources */,
-				15EEFFB61B280B8100B7E20E /* CKBusinessInfoView.m in Sources */,
 				1584AF8A1B1FEBB000A4E300 /* UIScrollView+MJExtension.m in Sources */,
 				1584AF6F1B1FEBB000A4E300 /* AFDownloadRequestOperation.m in Sources */,
 				1584AFA91B1FEC9100A4E300 /* Tools.m in Sources */,
@@ -1229,6 +1238,7 @@
 				1584B0331B2483A900A4E300 /* ViewSelectConditions.m in Sources */,
 				1584B0691B268A9A00A4E300 /* CommentCell.m in Sources */,
 				18A8D71D1B210A8300615933 /* ForgetPdViewController.m in Sources */,
+				18AA8F561B28ED1D00D565A2 /* CKBusinessInfoViewController.m in Sources */,
 				1584AF891B1FEBB000A4E300 /* MJRefreshLegendHeader.m in Sources */,
 				1584AFDB1B213F8400A4E300 /* viewSelectList.m in Sources */,
 				1584AF721B1FEBB000A4E300 /* AFHTTPSessionManager.m in Sources */,

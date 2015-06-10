@@ -9,7 +9,8 @@
 #import "BusinessDetailsViewController.h"
 #import "BusinessCommentView.h"
 #import "CKFoodCell.h"
-#import "CKBusinessInfoView.h"
+#import "CKBusinessInfoViewController.h"
+#import "CKBusinessCommentViewController.h"
 @interface BusinessDetailsViewController ()<UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *arrayFoodClass;
@@ -36,12 +37,18 @@
     self.tableViewFoodList.height = self.mainScrollView.height;
     self.tableViewFoodClass.height = self.mainScrollView.height;
     //评论列表
-    BusinessCommentView *viewComment = [[BusinessCommentView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, self.mainScrollView.height)];
-    [self.mainScrollView addSubview:viewComment];
+    CKBusinessCommentViewController *commentVC = [[CKBusinessCommentViewController alloc] initWithNibName:@"CKBusinessCommentViewController" bundle:nil];
+    [self addChildViewController:commentVC];
+    commentVC.view.frame = CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, self.mainScrollView.height);
+    [self.mainScrollView addSubview:commentVC.view];
+    
+//    BusinessCommentView *viewComment = [[BusinessCommentView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, self.mainScrollView.height)];
+//    [self.mainScrollView addSubview:viewComment];
     //商户详情
-    CKBusinessInfoView *viewBusinessInfo = [[CKBusinessInfoView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*2, 0, SCREEN_WIDTH, self.mainScrollView.height)];
-    viewBusinessInfo.backgroundColor = setNaviColor;
-    [self.mainScrollView addSubview:viewBusinessInfo];
+    CKBusinessInfoViewController *viewFlag = [[CKBusinessInfoViewController alloc] initWithNibName:@"CKBusinessInfoViewController" bundle:nil];
+    [self addChildViewController:viewFlag];
+    viewFlag.view.frame = CGRectMake(SCREEN_WIDTH*2, 0, SCREEN_WIDTH, self.mainScrollView.height);
+    [self.mainScrollView addSubview:viewFlag.view];
     
     arrayFoodClass = [[NSMutableArray alloc] initWithObjects:@"法师鲜奶",@"巧克力",@"苏轼拉面", nil];
     arrayFoodList = [[NSMutableArray alloc] init];
