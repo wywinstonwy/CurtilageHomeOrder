@@ -32,6 +32,7 @@
     [self.tableview registerNib:[UINib nibWithNibName:@"HomeCell" bundle:nil] forCellReuseIdentifier:@"HomeCell"];
     [self setLeftBarWithLeftImage:@"back" action:@selector(popBack)];
     self.lblNavititle.text = @"定位中...";
+    self.lblNavititle.width = SCREEN_WIDTH- 120;
     [self.navigationController setNavigationBarHidden:YES];
     //开启定位
     [self startLocation];

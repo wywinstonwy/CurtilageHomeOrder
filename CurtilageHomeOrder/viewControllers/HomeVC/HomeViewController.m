@@ -131,7 +131,7 @@
     btnCity = [UIButton buttonWithType:UIButtonTypeCustom];
     btnCity.frame = CGRectMake(0, 5, 100, 30);
     [btnCity setTitle:@"定位中..." forState:UIControlStateNormal];
-    [btnCity setImage:[UIImage imageNamed:@"BottomArrow"] forState:UIControlStateNormal];
+    [btnCity setImage:[UIImage imageNamed:@"naviTop"] forState:UIControlStateNormal];
     [btnCity addTarget:self action:@selector(selectCity) forControlEvents:UIControlEventTouchUpInside];
     btnCity.backgroundColor = setNaviColor;
     

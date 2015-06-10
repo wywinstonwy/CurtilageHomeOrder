@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CKPageScrollView : UIView
+@interface CKPageScrollView : UIView<UIScrollViewDelegate>
 @property (nonatomic, strong)UIPageControl *pageControl;
 @property (nonatomic, strong)UIScrollView * mainScrollView;
 @end

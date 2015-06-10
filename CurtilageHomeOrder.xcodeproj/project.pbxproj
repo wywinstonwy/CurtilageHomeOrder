@@ -68,7 +68,6 @@
 		1584AFB81B1FF50000A4E300 /* OrderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584AFB61B1FF50000A4E300 /* OrderListViewController.xib */; };
 		1584AFBC1B20002300A4E300 /* BaseNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584AFBB1B20002300A4E300 /* BaseNetWork.m */; };
 		1584AFC01B20025200A4E300 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1584AFBE1B20025200A4E300 /* back@2x.png */; };
-		1584AFC11B20025200A4E300 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1584AFBF1B20025200A4E300 /* back@3x.png */; };
 		1584AFC61B20136800A4E300 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584AFC41B20136800A4E300 /* MyCell.m */; };
 		1584AFC71B20136800A4E300 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584AFC51B20136800A4E300 /* MyCell.xib */; };
 		1584AFCC1B2041E500A4E300 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584AFCA1B2041E500A4E300 /* HomeViewController.m */; };
@@ -126,6 +125,17 @@
 		1584B0601B258E3700A4E300 /* Phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1584B05F1B258E3700A4E300 /* Phone@2x.png */; };
 		1584B0641B2592A100A4E300 /* BusinessDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584B0621B2592A100A4E300 /* BusinessDetailsViewController.m */; };
 		1584B0651B2592A100A4E300 /* BusinessDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584B0631B2592A100A4E300 /* BusinessDetailsViewController.xib */; };
+		1584B0691B268A9A00A4E300 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584B0671B268A9A00A4E300 /* CommentCell.m */; };
+		1584B06A1B268A9A00A4E300 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584B0681B268A9A00A4E300 /* CommentCell.xib */; };
+		1584B06C1B268D6E00A4E300 /* zan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1584B06B1B268D6E00A4E300 /* zan@2x.png */; };
+		1584B06F1B26968800A4E300 /* back2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1584B06D1B26968800A4E300 /* back2@2x.png */; };
+		1584B0701B26968800A4E300 /* Search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1584B06E1B26968800A4E300 /* Search@2x.png */; };
+		1584B0721B26B48B00A4E300 /* naviAddress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1584B0711B26B48B00A4E300 /* naviAddress@2x.png */; };
+		1584B0751B26B4BA00A4E300 /* naviBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1584B0731B26B4BA00A4E300 /* naviBottom@2x.png */; };
+		1584B0761B26B4BA00A4E300 /* naviTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1584B0741B26B4BA00A4E300 /* naviTop@2x.png */; };
+		1584B0781B26B90200A4E300 /* back1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1584B0771B26B90100A4E300 /* back1@2x.png */; };
+		1584B07C1B26DA5400A4E300 /* CKFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584B07A1B26DA5400A4E300 /* CKFoodCell.m */; };
+		1584B07D1B26DA5400A4E300 /* CKFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584B07B1B26DA5400A4E300 /* CKFoodCell.xib */; };
 		182347C31B1FAE3800DD04BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C21B1FAE3800DD04BE /* main.m */; };
 		182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C51B1FAE3800DD04BE /* AppDelegate.m */; };
 		182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182347CD1B1FAE3800DD04BE /* Images.xcassets */; };
@@ -289,7 +299,6 @@
 		1584AFBA1B20002200A4E300 /* BaseNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetWork.h; sourceTree = "<group>"; };
 		1584AFBB1B20002300A4E300 /* BaseNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetWork.m; sourceTree = "<group>"; };
 		1584AFBE1B20025200A4E300 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
-		1584AFBF1B20025200A4E300 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
 		1584AFC31B20136800A4E300 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		1584AFC41B20136800A4E300 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
 		1584AFC51B20136800A4E300 /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
@@ -359,6 +368,19 @@
 		1584B0611B2592A100A4E300 /* BusinessDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessDetailsViewController.h; sourceTree = "<group>"; };
 		1584B0621B2592A100A4E300 /* BusinessDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessDetailsViewController.m; sourceTree = "<group>"; };
 		1584B0631B2592A100A4E300 /* BusinessDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessDetailsViewController.xib; sourceTree = "<group>"; };
+		1584B0661B268A9A00A4E300 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		1584B0671B268A9A00A4E300 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		1584B0681B268A9A00A4E300 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		1584B06B1B268D6E00A4E300 /* zan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zan@2x.png"; sourceTree = "<group>"; };
+		1584B06D1B26968800A4E300 /* back2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back2@2x.png"; sourceTree = "<group>"; };
+		1584B06E1B26968800A4E300 /* Search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search@2x.png"; sourceTree = "<group>"; };
+		1584B0711B26B48B00A4E300 /* naviAddress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "naviAddress@2x.png"; sourceTree = "<group>"; };
+		1584B0731B26B4BA00A4E300 /* naviBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "naviBottom@2x.png"; sourceTree = "<group>"; };
+		1584B0741B26B4BA00A4E300 /* naviTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "naviTop@2x.png"; sourceTree = "<group>"; };
+		1584B0771B26B90100A4E300 /* back1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back1@2x.png"; sourceTree = "<group>"; };
+		1584B0791B26DA5400A4E300 /* CKFoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKFoodCell.h; sourceTree = "<group>"; };
+		1584B07A1B26DA5400A4E300 /* CKFoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKFoodCell.m; sourceTree = "<group>"; };
+		1584B07B1B26DA5400A4E300 /* CKFoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKFoodCell.xib; sourceTree = "<group>"; };
 		182347BD1B1FAE3800DD04BE /* CurtilageHomeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurtilageHomeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182347C11B1FAE3800DD04BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182347C21B1FAE3800DD04BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -629,6 +651,11 @@
 		1584AFBD1B20025200A4E300 /* PublicImages */ = {
 			isa = PBXGroup;
 			children = (
+				1584B0771B26B90100A4E300 /* back1@2x.png */,
+				1584B0711B26B48B00A4E300 /* naviAddress@2x.png */,
+				1584B06D1B26968800A4E300 /* back2@2x.png */,
+				1584B06E1B26968800A4E300 /* Search@2x.png */,
+				1584B06B1B268D6E00A4E300 /* zan@2x.png */,
 				18B2A6CF1B26480100F96B79 /* rightArrow@2x.png */,
 				1584B0431B25752100A4E300 /* BottomArrow@2x.png */,
 				1584B0251B2455E800A4E300 /* T2@2x.png */,
@@ -651,7 +678,6 @@
 				1584AFF31B23E23D00A4E300 /* SamllHeart2.png */,
 				1584AFDF1B22EEB200A4E300 /* NoLoginTips.png */,
 				1584AFBE1B20025200A4E300 /* back@2x.png */,
-				1584AFBF1B20025200A4E300 /* back@3x.png */,
 			);
 			path = PublicImages;
 			sourceTree = "<group>";
@@ -714,6 +740,8 @@
 		1584B0051B23E62D00A4E300 /* HomeImages */ = {
 			isa = PBXGroup;
 			children = (
+				1584B0731B26B4BA00A4E300 /* naviBottom@2x.png */,
+				1584B0741B26B4BA00A4E300 /* naviTop@2x.png */,
 				1584B0061B23E62D00A4E300 /* GourmetDelivery.png */,
 				1584B0071B23E62D00A4E300 /* Lifeservice.png */,
 				1584B0081B23E62D00A4E300 /* OnlineBooking.png */,
@@ -729,6 +757,12 @@
 				1584B0351B24994A00A4E300 /* CKSelectListCell.h */,
 				1584B0361B24994A00A4E300 /* CKSelectListCell.m */,
 				1584B0371B24994A00A4E300 /* CKSelectListCell.xib */,
+				1584B0661B268A9A00A4E300 /* CommentCell.h */,
+				1584B0671B268A9A00A4E300 /* CommentCell.m */,
+				1584B0681B268A9A00A4E300 /* CommentCell.xib */,
+				1584B0791B26DA5400A4E300 /* CKFoodCell.h */,
+				1584B07A1B26DA5400A4E300 /* CKFoodCell.m */,
+				1584B07B1B26DA5400A4E300 /* CKFoodCell.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -974,6 +1008,7 @@
 		182347B51B1FAE3800DD04BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CK;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = WangYun;
 				TargetAttributes = {
@@ -1011,6 +1046,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1584AFFC1B23E2A800A4E300 /* song.png in Resources */,
+				1584B0721B26B48B00A4E300 /* naviAddress@2x.png in Resources */,
 				1584B0231B24556500A4E300 /* T1@2x.png in Resources */,
 				1584B04C1B258AFC00A4E300 /* Set3.png in Resources */,
 				1584B0581B258D4800A4E300 /* My02.png in Resources */,
@@ -1018,6 +1054,7 @@
 				1584AFF51B23E23D00A4E300 /* mian.png in Resources */,
 				1584B0241B24556500A4E300 /* TS1@2x.png in Resources */,
 				1584AF811B1FEBB000A4E300 /* MJRefresh.bundle in Resources */,
+				1584B0781B26B90200A4E300 /* back1@2x.png in Resources */,
 				1584AFE01B22EEB200A4E300 /* NoLoginTips.png in Resources */,
 				1584AFFA1B23E27700A4E300 /* fu.png in Resources */,
 				182347D11B1FAE3800DD04BE /* LaunchScreen.xib in Resources */,
@@ -1029,15 +1066,18 @@
 				1584B04D1B258AFC00A4E300 /* Set4.png in Resources */,
 				1584B0391B24994A00A4E300 /* CKSelectListCell.xib in Resources */,
 				1584B02F1B2455E800A4E300 /* TS3@2x.png in Resources */,
+				1584B06A1B268A9A00A4E300 /* CommentCell.xib in Resources */,
 				1584B05B1B258D4800A4E300 /* My12.png in Resources */,
 				1584B0101B243AB600A4E300 /* HomeCellOne.xib in Resources */,
 				1584AF8F1B1FEBB000A4E300 /* MBProgressHUD.bundle in Resources */,
 				1584B05A1B258D4800A4E300 /* My11.png in Resources */,
+				1584B0701B26968800A4E300 /* Search@2x.png in Resources */,
 				182348081B1FB87200DD04BE /* MyViewController.xib in Resources */,
 				1584B0301B2455E800A4E300 /* TS4@2x.png in Resources */,
 				1584B04B1B258AFC00A4E300 /* Set2.png in Resources */,
 				1584AFFE1B23E40200A4E300 /* SwathesMarks.png in Resources */,
 				1584B00B1B23E62D00A4E300 /* OnlineBooking.png in Resources */,
+				1584B07D1B26DA5400A4E300 /* CKFoodCell.xib in Resources */,
 				1584AFB21B1FF04400A4E300 /* LoginViewController.xib in Resources */,
 				182348361B1FBA8700DD04BE /* tabbar_selected_background.png in Resources */,
 				1584B04A1B258AFC00A4E300 /* Set1.png in Resources */,
@@ -1046,7 +1086,6 @@
 				1584B0561B258D4800A4E300 /* My00.png in Resources */,
 				1584B0031B23E49800A4E300 /* zeng.png in Resources */,
 				1584AFD31B2042C500A4E300 /* HomeCell.xib in Resources */,
-				1584AFC11B20025200A4E300 /* back@3x.png in Resources */,
 				182348031B1FB85F00DD04BE /* OrderMealViewController.xib in Resources */,
 				1584AFF81B23E23D00A4E300 /* SamllHeart2.png in Resources */,
 				182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */,
@@ -1057,15 +1096,19 @@
 				1584B0021B23E49800A4E300 /* xin.png in Resources */,
 				1584AFEE1B22FB9100A4E300 /* OrderDetailViewController.xib in Resources */,
 				1584B02B1B2455E800A4E300 /* T2@2x.png in Resources */,
+				1584B0751B26B4BA00A4E300 /* naviBottom@2x.png in Resources */,
 				1584AFC71B20136800A4E300 /* MyCell.xib in Resources */,
 				1584B0041B23E49800A4E300 /* zhe.png in Resources */,
 				182348351B1FBA8700DD04BE /* tabbar_normal_background@2x.png in Resources */,
 				18B2A6D01B26480100F96B79 /* rightArrow@2x.png in Resources */,
 				182348371B1FBA8700DD04BE /* tabbar_selected_background@2x.png in Resources */,
+				1584B0761B26B4BA00A4E300 /* naviTop@2x.png in Resources */,
 				1584B00A1B23E62D00A4E300 /* Lifeservice.png in Resources */,
 				1584B0591B258D4800A4E300 /* My10.png in Resources */,
 				1584B02D1B2455E800A4E300 /* T4@2x.png in Resources */,
 				18A8D7231B210D0100615933 /* ModifyPdViewController.xib in Resources */,
+				1584B06C1B268D6E00A4E300 /* zan@2x.png in Resources */,
+				1584B06F1B26968800A4E300 /* back2@2x.png in Resources */,
 				1584AFC01B20025200A4E300 /* back@2x.png in Resources */,
 				1584AFA31B1FEBB000A4E300 /* SVProgressHUD.bundle in Resources */,
 				1584B02E1B2455E800A4E300 /* TS2@2x.png in Resources */,
@@ -1105,6 +1148,7 @@
 				1584AF7D1B1FEBB000A4E300 /* UIImageView+AFNetworking.m in Sources */,
 				1584AF961B1FEBB000A4E300 /* SDWebImageDecoder.m in Sources */,
 				1584AFAA1B1FEC9100A4E300 /* UIView+Extend.m in Sources */,
+				1584B07C1B26DA5400A4E300 /* CKFoodCell.m in Sources */,
 				1584AFB71B1FF50000A4E300 /* OrderListViewController.m in Sources */,
 				1584AF821B1FEBB000A4E300 /* MJRefreshComponent.m in Sources */,
 				1584AFE31B22F0B100A4E300 /* CKUserManager.m in Sources */,
@@ -1163,6 +1207,7 @@
 				1584AF801B1FEBB000A4E300 /* UIWebView+AFNetworking.m in Sources */,
 				1584AF921B1FEBB000A4E300 /* NSData+GIF.m in Sources */,
 				1584B0331B2483A900A4E300 /* ViewSelectConditions.m in Sources */,
+				1584B0691B268A9A00A4E300 /* CommentCell.m in Sources */,
 				18A8D71D1B210A8300615933 /* ForgetPdViewController.m in Sources */,
 				1584AF891B1FEBB000A4E300 /* MJRefreshLegendHeader.m in Sources */,
 				1584AFDB1B213F8400A4E300 /* viewSelectList.m in Sources */,

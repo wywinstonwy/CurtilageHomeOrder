@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BusinessCommentView : UIView
-
+#import "CommentCell.h"
+@interface BusinessCommentView : UIView<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic ,strong) UITableView *tableViewComment;
+@property (nonatomic, strong) NSMutableArray *arraySource;
 @end

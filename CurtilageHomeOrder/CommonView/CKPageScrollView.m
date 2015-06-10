@@ -23,7 +23,8 @@
 {
     self.mainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
     [self.mainScrollView setContentSize:CGSizeMake(SCREEN_WIDTH*10, 200)];
-    
+    self.mainScrollView.delegate = self;
+    self.mainScrollView.pagingEnabled = YES;
     [self addSubview:self.mainScrollView];
     
     
@@ -33,7 +34,20 @@
     
     [self.mainScrollView addSubview:btn];
     
+    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 170, SCREEN_WIDTH, 30)];
+    self.pageControl.numberOfPages = 10;
+    self.pageControl.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    self.pageControl.currentPageIndicatorTintColor = setNaviColor;
+    [self addSubview:self.pageControl];
     
+    
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == self.mainScrollView) {
+        NSInteger page = self.mainScrollView.contentOffset.x/SCREEN_WIDTH;
+        self.pageControl.currentPage = page;
+    }
 }
 /*
 // Only override drawRect: if you perform custom drawing.
