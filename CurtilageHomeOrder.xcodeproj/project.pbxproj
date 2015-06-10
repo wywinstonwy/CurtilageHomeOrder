@@ -136,6 +136,10 @@
 		1584B0781B26B90200A4E300 /* back1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1584B0771B26B90100A4E300 /* back1@2x.png */; };
 		1584B07C1B26DA5400A4E300 /* CKFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584B07A1B26DA5400A4E300 /* CKFoodCell.m */; };
 		1584B07D1B26DA5400A4E300 /* CKFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584B07B1B26DA5400A4E300 /* CKFoodCell.xib */; };
+		1584B0811B27E69600A4E300 /* CKSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584B07F1B27E69600A4E300 /* CKSearchViewController.m */; };
+		1584B0821B27E69600A4E300 /* CKSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584B0801B27E69600A4E300 /* CKSearchViewController.xib */; };
+		15EEFFB61B280B8100B7E20E /* CKBusinessInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EEFFB51B280B8100B7E20E /* CKBusinessInfoView.m */; };
+		15EEFFB81B280BAD00B7E20E /* CKBusinessInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15EEFFB71B280BAD00B7E20E /* CKBusinessInfoView.xib */; };
 		182347C31B1FAE3800DD04BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C21B1FAE3800DD04BE /* main.m */; };
 		182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C51B1FAE3800DD04BE /* AppDelegate.m */; };
 		182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182347CD1B1FAE3800DD04BE /* Images.xcassets */; };
@@ -381,6 +385,12 @@
 		1584B0791B26DA5400A4E300 /* CKFoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKFoodCell.h; sourceTree = "<group>"; };
 		1584B07A1B26DA5400A4E300 /* CKFoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKFoodCell.m; sourceTree = "<group>"; };
 		1584B07B1B26DA5400A4E300 /* CKFoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKFoodCell.xib; sourceTree = "<group>"; };
+		1584B07E1B27E69600A4E300 /* CKSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSearchViewController.h; sourceTree = "<group>"; };
+		1584B07F1B27E69600A4E300 /* CKSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSearchViewController.m; sourceTree = "<group>"; };
+		1584B0801B27E69600A4E300 /* CKSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKSearchViewController.xib; sourceTree = "<group>"; };
+		15EEFFB41B280B8100B7E20E /* CKBusinessInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKBusinessInfoView.h; sourceTree = "<group>"; };
+		15EEFFB51B280B8100B7E20E /* CKBusinessInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKBusinessInfoView.m; sourceTree = "<group>"; };
+		15EEFFB71B280BAD00B7E20E /* CKBusinessInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKBusinessInfoView.xib; sourceTree = "<group>"; };
 		182347BD1B1FAE3800DD04BE /* CurtilageHomeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurtilageHomeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182347C11B1FAE3800DD04BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182347C21B1FAE3800DD04BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -763,6 +773,9 @@
 				1584B0791B26DA5400A4E300 /* CKFoodCell.h */,
 				1584B07A1B26DA5400A4E300 /* CKFoodCell.m */,
 				1584B07B1B26DA5400A4E300 /* CKFoodCell.xib */,
+				15EEFFB41B280B8100B7E20E /* CKBusinessInfoView.h */,
+				15EEFFB51B280B8100B7E20E /* CKBusinessInfoView.m */,
+				15EEFFB71B280BAD00B7E20E /* CKBusinessInfoView.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -938,6 +951,9 @@
 				1584B0631B2592A100A4E300 /* BusinessDetailsViewController.xib */,
 				18B2A6D11B26545D00F96B79 /* BusinessCommentView.h */,
 				18B2A6D21B26545D00F96B79 /* BusinessCommentView.m */,
+				1584B07E1B27E69600A4E300 /* CKSearchViewController.h */,
+				1584B07F1B27E69600A4E300 /* CKSearchViewController.m */,
+				1584B0801B27E69600A4E300 /* CKSearchViewController.xib */,
 			);
 			path = OrderMealVC;
 			sourceTree = "<group>";
@@ -1051,6 +1067,7 @@
 				1584B04C1B258AFC00A4E300 /* Set3.png in Resources */,
 				1584B0581B258D4800A4E300 /* My02.png in Resources */,
 				1584B0441B25752100A4E300 /* BottomArrow@2x.png in Resources */,
+				1584B0821B27E69600A4E300 /* CKSearchViewController.xib in Resources */,
 				1584AFF51B23E23D00A4E300 /* mian.png in Resources */,
 				1584B0241B24556500A4E300 /* TS1@2x.png in Resources */,
 				1584AF811B1FEBB000A4E300 /* MJRefresh.bundle in Resources */,
@@ -1099,6 +1116,7 @@
 				1584B0751B26B4BA00A4E300 /* naviBottom@2x.png in Resources */,
 				1584AFC71B20136800A4E300 /* MyCell.xib in Resources */,
 				1584B0041B23E49800A4E300 /* zhe.png in Resources */,
+				15EEFFB81B280BAD00B7E20E /* CKBusinessInfoView.xib in Resources */,
 				182348351B1FBA8700DD04BE /* tabbar_normal_background@2x.png in Resources */,
 				18B2A6D01B26480100F96B79 /* rightArrow@2x.png in Resources */,
 				182348371B1FBA8700DD04BE /* tabbar_selected_background@2x.png in Resources */,
@@ -1157,6 +1175,7 @@
 				1584AF701B1FEBB000A4E300 /* AFHTTPRequestOperation.m in Sources */,
 				1584AF8B1B1FEBB000A4E300 /* UIScrollView+MJRefresh.m in Sources */,
 				1584AFCC1B2041E500A4E300 /* HomeViewController.m in Sources */,
+				15EEFFB61B280B8100B7E20E /* CKBusinessInfoView.m in Sources */,
 				1584AF8A1B1FEBB000A4E300 /* UIScrollView+MJExtension.m in Sources */,
 				1584AF6F1B1FEBB000A4E300 /* AFDownloadRequestOperation.m in Sources */,
 				1584AFA91B1FEC9100A4E300 /* Tools.m in Sources */,
@@ -1170,6 +1189,7 @@
 				1584AF791B1FEBB000A4E300 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				182347EB1B1FAFA400DD04BE /* BaseViewController.m in Sources */,
 				1584AFC61B20136800A4E300 /* MyCell.m in Sources */,
+				1584B0811B27E69600A4E300 /* CKSearchViewController.m in Sources */,
 				1584AF751B1FEBB000A4E300 /* AFURLConnectionOperation.m in Sources */,
 				1584AFA01B1FEBB000A4E300 /* UIImageView+WebCache.m in Sources */,
 				1584AF9D1B1FEBB000A4E300 /* UIImage+MultiFormat.m in Sources */,

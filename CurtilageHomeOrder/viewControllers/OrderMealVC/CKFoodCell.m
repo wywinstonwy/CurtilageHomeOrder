@@ -12,6 +12,11 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    self.btnSelectStandard.layer.cornerRadius = 6;
+    self.btnSelectStandard.layer.borderColor = [UIColor grayColor].CGColor;
+    self.btnSelectStandard.layer.borderWidth = 1;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

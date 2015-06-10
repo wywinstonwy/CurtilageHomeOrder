@@ -8,6 +8,8 @@
 
 #import "BusinessDetailsViewController.h"
 #import "BusinessCommentView.h"
+#import "CKFoodCell.h"
+#import "CKBusinessInfoView.h"
 @interface BusinessDetailsViewController ()<UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *arrayFoodClass;
@@ -26,13 +28,29 @@
     
     
     [self.tableViewFoodClass registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableViewFoodList registerNib:[UINib nibWithNibName:@"CKFoodCell" bundle:nil] forCellReuseIdentifier:@"CKFoodCell"];
+    
     self.tableViewFoodClass.tableFooterView =[[UIView alloc] init];
     self.tableViewFoodClass.tableFooterView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    
+    self.tableViewFoodList.height = self.mainScrollView.height;
+    self.tableViewFoodClass.height = self.mainScrollView.height;
     //评论列表
     BusinessCommentView *viewComment = [[BusinessCommentView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, self.mainScrollView.height)];
     [self.mainScrollView addSubview:viewComment];
+    //商户详情
+    CKBusinessInfoView *viewBusinessInfo = [[CKBusinessInfoView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*2, 0, SCREEN_WIDTH, self.mainScrollView.height)];
+    viewBusinessInfo.backgroundColor = setNaviColor;
+    [self.mainScrollView addSubview:viewBusinessInfo];
     
-    arrayFoodClass = [[NSMutableArray alloc] initWithObjects:@"法师鲜奶",@"巧克力",@"苏轼拉面",@"凉菜", nil];
+    arrayFoodClass = [[NSMutableArray alloc] initWithObjects:@"法师鲜奶",@"巧克力",@"苏轼拉面", nil];
+    arrayFoodList = [[NSMutableArray alloc] init];
+    NSArray *arr1 = @[@"新鲜蛋糕",@"巧克力蛋糕",@"奶油蛋糕"];
+    NSArray *arr2 = @[@"话是签了里",@"巧克力棒",@"千克力并"];
+    NSArray *arr3 = @[@"加州拉面",@"兰州拉面",@"普通拉面",@"刀削面"];
+    [arrayFoodList addObject:arr1];
+    [arrayFoodList addObject:arr2];
+    [arrayFoodList addObject:arr3];
     // Do any additional setup after loading the view from its nib.
 }
 #pragma mark UITableViewDelagate
@@ -42,7 +60,10 @@
         return arrayFoodClass.count;
     }
     else
-        return arrayFoodList.count;
+    {
+        NSArray *arr = [arrayFoodList objectAtIndex:section];
+      return  arr.count;
+    }
   
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -51,13 +72,53 @@
         return 1;
     }
     else
-        return 3;
+        return arrayFoodList.count;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView.tag == 1)
+    {
+        return 44;
+    }
+    else
+    {
+        return 100;
+    }
+}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (tableView.tag == 1) {
+        return nil;
+    }
+    else
+        return @"法师蛋糕";
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = [arrayFoodClass objectAtIndex:indexPath.row];
-    return cell;
+    if (tableView.tag == 1) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        cell.textLabel.text = [arrayFoodClass objectAtIndex:indexPath.row];
+        return cell;
+    }
+    else
+    {//CKFoodCell
+        CKFoodCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKFoodCell"];
+        NSArray *arr = [arrayFoodList objectAtIndex:[indexPath section]];
+ 
+        cell.lblName.text = [arr objectAtIndex:indexPath.row];
+        return cell;
+    }
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView.tag == 1)
+    {
+        [self.tableViewFoodList scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.row] atScrollPosition:(UITableViewScrollPositionTop) animated:YES];
+    }
+    else
+    {
+    
+    }
 }
 - (IBAction)btnSelectMenuFunction:(UIButton *)sender;
 {

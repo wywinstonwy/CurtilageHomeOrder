@@ -12,6 +12,7 @@
 
 #import <CoreLocation/CoreLocation.h>
 #import "BusinessDetailsViewController.h"
+#import "CKSearchViewController.h"
 @interface OrderMealViewController ()<UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate>
 {
     ViewSelectConditions *viewSelectList;
@@ -154,6 +155,11 @@
 }
 
 #pragma mark methos 
+- (IBAction)btnClickSearch:(id)sender
+{
+    CKSearchViewController *viewFlag = [CKSearchViewController new];
+    [self pushToViewController:viewFlag anmation:YES];
+}
 - (IBAction)btnClickfunction:(UIButton *)sender
 {
     for(int i = 0;i<3;  i++)
@@ -177,6 +183,7 @@
     
     [self showSelectList];
 }
+
 - (void)showSelectList
 {
     viewSelectList.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];

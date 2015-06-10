@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CKFoodCell : UITableViewCell
-
+@property (nonatomic ,weak) IBOutlet UIButton *btnSelectStandard;//可选规格
+@property (nonatomic ,weak) IBOutlet UILabel *lblName;//
 @end

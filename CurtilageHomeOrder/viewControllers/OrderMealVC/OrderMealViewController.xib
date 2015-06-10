@@ -48,6 +48,9 @@
                             <state key="normal" image="Search.png">
                                 <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="btnClickSearch:" destination="-1" eventType="touchUpInside" id="4oq-dT-UYm"/>
+                            </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="naviAddress.png" id="ibl-nN-vaD">
                             <rect key="frame" x="70" y="32" width="20" height="20"/>
