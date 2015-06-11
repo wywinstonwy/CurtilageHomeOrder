@@ -19,12 +19,11 @@
 #import "SettingViewController.h"
 #import "RDVTabBarController.h"
 #import "RDVTabBarItem.h"
-#import "viewSelectList.h"
 @interface HomeViewController ()<UITextFieldDelegate,CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     CLLocationManager *locationManager;//地图定位
     RDVTabBarController *tabBarController;//tabbar
-    viewSelectList *viewCityClist;//城市选择列表
+   // viewSelectList *viewCityClist;//城市选择列表
 }
 @property (nonatomic,strong)UIButton *btnCity;
 @end
@@ -36,46 +35,28 @@
     [super viewWillAppear:animated];
     [[self rdv_tabBarController] setTabBarHidden:NO animated:YES];
     tabBarController.selectedIndex = 0;
-    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController setNavigationBarHidden:YES];
     
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"订餐";
-    [[self rdv_tabBarItem] setBadgeValue:@"3"];
-    
+//    [[self rdv_tabBarItem] setBadgeValue:@"3"];
     [self.tableview registerNib:[UINib nibWithNibName:@"HomeCell" bundle:nil] forCellReuseIdentifier:@"HomeCell"];
     [self.tableview registerNib:[UINib nibWithNibName:@"HomeCellOne" bundle:nil] forCellReuseIdentifier:@"HomeCellOne"];
-    [self setNaviStyle];
+  //  [self setNaviStyle];
     
     [self startLocation];
     
     [self setupViewControllers];
     
-    CKPageScrollView *viewHead = [[CKPageScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 315)];
-    self.tableview.tableHeaderView = viewHead;
-    NSArray *arrImages = @[@"GourmetDelivery",@"Lifeservice",@"OnlineBooking"];
-    NSArray *arrTitles = @[@"美食外卖",@"生活服务",@"在线订房"];
-    CGFloat with = 60;
-    for (int i = 0; i<3; i++)
-    {
-        UIButton*btnHead = [UIButton buttonWithType:UIButtonTypeCustom];
-        btnHead.frame = CGRectMake((SCREEN_WIDTH-with*3)/4 +(with + (SCREEN_WIDTH-with*3)/4)*i, 210, with, with);
-        [btnHead setImage:[UIImage imageNamed:[arrImages objectAtIndex:i]] forState:UIControlStateNormal];
-        [viewHead addSubview:btnHead];
-        
-        UILabel *lblTitle = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH/3)*i, btnHead.bottom+5, SCREEN_WIDTH/3, 21)];
-        lblTitle.textAlignment= NSTextAlignmentCenter;
-        lblTitle.text = [arrTitles objectAtIndex:i];
-        lblTitle.centerX = btnHead.centerX;
-        [viewHead addSubview:lblTitle];
-        
-    }
-    UILabel *lblLine = [[UILabel alloc] initWithFrame:CGRectMake(0, viewHead.height-10, SCREEN_WIDTH, 10)];
-    lblLine.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    [viewHead addSubview:lblLine];
+    
+    [self createSubview];
+ 
     // Do any additional setup after loading the view from its nib.
 }
+
+
+
 #pragma mark UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -112,71 +93,81 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self pushToViewController:tabBarController anmation:YES];
-    [self.navigationController setNavigationBarHidden:YES];
     
 }
-//设置导航栏样式
-- (void)setNaviStyle
+
+#pragma mark 视图初始化
+- (void)createSubview
 {
-  //  [self setLeftBarWithLeftTitle:@"北京" action:@selector(selectCity)];
-    
-    UIView *viewNavi = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH , 44)];
-    viewNavi.layer.cornerRadius = 4.0f;
-    viewNavi.backgroundColor = setNaviColor;
-//    self.textSearch = [[UITextField alloc] initWithFrame:CGRectMake(5, 0, viewNavi.width-40, 30)];
-//    self.textSearch.delegate = self;
-//    self.textSearch.placeholder = @"搜索关键字";
-//    self.textSearch.returnKeyType = UIReturnKeySearch;
-   // [viewNavi addSubview:self.textSearch];
-    btnCity = [UIButton buttonWithType:UIButtonTypeCustom];
-    btnCity.frame = CGRectMake(0, 5, 100, 30);
-    [btnCity setTitle:@"定位中..." forState:UIControlStateNormal];
-    [btnCity setImage:[UIImage imageNamed:@"naviTop"] forState:UIControlStateNormal];
-    [btnCity addTarget:self action:@selector(selectCity) forControlEvents:UIControlEventTouchUpInside];
-    btnCity.backgroundColor = setNaviColor;
-    
-    [viewNavi addSubview:btnCity];
-    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(120, 5, viewNavi.width - 160, 30)];
-    searchBar.placeholder = @"搜索";
-    searchBar.barTintColor = setNaviColor;
-    [viewNavi addSubview:searchBar];
-    searchBar.barStyle = UISearchBarStyleProminent;
-    searchBar.backgroundColor = [UIColor whiteColor];
-   
-    
-    self.navigationItem.titleView  = viewNavi;
-    
-    
-    
-}
-- (void)selectCity
-{
-    if(viewCityClist == nil)
+    CKPageScrollView *viewHead = [[CKPageScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 315)];
+    self.tableview.tableHeaderView = viewHead;
+    NSArray *arrImages = @[@"GourmetDelivery",@"Lifeservice",@"OnlineBooking"];
+    NSArray *arrTitles = @[@"美食外卖",@"生活服务",@"在线订房"];
+    CGFloat with = 60;
+    for (int i = 0; i<3; i++)
     {
-        __weak HomeViewController *weakSelf = self;
-        viewCityClist = [[viewSelectList alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64)];
-        [self.view addSubview:viewCityClist];
-        viewCityClist.selectresultBlock = ^(id result)
-        {
-            [weakSelf.btnCity setTitle:result forState:UIControlStateNormal];
-            [weakSelf hidenCityList];
-        };
-        viewCityClist.bottom = 0;
+        UIButton*btnHead = [UIButton buttonWithType:UIButtonTypeCustom];
+        btnHead.frame = CGRectMake((SCREEN_WIDTH-with*3)/4 +(with + (SCREEN_WIDTH-with*3)/4)*i, 210, with, with);
+        [btnHead setImage:[UIImage imageNamed:[arrImages objectAtIndex:i]] forState:UIControlStateNormal];
+        [viewHead addSubview:btnHead];
+        [btnHead addTarget:self action:@selector(btnClickToServerce) forControlEvents:UIControlEventTouchUpInside];
+        UILabel *lblTitle = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH/3)*i, btnHead.bottom+5, SCREEN_WIDTH/3, 21)];
+        lblTitle.textAlignment= NSTextAlignmentCenter;
+        lblTitle.text = [arrTitles objectAtIndex:i];
+        lblTitle.centerX = btnHead.centerX;
+        [viewHead addSubview:lblTitle];
+        
     }
-    viewCityClist.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
-    [UIView animateWithDuration:0.3 animations:^{
-        viewCityClist.top = 0;
+    UILabel *lblLine = [[UILabel alloc] initWithFrame:CGRectMake(0, viewHead.height-10, SCREEN_WIDTH, 10)];
+    lblLine.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    [viewHead addSubview:lblLine];
+    
+    
+    __weak HomeViewController *weakSelf = self;
+    
+    self.viewSelectCity.selectresultBlock = ^(id result)
+    {
+        weakSelf.lblCity.text=result;
+        [weakSelf.lblCity sizeToFit];
+        weakSelf.lblCity.height = 22;
+        weakSelf.imageVCity.left = weakSelf.lblCity.right;
+        
+        [weakSelf hidenCityList];
+        
+    };
+    
+}
+#pragma mark 美食外卖，生活服务，在线订房
+- (void)btnClickToServerce
+{
+    [self pushToViewController:tabBarController anmation:YES];
+
+}
+- (IBAction)selectCity
+{
+    if (self.viewSelectCity.top == 64) {
+        [self hidenCityList];
+        return;
+    }
+    self.viewSelectCity.height =SCREEN_HEIGHT-64;
+    self.viewSelectCity.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    self.viewSelectCity.hidden = NO;
+    self.imageVCity.image =[UIImage imageNamed:@"shangSanjiao"];
+
+    [UIView animateWithDuration:0.5 animations:^{
+        self.viewSelectCity.top = 64;
     } completion:^(BOOL finished) {
-        viewCityClist.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        self.viewSelectCity.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     }];
 }
 - (void)hidenCityList
 {
-    viewCityClist.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
-    [UIView animateWithDuration:0.3 animations:^{
-        viewCityClist.bottom = 0;
+    self.viewSelectCity.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.viewSelectCity.bottom = 64;
+        self.imageVCity.image =[UIImage imageNamed:@"xiaSanjiao"];
     } completion:^(BOOL finished) {
-        
+        self.viewSelectCity.hidden = YES;
     }];
 }
 - (void)setLeftBarWithLeftTitle:(NSString *)leftTitle action:(SEL)leftAction

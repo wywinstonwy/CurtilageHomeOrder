@@ -138,6 +138,8 @@
 		1584B07D1B26DA5400A4E300 /* CKFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584B07B1B26DA5400A4E300 /* CKFoodCell.xib */; };
 		1584B0811B27E69600A4E300 /* CKSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1584B07F1B27E69600A4E300 /* CKSearchViewController.m */; };
 		1584B0821B27E69600A4E300 /* CKSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584B0801B27E69600A4E300 /* CKSearchViewController.xib */; };
+		15B010341B29650B00C49B70 /* shangSanjiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B010321B29650B00C49B70 /* shangSanjiao@2x.png */; };
+		15B010351B29650B00C49B70 /* xiaSanjiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B010331B29650B00C49B70 /* xiaSanjiao@2x.png */; };
 		182347C31B1FAE3800DD04BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C21B1FAE3800DD04BE /* main.m */; };
 		182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C51B1FAE3800DD04BE /* AppDelegate.m */; };
 		182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182347CD1B1FAE3800DD04BE /* Images.xcassets */; };
@@ -390,6 +392,8 @@
 		1584B07E1B27E69600A4E300 /* CKSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSearchViewController.h; sourceTree = "<group>"; };
 		1584B07F1B27E69600A4E300 /* CKSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSearchViewController.m; sourceTree = "<group>"; };
 		1584B0801B27E69600A4E300 /* CKSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKSearchViewController.xib; sourceTree = "<group>"; };
+		15B010321B29650B00C49B70 /* shangSanjiao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shangSanjiao@2x.png"; sourceTree = "<group>"; };
+		15B010331B29650B00C49B70 /* xiaSanjiao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaSanjiao@2x.png"; sourceTree = "<group>"; };
 		182347BD1B1FAE3800DD04BE /* CurtilageHomeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurtilageHomeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182347C11B1FAE3800DD04BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182347C21B1FAE3800DD04BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -666,6 +670,8 @@
 		1584AFBD1B20025200A4E300 /* PublicImages */ = {
 			isa = PBXGroup;
 			children = (
+				15B010321B29650B00C49B70 /* shangSanjiao@2x.png */,
+				15B010331B29650B00C49B70 /* xiaSanjiao@2x.png */,
 				1584B0771B26B90100A4E300 /* back1@2x.png */,
 				1584B0711B26B48B00A4E300 /* naviAddress@2x.png */,
 				1584B06D1B26968800A4E300 /* back2@2x.png */,
@@ -1086,6 +1092,7 @@
 				1584B0091B23E62D00A4E300 /* GourmetDelivery.png in Resources */,
 				1584AFF71B23E23D00A4E300 /* SamllHeart.png in Resources */,
 				1584B0651B2592A100A4E300 /* BusinessDetailsViewController.xib in Resources */,
+				15B010341B29650B00C49B70 /* shangSanjiao@2x.png in Resources */,
 				1584AFF61B23E23D00A4E300 /* piao.png in Resources */,
 				1584B0601B258E3700A4E300 /* Phone@2x.png in Resources */,
 				1584B04D1B258AFC00A4E300 /* Set4.png in Resources */,
@@ -1093,6 +1100,7 @@
 				1584B02F1B2455E800A4E300 /* TS3@2x.png in Resources */,
 				1584B06A1B268A9A00A4E300 /* CommentCell.xib in Resources */,
 				1584B05B1B258D4800A4E300 /* My12.png in Resources */,
+				15B010351B29650B00C49B70 /* xiaSanjiao@2x.png in Resources */,
 				1584B0101B243AB600A4E300 /* HomeCellOne.xib in Resources */,
 				1584AF8F1B1FEBB000A4E300 /* MBProgressHUD.bundle in Resources */,
 				1584B05A1B258D4800A4E300 /* My11.png in Resources */,

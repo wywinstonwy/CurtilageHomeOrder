@@ -12,4 +12,6 @@
 @property (nonatomic, weak) IBOutlet UITableView *tableViewComment;
 @property (nonatomic, weak) IBOutlet UIView *viewHeader;
 @property (nonatomic, strong) NSMutableArray *arraySource;
+@property (nonatomic, weak) IBOutlet UIButton *btn1;
+@property (nonatomic, weak) IBOutlet UIButton *btn2;
 @end
