@@ -18,7 +18,23 @@
     self.btnSelectStandard.layer.borderWidth = 1;
     
 }
-
+- (void)setCellContent:(CKFoodListModel *)dataModel indexPath:(NSIndexPath *)indePath;
+{
+    
+    if (dataModel.foodSelectCount>0) {
+        self.btnReduce.hidden = NO;
+        self.btnPlus.hidden = NO;
+        self.lblCount.hidden = NO;
+    }
+    else
+    {
+        self.btnReduce.hidden = YES;
+        self.btnPlus.hidden = NO;
+        self.lblCount.hidden = NO;
+    }
+    self.lblCount.text = dataModel.foodSelectCount;
+    self.lblName.text = dataModel.foodName;
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

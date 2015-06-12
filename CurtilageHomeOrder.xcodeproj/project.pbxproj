@@ -140,6 +140,9 @@
 		1584B0821B27E69600A4E300 /* CKSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1584B0801B27E69600A4E300 /* CKSearchViewController.xib */; };
 		15B010341B29650B00C49B70 /* shangSanjiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B010321B29650B00C49B70 /* shangSanjiao@2x.png */; };
 		15B010351B29650B00C49B70 /* xiaSanjiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B010331B29650B00C49B70 /* xiaSanjiao@2x.png */; };
+		15B011181B2AA57B00C49B70 /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B011161B2AA57B00C49B70 /* plus@2x.png */; };
+		15B011191B2AA57B00C49B70 /* reduce@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B011171B2AA57B00C49B70 /* reduce@2x.png */; };
+		15B0111D1B2AA75A00C49B70 /* CKFoodListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B0111C1B2AA75A00C49B70 /* CKFoodListModel.m */; };
 		182347C31B1FAE3800DD04BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C21B1FAE3800DD04BE /* main.m */; };
 		182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C51B1FAE3800DD04BE /* AppDelegate.m */; };
 		182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182347CD1B1FAE3800DD04BE /* Images.xcassets */; };
@@ -398,6 +401,10 @@
 		1584B0801B27E69600A4E300 /* CKSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKSearchViewController.xib; sourceTree = "<group>"; };
 		15B010321B29650B00C49B70 /* shangSanjiao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shangSanjiao@2x.png"; sourceTree = "<group>"; };
 		15B010331B29650B00C49B70 /* xiaSanjiao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaSanjiao@2x.png"; sourceTree = "<group>"; };
+		15B011161B2AA57B00C49B70 /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@2x.png"; sourceTree = "<group>"; };
+		15B011171B2AA57B00C49B70 /* reduce@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reduce@2x.png"; sourceTree = "<group>"; };
+		15B0111B1B2AA75A00C49B70 /* CKFoodListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKFoodListModel.h; sourceTree = "<group>"; };
+		15B0111C1B2AA75A00C49B70 /* CKFoodListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKFoodListModel.m; sourceTree = "<group>"; };
 		182347BD1B1FAE3800DD04BE /* CurtilageHomeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurtilageHomeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182347C11B1FAE3800DD04BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182347C21B1FAE3800DD04BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -670,6 +677,7 @@
 		1584AFB91B20002200A4E300 /* NetWorkAndModel */ = {
 			isa = PBXGroup;
 			children = (
+				15B0111A1B2AA72B00C49B70 /* models */,
 				1584AFBA1B20002200A4E300 /* BaseNetWork.h */,
 				1584AFBB1B20002300A4E300 /* BaseNetWork.m */,
 			);
@@ -821,6 +829,15 @@
 				1584B0551B258D4800A4E300 /* My13.png */,
 			);
 			path = MyImages;
+			sourceTree = "<group>";
+		};
+		15B0111A1B2AA72B00C49B70 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				15B0111B1B2AA75A00C49B70 /* CKFoodListModel.h */,
+				15B0111C1B2AA75A00C49B70 /* CKFoodListModel.m */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 		182347B41B1FAE3800DD04BE = {
@@ -1010,6 +1027,8 @@
 		18A5480D1B2A4576004EF360 /* OrderMealImages */ = {
 			isa = PBXGroup;
 			children = (
+				15B011161B2AA57B00C49B70 /* plus@2x.png */,
+				15B011171B2AA57B00C49B70 /* reduce@2x.png */,
 				18A548101B2A5478004EF360 /* storeNotification@2x.png */,
 				18A5480E1B2A4576004EF360 /* shoppingCart@2x.png */,
 			);
@@ -1136,6 +1155,7 @@
 				1584AFFE1B23E40200A4E300 /* SwathesMarks.png in Resources */,
 				1584B00B1B23E62D00A4E300 /* OnlineBooking.png in Resources */,
 				1584B07D1B26DA5400A4E300 /* CKFoodCell.xib in Resources */,
+				15B011191B2AA57B00C49B70 /* reduce@2x.png in Resources */,
 				1584AFB21B1FF04400A4E300 /* LoginViewController.xib in Resources */,
 				182348361B1FBA8700DD04BE /* tabbar_selected_background.png in Resources */,
 				18AA8F571B28ED1D00D565A2 /* CKBusinessInfoViewController.xib in Resources */,
@@ -1173,6 +1193,7 @@
 				1584AFA31B1FEBB000A4E300 /* SVProgressHUD.bundle in Resources */,
 				1584B02E1B2455E800A4E300 /* TS2@2x.png in Resources */,
 				1584AFE91B22F38100A4E300 /* CKOrderListCell.xib in Resources */,
+				15B011181B2AA57B00C49B70 /* plus@2x.png in Resources */,
 				1584B05C1B258D4800A4E300 /* My13.png in Resources */,
 				1584AFB81B1FF50000A4E300 /* OrderListViewController.xib in Resources */,
 				182348121B1FB89A00DD04BE /* SettingViewController.xib in Resources */,
@@ -1210,6 +1231,7 @@
 				1584AFAA1B1FEC9100A4E300 /* UIView+Extend.m in Sources */,
 				1584B07C1B26DA5400A4E300 /* CKFoodCell.m in Sources */,
 				1584AFB71B1FF50000A4E300 /* OrderListViewController.m in Sources */,
+				15B0111D1B2AA75A00C49B70 /* CKFoodListModel.m in Sources */,
 				1584AF821B1FEBB000A4E300 /* MJRefreshComponent.m in Sources */,
 				1584AFE31B22F0B100A4E300 /* CKUserManager.m in Sources */,
 				1584AF9E1B1FEBB000A4E300 /* UIImage+WebP.m in Sources */,

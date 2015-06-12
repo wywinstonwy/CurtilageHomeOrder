@@ -8,6 +8,7 @@
 
 #import "CKChooseMealViewController.h"
 #import "CKFoodCell.h"
+#import "CKFoodListModel.h"
 @interface CKChooseMealViewController ()
 {
     NSMutableArray *arrayFoodClass;
@@ -34,12 +35,46 @@
     NSArray *arr1 = @[@"新鲜蛋糕",@"巧克力蛋糕",@"奶油蛋糕"];
     NSArray *arr2 = @[@"话是签了里",@"巧克力棒",@"千克力并"];
     NSArray *arr3 = @[@"加州拉面",@"兰州拉面",@"普通拉面",@"刀削面"];
-    [arrayFoodList addObject:arr1];
-    [arrayFoodList addObject:arr2];
-    [arrayFoodList addObject:arr3];
     
-    self.lblOderCount.layer.cornerRadius = 6;
-//    self.lblOderCount.layer.masksToBounds = YES;
+    NSMutableArray *arr11 = [[NSMutableArray alloc] initWithCapacity:0];
+    NSMutableArray *arr22 = [[NSMutableArray alloc] initWithCapacity:0];
+    NSMutableArray *arr33 = [[NSMutableArray alloc] initWithCapacity:0];
+    for (int i = 0; i<arr1.count; i++)
+    {
+        CKFoodListModel *dataModel =[[CKFoodListModel alloc] init];
+        dataModel.foodName = [arr1 objectAtIndex:i];
+        dataModel.foodPrice= [NSString stringWithFormat:@"%d",i];
+        dataModel.foodRecommendCont= [NSString stringWithFormat:@"%d",i];
+        dataModel.foodSelectCount= [NSString stringWithFormat:@"%d",i];
+        dataModel.foodPrice= [NSString stringWithFormat:@"%d",i];
+        [arr11 addObject:dataModel];
+        
+    } for (int i = 0; i<arr2.count; i++)
+    {
+        CKFoodListModel *dataModel =[[CKFoodListModel alloc] init];
+        dataModel.foodName = [arr1 objectAtIndex:i];
+        dataModel.foodPrice= [NSString stringWithFormat:@"%d",i];
+        dataModel.foodRecommendCont= [NSString stringWithFormat:@"%d",i];
+        dataModel.foodSelectCount= [NSString stringWithFormat:@"%d",i];
+        dataModel.foodPrice= [NSString stringWithFormat:@"%d",i];
+        [arr22 addObject:dataModel];
+        
+    } for (int i = 0; i<arr3.count; i++)
+    {
+        CKFoodListModel *dataModel =[[CKFoodListModel alloc] init];
+        dataModel.foodName = [arr1 objectAtIndex:i];
+        dataModel.foodPrice= [NSString stringWithFormat:@"%d",i];
+        dataModel.foodRecommendCont= [NSString stringWithFormat:@"%d",i];
+        dataModel.foodSelectCount= [NSString stringWithFormat:@"%d",i];
+        dataModel.foodPrice= [NSString stringWithFormat:@"%d",i];
+        [arr33 addObject:dataModel];
+        
+    }
+    [arrayFoodList addObject:arr11];
+    [arrayFoodList addObject:arr22];
+    [arrayFoodList addObject:arr33];
+    self.lblOderCount.layer.cornerRadius = self.lblOderCount.height/2.0f;
+    self.lblOderCount.layer.masksToBounds = YES;
     // Do any additional setup after loading the view from its nib.
 }
 #pragma mark UITableViewDelagate
@@ -92,9 +127,12 @@
     else
     {//CKFoodCell
         CKFoodCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKFoodCell"];
-        NSArray *arr = [arrayFoodList objectAtIndex:[indexPath section]];
         
-        cell.lblName.text = [arr objectAtIndex:indexPath.row];
+        NSArray *arr = [arrayFoodList objectAtIndex:[indexPath section]];
+        CKFoodListModel *dataModel = [arr objectAtIndex:indexPath.row];
+        cell.lblName.text = dataModel.foodName;
+        
+        [cell setCellContent:dataModel indexPath:indexPath];
         return cell;
     }
 }
@@ -109,7 +147,8 @@
         
     }
 }
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
