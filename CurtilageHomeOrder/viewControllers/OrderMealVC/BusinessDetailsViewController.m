@@ -9,12 +9,12 @@
 #import "BusinessDetailsViewController.h"
 #import "BusinessCommentView.h"
 #import "CKFoodCell.h"
+#import "CKChooseMealViewController.h"
 #import "CKBusinessInfoViewController.h"
 #import "CKBusinessCommentViewController.h"
-@interface BusinessDetailsViewController ()<UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface BusinessDetailsViewController ()<UIScrollViewDelegate>
 {
-    NSMutableArray *arrayFoodClass;
-    NSMutableArray *arrayFoodList;
+   
 }
 @end
 
@@ -22,20 +22,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[UIApplication sharedApplication].keyWindow addSubview:self.viewStoreNotifi];
+    self.viewStoreNotifi.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    self.viewStoreNotifi.hidden = YES;
+    
     self.mainScrollView.width = SCREEN_WIDTH;
     self.mainScrollView.height = SCREEN_HEIGHT-94;
     [self.mainScrollView setContentSize:CGSizeMake(SCREEN_WIDTH*3, SCREEN_HEIGHT-94)];
     self.mainScrollView.pagingEnabled = YES;
-    
-    
-    [self.tableViewFoodClass registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    [self.tableViewFoodList registerNib:[UINib nibWithNibName:@"CKFoodCell" bundle:nil] forCellReuseIdentifier:@"CKFoodCell"];
-    
-    self.tableViewFoodClass.tableFooterView =[[UIView alloc] init];
-    self.tableViewFoodClass.tableFooterView.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    
-    self.tableViewFoodList.height = self.mainScrollView.height;
-    self.tableViewFoodClass.height = self.mainScrollView.height;
+
+    CKChooseMealViewController *choseMealVC = [[CKChooseMealViewController alloc] initWithNibName:@"CKChooseMealViewController" bundle:nil];
+    [self addChildViewController:choseMealVC];
+    choseMealVC.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.mainScrollView.height);
+    [self.mainScrollView addSubview:choseMealVC.view];
+   
     //评论列表
     CKBusinessCommentViewController *commentVC = [[CKBusinessCommentViewController alloc] initWithNibName:@"CKBusinessCommentViewController" bundle:nil];
     [self addChildViewController:commentVC];
@@ -50,83 +50,31 @@
     viewFlag.view.frame = CGRectMake(SCREEN_WIDTH*2, 0, SCREEN_WIDTH, self.mainScrollView.height);
     [self.mainScrollView addSubview:viewFlag.view];
     
-    arrayFoodClass = [[NSMutableArray alloc] initWithObjects:@"法师鲜奶",@"巧克力",@"苏轼拉面", nil];
-    arrayFoodList = [[NSMutableArray alloc] init];
-    NSArray *arr1 = @[@"新鲜蛋糕",@"巧克力蛋糕",@"奶油蛋糕"];
-    NSArray *arr2 = @[@"话是签了里",@"巧克力棒",@"千克力并"];
-    NSArray *arr3 = @[@"加州拉面",@"兰州拉面",@"普通拉面",@"刀削面"];
-    [arrayFoodList addObject:arr1];
-    [arrayFoodList addObject:arr2];
-    [arrayFoodList addObject:arr3];
+   
     // Do any additional setup after loading the view from its nib.
 }
-#pragma mark UITableViewDelagate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//关闭店内通知
+- (IBAction)btnClickCloseStoreNotifi:(UIButton *)sender
 {
-    if (tableView.tag ==1) {
-        return arrayFoodClass.count;
-    }
-    else
-    {
-        NSArray *arr = [arrayFoodList objectAtIndex:section];
-      return  arr.count;
-    }
+    [UIView animateWithDuration:0.3 animations:^{
+        self.viewStoreNotifi.bottom = 0;
+    } completion:^(BOOL finished) {
+        self.viewStoreNotifi.hidden = YES;
   
+    }];
 }
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (IBAction)btnClickOpenStoreNotifi:(id)sender
 {
-    if (tableView.tag ==1) {
-        return 1;
-    }
-    else
-        return arrayFoodList.count;
+    self.viewStoreNotifi.hidden = NO;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.viewStoreNotifi.top = 0;
+    } completion:^(BOOL finished) {
+        
+    }];
+
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (tableView.tag == 1)
-    {
-        return 44;
-    }
-    else
-    {
-        return 100;
-    }
-}
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if (tableView.tag == 1) {
-        return nil;
-    }
-    else
-        return @"法师蛋糕";
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (tableView.tag == 1) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-        cell.textLabel.text = [arrayFoodClass objectAtIndex:indexPath.row];
-        return cell;
-    }
-    else
-    {//CKFoodCell
-        CKFoodCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKFoodCell"];
-        NSArray *arr = [arrayFoodList objectAtIndex:[indexPath section]];
- 
-        cell.lblName.text = [arr objectAtIndex:indexPath.row];
-        return cell;
-    }
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (tableView.tag == 1)
-    {
-        [self.tableViewFoodList scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.row] atScrollPosition:(UITableViewScrollPositionTop) animated:YES];
-    }
-    else
-    {
-    
-    }
-}
+
+
 - (IBAction)btnSelectMenuFunction:(UIButton *)sender;
 {
     [self.mainScrollView setContentOffset:CGPointMake(SCREEN_WIDTH*(sender.tag-100), 0) animated:YES];
