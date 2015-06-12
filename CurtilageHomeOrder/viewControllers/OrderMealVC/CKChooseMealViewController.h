@@ -11,6 +11,10 @@
 @interface CKChooseMealViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,weak) IBOutlet UITableView *tableViewFoodClass;
 @property(nonatomic,weak) IBOutlet UITableView *tableViewFoodList;
+@property(nonatomic,weak) IBOutlet UITableView *tableViewSelectResult;
+@property(nonatomic,weak) IBOutlet UIView *viewSelectResult;
 @property(nonatomic,weak) IBOutlet UILabel *lblOderCount;
 @property(nonatomic,weak) IBOutlet UIButton *btnBuy;
+
+-(IBAction)btnClickShowShopingCart:(id)sender;
 @end

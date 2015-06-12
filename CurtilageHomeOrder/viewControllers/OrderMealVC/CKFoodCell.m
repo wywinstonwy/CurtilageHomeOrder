@@ -21,7 +21,7 @@
 - (void)setCellContent:(CKFoodListModel *)dataModel indexPath:(NSIndexPath *)indePath;
 {
     
-    if (dataModel.foodSelectCount>0) {
+    if ([dataModel.foodSelectCount integerValue]>0) {
         self.btnReduce.hidden = NO;
         self.btnPlus.hidden = NO;
         self.lblCount.hidden = NO;
@@ -34,6 +34,9 @@
     }
     self.lblCount.text = dataModel.foodSelectCount;
     self.lblName.text = dataModel.foodName;
+    self.btnSelectStandard.hidden = YES;
+    
+   
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

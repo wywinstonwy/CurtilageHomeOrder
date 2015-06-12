@@ -55,14 +55,14 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5FC-qs-FKd">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5FC-qs-FKd" customClass="CKButton">
                         <rect key="frame" x="161" y="57" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" image="reduce.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rH8-rT-rf5">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rH8-rT-rf5" customClass="CKButton">
                         <rect key="frame" x="211" y="57" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" image="plus.png">
@@ -72,7 +72,10 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="btnPlus" destination="rH8-rT-rf5" id="eMf-K2-QQS"/>
+                <outlet property="btnReduce" destination="5FC-qs-FKd" id="TNc-6x-5uV"/>
                 <outlet property="btnSelectStandard" destination="DCE-WE-MKk" id="8Vx-tV-4I7"/>
+                <outlet property="lblCount" destination="gQy-2A-QWD" id="IFL-2K-0z7"/>
                 <outlet property="lblName" destination="D7k-QU-MSO" id="l5q-pl-hGO"/>
             </connections>
             <point key="canvasLocation" x="244" y="302.5"/>

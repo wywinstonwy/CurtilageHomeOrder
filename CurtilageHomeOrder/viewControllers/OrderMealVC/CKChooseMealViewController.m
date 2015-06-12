@@ -9,10 +9,14 @@
 #import "CKChooseMealViewController.h"
 #import "CKFoodCell.h"
 #import "CKFoodListModel.h"
+#import "CKButton.h"
+#import "CKSelectResultCell.h"
+
 @interface CKChooseMealViewController ()
 {
     NSMutableArray *arrayFoodClass;
     NSMutableArray *arrayFoodList;
+    NSMutableArray *arraySelectResult;
 
 }
 @end
@@ -23,15 +27,19 @@
     [super viewDidLoad];
     
     [self.tableViewFoodClass registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
     [self.tableViewFoodList registerNib:[UINib nibWithNibName:@"CKFoodCell" bundle:nil] forCellReuseIdentifier:@"CKFoodCell"];
+    
+    [self.tableViewSelectResult registerNib:[UINib nibWithNibName:@"CKSelectResultCell" bundle:nil] forCellReuseIdentifier:@"CKSelectResultCell"];
     
     self.tableViewFoodClass.tableFooterView =[[UIView alloc] init];
     self.tableViewFoodClass.tableFooterView.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    
+    self.viewSelectResult.top = SCREEN_HEIGHT;
 //    self.tableViewFoodList.height = self.mainScrollView.height;
 //    self.tableViewFoodClass.height = self.mainScrollView.height;
     arrayFoodClass = [[NSMutableArray alloc] initWithObjects:@"法师鲜奶",@"巧克力",@"苏轼拉面", nil];
     arrayFoodList = [[NSMutableArray alloc] init];
+    arraySelectResult = [[NSMutableArray alloc] initWithCapacity:0];
     NSArray *arr1 = @[@"新鲜蛋糕",@"巧克力蛋糕",@"奶油蛋糕"];
     NSArray *arr2 = @[@"话是签了里",@"巧克力棒",@"千克力并"];
     NSArray *arr3 = @[@"加州拉面",@"兰州拉面",@"普通拉面",@"刀削面"];
@@ -52,7 +60,7 @@
     } for (int i = 0; i<arr2.count; i++)
     {
         CKFoodListModel *dataModel =[[CKFoodListModel alloc] init];
-        dataModel.foodName = [arr1 objectAtIndex:i];
+        dataModel.foodName = [arr2 objectAtIndex:i];
         dataModel.foodPrice= [NSString stringWithFormat:@"%d",i];
         dataModel.foodRecommendCont= [NSString stringWithFormat:@"%d",i];
         dataModel.foodSelectCount= [NSString stringWithFormat:@"%d",i];
@@ -62,7 +70,7 @@
     } for (int i = 0; i<arr3.count; i++)
     {
         CKFoodListModel *dataModel =[[CKFoodListModel alloc] init];
-        dataModel.foodName = [arr1 objectAtIndex:i];
+        dataModel.foodName = [arr3 objectAtIndex:i];
         dataModel.foodPrice= [NSString stringWithFormat:@"%d",i];
         dataModel.foodRecommendCont= [NSString stringWithFormat:@"%d",i];
         dataModel.foodSelectCount= [NSString stringWithFormat:@"%d",i];
@@ -83,11 +91,13 @@
     if (tableView.tag ==1) {
         return arrayFoodClass.count;
     }
-    else
+    else if(tableView.tag ==2)
     {
         NSArray *arr = [arrayFoodList objectAtIndex:section];
         return  arr.count;
     }
+    else
+        return arraySelectResult.count;
     
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -95,8 +105,13 @@
     if (tableView.tag ==1) {
         return 1;
     }
-    else
+    else if(tableView.tag == 2)
+    {
         return arrayFoodList.count;
+
+    }
+    else
+        return 1;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -104,18 +119,26 @@
     {
         return 44;
     }
-    else
+    else if(tableView.tag ==2)
     {
         return 100;
     }
+    else
+        return 44;
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if (tableView.tag == 1) {
         return nil;
     }
-    else
+    else if(tableView.tag == 2)
+    {
         return @"法师蛋糕";
+    }
+    else
+    {
+        return nil;
+    }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -124,14 +147,33 @@
         cell.textLabel.text = [arrayFoodClass objectAtIndex:indexPath.row];
         return cell;
     }
-    else
+    else if(tableView.tag == 2)
     {//CKFoodCell
         CKFoodCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKFoodCell"];
-        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         NSArray *arr = [arrayFoodList objectAtIndex:[indexPath section]];
         CKFoodListModel *dataModel = [arr objectAtIndex:indexPath.row];
-        cell.lblName.text = dataModel.foodName;
+        cell.btnPlus.indexRow = indexPath.row;
+        cell.btnPlus.section = [indexPath section];
+        cell.btnReduce.indexRow = indexPath.row;
+        cell.btnReduce.section = [indexPath section];
+        [cell.btnPlus addTarget:self action:@selector(btnClickPlus:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.btnReduce addTarget:self action:@selector(btnClickReduce:) forControlEvents:UIControlEventTouchUpInside];
         
+        
+        [cell setCellContent:dataModel indexPath:indexPath];
+        return cell;
+    }
+    else
+    {
+        CKSelectResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKSelectResultCell"];
+        CKFoodListModel *dataModel = [arraySelectResult objectAtIndex:indexPath.row];
+        cell.btnPlus.indexRow = indexPath.row;
+        cell.btnPlus.section = [indexPath section];
+        cell.btnReduce.indexRow = indexPath.row;
+        cell.btnReduce.section = [indexPath section];
+        [cell.btnPlus addTarget:self action:@selector(btnClickSelectResultPlus:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.btnReduce addTarget:self action:@selector(btnClickSelectResultReduce:) forControlEvents:UIControlEventTouchUpInside];
         [cell setCellContent:dataModel indexPath:indexPath];
         return cell;
     }
@@ -144,8 +186,110 @@
     }
     else
     {
+        [self.tableViewFoodClass selectRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row inSection:0] animated:YES scrollPosition:(UITableViewScrollPositionTop)];
         
     }
+}
+-(IBAction)btnClickShowShopingCart:(id)sender
+{
+    [self.tableViewSelectResult reloadData];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.viewSelectResult.top = 0;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+#pragma mark 选餐数量加减
+- (void)btnClickPlus:(CKButton *)sender
+{
+    NSArray *arr = [arrayFoodList objectAtIndex:sender.section];
+    CKFoodListModel *dataModel = [arr objectAtIndex:sender.indexRow];
+    
+    NSInteger count = [dataModel.foodSelectCount integerValue]+1;
+    dataModel.foodSelectCount = [NSString stringWithFormat:@"%ld",(long)count];
+    
+    [self.tableViewFoodList reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:sender.indexRow inSection:sender.section]] withRowAnimation:(UITableViewRowAnimationFade)];
+    
+    [self calculateTotalNumber];
+
+}
+- (void)btnClickReduce:(CKButton *)sender
+{
+    NSArray *arr = [arrayFoodList objectAtIndex:sender.section];
+    CKFoodListModel *dataModel = [arr objectAtIndex:sender.indexRow];
+    
+    NSInteger count = [dataModel.foodSelectCount integerValue];
+    if (count>0) {
+        count = count-1;
+    }
+    dataModel.foodSelectCount = [NSString stringWithFormat:@"%ld",(long)count];
+    [self.tableViewFoodList reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:sender.indexRow inSection:sender.section]] withRowAnimation:(UITableViewRowAnimationFade)];
+    
+    [self calculateTotalNumber];
+
+}
+
+#pragma mark 选择结果操作
+- (void)btnClickSelectResultPlus:(CKButton *)sender
+{
+    CKFoodListModel *dataModel = [arraySelectResult objectAtIndex:sender.indexRow];
+    
+    NSInteger count = [dataModel.foodSelectCount integerValue]+1;
+    dataModel.foodSelectCount = [NSString stringWithFormat:@"%ld",(long)count];
+    
+    [self.tableViewSelectResult reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:sender.indexRow inSection:0]] withRowAnimation:(UITableViewRowAnimationFade)];
+    [self.tableViewSelectResult reloadData];
+
+    [self calculateTotalNumber];
+}
+- (void)btnClickSelectResultReduce:(CKButton *)sender
+{
+    CKFoodListModel *dataModel = [arraySelectResult objectAtIndex:sender.indexRow];
+    
+    NSInteger count = [dataModel.foodSelectCount integerValue];
+    if (count>0) {
+        count = count-1;
+    }
+    dataModel.foodSelectCount = [NSString stringWithFormat:@"%ld",(long)count];
+    [self.tableViewFoodList reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:sender.indexRow inSection:0]] withRowAnimation:(UITableViewRowAnimationFade)];
+    [self.tableViewSelectResult reloadData];
+    
+    [self calculateTotalNumber];
+}
+#pragma mark 计算所有选中的数量
+- (void)calculateTotalNumber
+{
+    NSInteger selectCount = 0;
+    for (int i = 0; i < arrayFoodList.count; i++)
+    {
+        NSArray *arr = [arrayFoodList objectAtIndex:i];
+        
+        for (int j = 0; j<arr.count; j++)
+        {
+            CKFoodListModel *dataModel = [arr objectAtIndex:j];
+            if ([dataModel.foodSelectCount integerValue]>0)
+            {
+                selectCount = selectCount+[dataModel.foodSelectCount integerValue];
+                [arraySelectResult addObject:dataModel];
+            }
+            
+
+        }
+    }
+    if (selectCount<10) {
+        self.lblOderCount.width = self.lblOderCount.height;
+    }
+    else
+        self.lblOderCount.width = self.lblOderCount.height+10;
+
+    self.lblOderCount.text = [NSString stringWithFormat:@"%ld",(long)selectCount];
+    if(selectCount<=0)
+    {
+        self.lblOderCount.hidden = YES;
+    }
+    else
+        self.lblOderCount.hidden = NO;
+    
 }
 - (void)didReceiveMemoryWarning
 {
