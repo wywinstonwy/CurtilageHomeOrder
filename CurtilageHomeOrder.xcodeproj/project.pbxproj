@@ -146,6 +146,18 @@
 		15B011201B2B1FEE00C49B70 /* CKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B0111F1B2B1FEE00C49B70 /* CKButton.m */; };
 		15B011241B2B2A6500C49B70 /* CKSelectResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B011221B2B2A6500C49B70 /* CKSelectResultCell.m */; };
 		15B011251B2B2A6500C49B70 /* CKSelectResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B011231B2B2A6500C49B70 /* CKSelectResultCell.xib */; };
+		15B011291B2C4BE900C49B70 /* CKCommitOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B011271B2C4BE900C49B70 /* CKCommitOrderVC.m */; };
+		15B0112A1B2C4BE900C49B70 /* CKCommitOrderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B011281B2C4BE900C49B70 /* CKCommitOrderVC.xib */; };
+		15B0112E1B2C50DF00C49B70 /* CKAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B0112C1B2C50DF00C49B70 /* CKAddressCell.m */; };
+		15B0112F1B2C50DF00C49B70 /* CKAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B0112D1B2C50DF00C49B70 /* CKAddressCell.xib */; };
+		15B011741B2C6ED900C49B70 /* CKSelectPayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B011721B2C6ED900C49B70 /* CKSelectPayCell.m */; };
+		15B011751B2C6ED900C49B70 /* CKSelectPayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B011731B2C6ED900C49B70 /* CKSelectPayCell.xib */; };
+		15B011791B2C775500C49B70 /* CKSelectMeaNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B011771B2C775500C49B70 /* CKSelectMeaNoteCell.m */; };
+		15B0117A1B2C775500C49B70 /* CKSelectMeaNoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B011781B2C775500C49B70 /* CKSelectMeaNoteCell.xib */; };
+		15B0117E1B2C7B8700C49B70 /* CKOderResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B0117C1B2C7B8700C49B70 /* CKOderResultCell.m */; };
+		15B0117F1B2C7B8700C49B70 /* CKOderResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B0117D1B2C7B8700C49B70 /* CKOderResultCell.xib */; };
+		15B011831B2C8CE200C49B70 /* CKWriteNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B011811B2C8CE200C49B70 /* CKWriteNoteVC.m */; };
+		15B011841B2C8CE200C49B70 /* CKWriteNoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B011821B2C8CE200C49B70 /* CKWriteNoteVC.xib */; };
 		182347C31B1FAE3800DD04BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C21B1FAE3800DD04BE /* main.m */; };
 		182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C51B1FAE3800DD04BE /* AppDelegate.m */; };
 		182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182347CD1B1FAE3800DD04BE /* Images.xcassets */; };
@@ -413,6 +425,24 @@
 		15B011211B2B2A6500C49B70 /* CKSelectResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSelectResultCell.h; sourceTree = "<group>"; };
 		15B011221B2B2A6500C49B70 /* CKSelectResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSelectResultCell.m; sourceTree = "<group>"; };
 		15B011231B2B2A6500C49B70 /* CKSelectResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKSelectResultCell.xib; sourceTree = "<group>"; };
+		15B011261B2C4BE900C49B70 /* CKCommitOrderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCommitOrderVC.h; sourceTree = "<group>"; };
+		15B011271B2C4BE900C49B70 /* CKCommitOrderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCommitOrderVC.m; sourceTree = "<group>"; };
+		15B011281B2C4BE900C49B70 /* CKCommitOrderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKCommitOrderVC.xib; sourceTree = "<group>"; };
+		15B0112B1B2C50DF00C49B70 /* CKAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAddressCell.h; sourceTree = "<group>"; };
+		15B0112C1B2C50DF00C49B70 /* CKAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAddressCell.m; sourceTree = "<group>"; };
+		15B0112D1B2C50DF00C49B70 /* CKAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKAddressCell.xib; sourceTree = "<group>"; };
+		15B011711B2C6ED900C49B70 /* CKSelectPayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSelectPayCell.h; sourceTree = "<group>"; };
+		15B011721B2C6ED900C49B70 /* CKSelectPayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSelectPayCell.m; sourceTree = "<group>"; };
+		15B011731B2C6ED900C49B70 /* CKSelectPayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKSelectPayCell.xib; sourceTree = "<group>"; };
+		15B011761B2C775500C49B70 /* CKSelectMeaNoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSelectMeaNoteCell.h; sourceTree = "<group>"; };
+		15B011771B2C775500C49B70 /* CKSelectMeaNoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSelectMeaNoteCell.m; sourceTree = "<group>"; };
+		15B011781B2C775500C49B70 /* CKSelectMeaNoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKSelectMeaNoteCell.xib; sourceTree = "<group>"; };
+		15B0117B1B2C7B8700C49B70 /* CKOderResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKOderResultCell.h; sourceTree = "<group>"; };
+		15B0117C1B2C7B8700C49B70 /* CKOderResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKOderResultCell.m; sourceTree = "<group>"; };
+		15B0117D1B2C7B8700C49B70 /* CKOderResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKOderResultCell.xib; sourceTree = "<group>"; };
+		15B011801B2C8CE200C49B70 /* CKWriteNoteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKWriteNoteVC.h; sourceTree = "<group>"; };
+		15B011811B2C8CE200C49B70 /* CKWriteNoteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKWriteNoteVC.m; sourceTree = "<group>"; };
+		15B011821B2C8CE200C49B70 /* CKWriteNoteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKWriteNoteVC.xib; sourceTree = "<group>"; };
 		182347BD1B1FAE3800DD04BE /* CurtilageHomeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurtilageHomeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182347C11B1FAE3800DD04BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182347C21B1FAE3800DD04BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -812,6 +842,18 @@
 				15B011211B2B2A6500C49B70 /* CKSelectResultCell.h */,
 				15B011221B2B2A6500C49B70 /* CKSelectResultCell.m */,
 				15B011231B2B2A6500C49B70 /* CKSelectResultCell.xib */,
+				15B0112B1B2C50DF00C49B70 /* CKAddressCell.h */,
+				15B0112C1B2C50DF00C49B70 /* CKAddressCell.m */,
+				15B0112D1B2C50DF00C49B70 /* CKAddressCell.xib */,
+				15B011711B2C6ED900C49B70 /* CKSelectPayCell.h */,
+				15B011721B2C6ED900C49B70 /* CKSelectPayCell.m */,
+				15B011731B2C6ED900C49B70 /* CKSelectPayCell.xib */,
+				15B011761B2C775500C49B70 /* CKSelectMeaNoteCell.h */,
+				15B011771B2C775500C49B70 /* CKSelectMeaNoteCell.m */,
+				15B011781B2C775500C49B70 /* CKSelectMeaNoteCell.xib */,
+				15B0117B1B2C7B8700C49B70 /* CKOderResultCell.h */,
+				15B0117C1B2C7B8700C49B70 /* CKOderResultCell.m */,
+				15B0117D1B2C7B8700C49B70 /* CKOderResultCell.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -1011,6 +1053,12 @@
 				18A548081B2A3DDD004EF360 /* CKChooseMealViewController.h */,
 				18A548091B2A3DDD004EF360 /* CKChooseMealViewController.m */,
 				18A5480A1B2A3DDD004EF360 /* CKChooseMealViewController.xib */,
+				15B011261B2C4BE900C49B70 /* CKCommitOrderVC.h */,
+				15B011271B2C4BE900C49B70 /* CKCommitOrderVC.m */,
+				15B011281B2C4BE900C49B70 /* CKCommitOrderVC.xib */,
+				15B011801B2C8CE200C49B70 /* CKWriteNoteVC.h */,
+				15B011811B2C8CE200C49B70 /* CKWriteNoteVC.m */,
+				15B011821B2C8CE200C49B70 /* CKWriteNoteVC.xib */,
 			);
 			path = OrderMealVC;
 			sourceTree = "<group>";
@@ -1163,6 +1211,7 @@
 				1584B0701B26968800A4E300 /* Search@2x.png in Resources */,
 				18AA8F5C1B28F1C700D565A2 /* CKBusinessCommentViewController.xib in Resources */,
 				182348081B1FB87200DD04BE /* MyViewController.xib in Resources */,
+				15B011841B2C8CE200C49B70 /* CKWriteNoteVC.xib in Resources */,
 				1584B0301B2455E800A4E300 /* TS4@2x.png in Resources */,
 				1584B04B1B258AFC00A4E300 /* Set2.png in Resources */,
 				1584AFFE1B23E40200A4E300 /* SwathesMarks.png in Resources */,
@@ -1198,18 +1247,23 @@
 				1584B00A1B23E62D00A4E300 /* Lifeservice.png in Resources */,
 				1584B0591B258D4800A4E300 /* My10.png in Resources */,
 				1584B02D1B2455E800A4E300 /* T4@2x.png in Resources */,
+				15B011751B2C6ED900C49B70 /* CKSelectPayCell.xib in Resources */,
 				18A5480C1B2A3DDD004EF360 /* CKChooseMealViewController.xib in Resources */,
 				18A8D7231B210D0100615933 /* ModifyPdViewController.xib in Resources */,
 				1584B06C1B268D6E00A4E300 /* zan@2x.png in Resources */,
 				1584B06F1B26968800A4E300 /* back2@2x.png in Resources */,
 				1584AFC01B20025200A4E300 /* back@2x.png in Resources */,
+				15B0117A1B2C775500C49B70 /* CKSelectMeaNoteCell.xib in Resources */,
 				1584AFA31B1FEBB000A4E300 /* SVProgressHUD.bundle in Resources */,
 				1584B02E1B2455E800A4E300 /* TS2@2x.png in Resources */,
 				15B011251B2B2A6500C49B70 /* CKSelectResultCell.xib in Resources */,
 				1584AFE91B22F38100A4E300 /* CKOrderListCell.xib in Resources */,
 				15B011181B2AA57B00C49B70 /* plus@2x.png in Resources */,
 				1584B05C1B258D4800A4E300 /* My13.png in Resources */,
+				15B0117F1B2C7B8700C49B70 /* CKOderResultCell.xib in Resources */,
 				1584AFB81B1FF50000A4E300 /* OrderListViewController.xib in Resources */,
+				15B0112A1B2C4BE900C49B70 /* CKCommitOrderVC.xib in Resources */,
+				15B0112F1B2C50DF00C49B70 /* CKAddressCell.xib in Resources */,
 				182348121B1FB89A00DD04BE /* SettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1232,6 +1286,7 @@
 				1584AF911B1FEBB000A4E300 /* MKAnnotationView+WebCache.m in Sources */,
 				1584AF8E1B1FEBB000A4E300 /* MBProgressHUD+Add.m in Sources */,
 				1584AF7B1B1FEBB000A4E300 /* UIAlertView+AFNetworking.m in Sources */,
+				15B0112E1B2C50DF00C49B70 /* CKAddressCell.m in Sources */,
 				1584AFE81B22F38100A4E300 /* CKOrderListCell.m in Sources */,
 				1584B0641B2592A100A4E300 /* BusinessDetailsViewController.m in Sources */,
 				1584AF841B1FEBB000A4E300 /* MJRefreshFooter.m in Sources */,
@@ -1239,6 +1294,8 @@
 				1584AFA21B1FEBB000A4E300 /* SVIndefiniteAnimatedView.m in Sources */,
 				1584AF991B1FEBB000A4E300 /* SDWebImageManager.m in Sources */,
 				18B2A6D31B26545D00F96B79 /* BusinessCommentView.m in Sources */,
+				15B011831B2C8CE200C49B70 /* CKWriteNoteVC.m in Sources */,
+				15B011741B2C6ED900C49B70 /* CKSelectPayCell.m in Sources */,
 				1584AF851B1FEBB000A4E300 /* MJRefreshGifFooter.m in Sources */,
 				1584AF7D1B1FEBB000A4E300 /* UIImageView+AFNetworking.m in Sources */,
 				1584AF961B1FEBB000A4E300 /* SDWebImageDecoder.m in Sources */,
@@ -1250,6 +1307,7 @@
 				1584AF821B1FEBB000A4E300 /* MJRefreshComponent.m in Sources */,
 				1584AFE31B22F0B100A4E300 /* CKUserManager.m in Sources */,
 				1584AF9E1B1FEBB000A4E300 /* UIImage+WebP.m in Sources */,
+				15B0117E1B2C7B8700C49B70 /* CKOderResultCell.m in Sources */,
 				1584AF7C1B1FEBB000A4E300 /* UIButton+AFNetworking.m in Sources */,
 				1584AF701B1FEBB000A4E300 /* AFHTTPRequestOperation.m in Sources */,
 				18AA8F5B1B28F1C700D565A2 /* CKBusinessCommentViewController.m in Sources */,
@@ -1271,6 +1329,7 @@
 				1584B0811B27E69600A4E300 /* CKSearchViewController.m in Sources */,
 				1584AF751B1FEBB000A4E300 /* AFURLConnectionOperation.m in Sources */,
 				1584AFA01B1FEBB000A4E300 /* UIImageView+WebCache.m in Sources */,
+				15B011791B2C775500C49B70 /* CKSelectMeaNoteCell.m in Sources */,
 				1584AF9D1B1FEBB000A4E300 /* UIImage+MultiFormat.m in Sources */,
 				1584AFA41B1FEBB000A4E300 /* SVProgressHUD.m in Sources */,
 				18A8D7181B21025000615933 /* RegisterViewController.m in Sources */,
@@ -1298,6 +1357,7 @@
 				1584AF771B1FEBB000A4E300 /* AFURLResponseSerialization.m in Sources */,
 				1584AF7A1B1FEBB000A4E300 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				18A5480B1B2A3DDD004EF360 /* CKChooseMealViewController.m in Sources */,
+				15B011291B2C4BE900C49B70 /* CKCommitOrderVC.m in Sources */,
 				1584AF8C1B1FEBB000A4E300 /* UIView+MJExtension.m in Sources */,
 				1584AF7F1B1FEBB000A4E300 /* UIRefreshControl+AFNetworking.m in Sources */,
 				1584AFDE1B214D0600A4E300 /* CKPageScrollView.m in Sources */,

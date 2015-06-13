@@ -17,4 +17,5 @@
 #import "BaseNetWork.h"
 #import "Tools.h"
 #import "CKUserManager.h"
+#import "SVProgressHUD.h"
 #endif

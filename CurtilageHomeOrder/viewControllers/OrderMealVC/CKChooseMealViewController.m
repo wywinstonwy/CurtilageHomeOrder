@@ -11,7 +11,7 @@
 #import "CKFoodListModel.h"
 #import "CKButton.h"
 #import "CKSelectResultCell.h"
-
+#import "CKCommitOrderVC.h"
 @interface CKChooseMealViewController ()
 {
     NSMutableArray *arrayFoodClass;
@@ -35,8 +35,9 @@
     self.tableViewFoodClass.tableFooterView =[[UIView alloc] init];
     self.tableViewFoodClass.tableFooterView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.viewSelectResult.top = SCREEN_HEIGHT;
-//    self.tableViewFoodList.height = self.mainScrollView.height;
-//    self.tableViewFoodClass.height = self.mainScrollView.height;
+    self.tableViewSelectResult.tableHeaderView = self.viewSelectResultHeader;
+    self.tableViewSelectResult.tableFooterView = [[UIView alloc] init];
+
     arrayFoodClass = [[NSMutableArray alloc] initWithObjects:@"法师鲜奶",@"巧克力",@"苏轼拉面", nil];
     arrayFoodList = [[NSMutableArray alloc] init];
     arraySelectResult = [[NSMutableArray alloc] initWithCapacity:0];
@@ -153,6 +154,9 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         NSArray *arr = [arrayFoodList objectAtIndex:[indexPath section]];
         CKFoodListModel *dataModel = [arr objectAtIndex:indexPath.row];
+        dataModel.section = [indexPath section];
+        dataModel.indexRow = indexPath.row;
+        
         cell.btnPlus.indexRow = indexPath.row;
         cell.btnPlus.section = [indexPath section];
         cell.btnReduce.indexRow = indexPath.row;
@@ -167,14 +171,20 @@
     else
     {
         CKSelectResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKSelectResultCell"];
-        CKFoodListModel *dataModel = [arraySelectResult objectAtIndex:indexPath.row];
-        cell.btnPlus.indexRow = indexPath.row;
-        cell.btnPlus.section = [indexPath section];
-        cell.btnReduce.indexRow = indexPath.row;
-        cell.btnReduce.section = [indexPath section];
-        [cell.btnPlus addTarget:self action:@selector(btnClickSelectResultPlus:) forControlEvents:UIControlEventTouchUpInside];
-        [cell.btnReduce addTarget:self action:@selector(btnClickSelectResultReduce:) forControlEvents:UIControlEventTouchUpInside];
-        [cell setCellContent:dataModel indexPath:indexPath];
+        if (indexPath) {
+            if (arraySelectResult.count>= indexPath.row+1) {
+                CKFoodListModel *dataModel = [arraySelectResult objectAtIndex:indexPath.row];
+                cell.btnPlus.indexRow = indexPath.row;
+                cell.btnPlus.section = [indexPath section];
+                cell.btnReduce.indexRow = indexPath.row;
+                cell.btnReduce.section = [indexPath section];
+                [cell.btnPlus addTarget:self action:@selector(btnClickSelectResultPlus:) forControlEvents:UIControlEventTouchUpInside];
+                [cell.btnReduce addTarget:self action:@selector(btnClickSelectResultReduce:) forControlEvents:UIControlEventTouchUpInside];
+                [cell setCellContent:dataModel indexPath:indexPath];
+            }
+            
+        }
+       
         return cell;
     }
 }
@@ -184,20 +194,71 @@
     {
         [self.tableViewFoodList scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.row] atScrollPosition:(UITableViewScrollPositionTop) animated:YES];
     }
-    else
+    else if(tableView.tag == 2)
     {
         [self.tableViewFoodClass selectRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row inSection:0] animated:YES scrollPosition:(UITableViewScrollPositionTop)];
         
     }
+   
 }
 -(IBAction)btnClickShowShopingCart:(id)sender
 {
+    [self calculateTotalNumber];
     [self.tableViewSelectResult reloadData];
+    if (arraySelectResult.count <= 0) {
+        return;
+    }
+    self.tableViewSelectResult.height = 44*arraySelectResult.count+44;
+    if (self.tableViewSelectResult.height>SCREEN_HEIGHT-113) {
+        self.tableViewSelectResult.height = SCREEN_HEIGHT-113;
+    }
+    self.tableViewSelectResult.bottom = SCREEN_HEIGHT - 143;
+    
     [UIView animateWithDuration:0.3 animations:^{
         self.viewSelectResult.top = 0;
     } completion:^(BOOL finished) {
         
     }];
+}
+- (IBAction)hiddenShopingCart
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        self.viewSelectResult.top = SCREEN_HEIGHT;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+//清除购物车
+- (IBAction)clearShopingCar:(id)sender;
+{
+    [arraySelectResult removeAllObjects];
+
+    for (int i = 0; i < arrayFoodList.count; i++)
+    {
+        NSArray *arr = [arrayFoodList objectAtIndex:i];
+        
+        for (int j = 0; j<arr.count; j++)
+        {
+            CKFoodListModel *dataModel = [arr objectAtIndex:j];
+            if ([dataModel.foodSelectCount integerValue]>0)
+            {
+                dataModel.foodSelectCount = @"0";
+            }
+        }
+    }
+    [self.tableViewSelectResult reloadData];
+    [self.tableViewFoodList reloadData];
+    [self calculateTotalNumber];
+    
+    [self performSelector:@selector(hiddenShopingCart) withObject:nil afterDelay:0.3];
+    
+}
+//点击购买
+- (IBAction)btnClickToBuy:(UIButton *)sender
+{
+    CKCommitOrderVC *viewFlag = [[CKCommitOrderVC alloc] initWithNibName:@"CKCommitOrderVC" bundle:nil];
+    [self pushToViewController:viewFlag anmation:YES];
+    
 }
 #pragma mark 选餐数量加减
 - (void)btnClickPlus:(CKButton *)sender
@@ -211,6 +272,7 @@
     [self.tableViewFoodList reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:sender.indexRow inSection:sender.section]] withRowAnimation:(UITableViewRowAnimationFade)];
     
     [self calculateTotalNumber];
+    
 
 }
 - (void)btnClickReduce:(CKButton *)sender
@@ -229,16 +291,16 @@
 
 }
 
-#pragma mark 选择结果操作
+#pragma mark 选择结果加减操作
 - (void)btnClickSelectResultPlus:(CKButton *)sender
 {
+    
     CKFoodListModel *dataModel = [arraySelectResult objectAtIndex:sender.indexRow];
     
     NSInteger count = [dataModel.foodSelectCount integerValue]+1;
     dataModel.foodSelectCount = [NSString stringWithFormat:@"%ld",(long)count];
-    
-    [self.tableViewSelectResult reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:sender.indexRow inSection:0]] withRowAnimation:(UITableViewRowAnimationFade)];
     [self.tableViewSelectResult reloadData];
+    [self.tableViewFoodList reloadData];
 
     [self calculateTotalNumber];
 }
@@ -251,8 +313,10 @@
         count = count-1;
     }
     dataModel.foodSelectCount = [NSString stringWithFormat:@"%ld",(long)count];
-    [self.tableViewFoodList reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:sender.indexRow inSection:0]] withRowAnimation:(UITableViewRowAnimationFade)];
     [self.tableViewSelectResult reloadData];
+    [self.tableViewFoodList reloadData];
+
+   // [self.tableViewFoodList reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:dataModel.indexRow inSection:dataModel.section]] withRowAnimation:(UITableViewRowAnimationFade)];
     
     [self calculateTotalNumber];
 }
@@ -260,6 +324,9 @@
 - (void)calculateTotalNumber
 {
     NSInteger selectCount = 0;
+    CGFloat TotalPrice = 0.0;
+    
+    [arraySelectResult removeAllObjects];
     for (int i = 0; i < arrayFoodList.count; i++)
     {
         NSArray *arr = [arrayFoodList objectAtIndex:i];
@@ -270,6 +337,7 @@
             if ([dataModel.foodSelectCount integerValue]>0)
             {
                 selectCount = selectCount+[dataModel.foodSelectCount integerValue];
+                TotalPrice =TotalPrice + [dataModel.foodSelectCount integerValue]*[dataModel.foodPrice floatValue];
                 [arraySelectResult addObject:dataModel];
             }
             
@@ -283,6 +351,7 @@
         self.lblOderCount.width = self.lblOderCount.height+10;
 
     self.lblOderCount.text = [NSString stringWithFormat:@"%ld",(long)selectCount];
+    self.lblTotalPrice.text = [NSString stringWithFormat:@"共￥%.1f",TotalPrice];
     if(selectCount<=0)
     {
         self.lblOderCount.hidden = YES;
@@ -290,7 +359,30 @@
     else
         self.lblOderCount.hidden = NO;
     
+    [self.tableViewSelectResult reloadData];
+    
+    if(TotalPrice<20)
+    {
+        self.btnBuy.backgroundColor = [UIColor lightGrayColor];
+        [self.btnBuy setTitle:[NSString stringWithFormat:@"还差￥%.1f起送",20-TotalPrice] forState:UIControlStateNormal];
+        [self.btnBuy setEnabled:NO];
+    }
+    else if (TotalPrice >= 20)
+    {
+        self.btnBuy.backgroundColor = setNaviColor;
+        [self.btnBuy setTitle:@"选好了" forState:UIControlStateNormal];
+        [self.btnBuy setEnabled:YES];
+
+    }
+    if (arraySelectResult.count == 0) {
+        self.lblTotalPrice.text = @"购物车是空的";
+        self.btnBuy.backgroundColor = setNaviColor;
+        [self.btnBuy setTitle:@"20元起送" forState:UIControlStateNormal];
+        self.btnBuy.enabled = NO;
+    }
+    
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

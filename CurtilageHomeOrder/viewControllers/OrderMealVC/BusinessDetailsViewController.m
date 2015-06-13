@@ -42,16 +42,12 @@
     commentVC.view.frame = CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, self.mainScrollView.height);
     [self.mainScrollView addSubview:commentVC.view];
     
-//    BusinessCommentView *viewComment = [[BusinessCommentView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, self.mainScrollView.height)];
-//    [self.mainScrollView addSubview:viewComment];
     //商户详情
     CKBusinessInfoViewController *viewFlag = [[CKBusinessInfoViewController alloc] initWithNibName:@"CKBusinessInfoViewController" bundle:nil];
     [self addChildViewController:viewFlag];
     viewFlag.view.frame = CGRectMake(SCREEN_WIDTH*2, 0, SCREEN_WIDTH, self.mainScrollView.height);
     [self.mainScrollView addSubview:viewFlag.view];
     
-   
-    // Do any additional setup after loading the view from its nib.
 }
 //关闭店内通知
 - (IBAction)btnClickCloseStoreNotifi:(UIButton *)sender

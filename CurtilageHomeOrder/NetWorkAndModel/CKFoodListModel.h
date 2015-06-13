@@ -16,4 +16,7 @@
 @property (nonatomic,strong) NSString *foodSelectCount;
 @property (nonatomic,strong) NSString *foodID;
 
+@property (nonatomic,assign) NSInteger section;
+@property (nonatomic,assign) NSInteger indexRow;
+
 @end

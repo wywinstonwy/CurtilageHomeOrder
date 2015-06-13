@@ -20,7 +20,26 @@
     self.arraySource = [[NSMutableArray alloc] initWithObjects:@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"", nil];
     [self.tableViewComment registerNib:[UINib nibWithNibName:@"CommentCell" bundle:nil] forCellReuseIdentifier:@"CommentCell"];
     self.tableViewComment.tableHeaderView = self.viewHeader;
+    self.btnCommentAll.layer.cornerRadius =
+    self.btnComment.layer.cornerRadius = 4.0f;
+    
+    self.btnCommentAll.layer.borderColor =setNaviColor.CGColor;
+    self.btnComment.layer.borderColor = [UIColor grayColor].CGColor;
+    self.btnCommentAll.layer.borderWidth =self.btnComment.layer.borderWidth = 1;
+    
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)btnClickComentList:(UIButton *)sender;
+{
+    for (int i = 1; i<3; i++) {
+        UIButton *btn = (UIButton *)[self.view viewWithTag:i];
+        btn.layer.borderColor = [UIColor grayColor].CGColor;
+        [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    }
+    
+    sender.layer.borderColor = setNaviColor.CGColor;
+    [sender setTitleColor:setNaviColor forState:UIControlStateNormal];
+
 }
 #pragma mark tableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
