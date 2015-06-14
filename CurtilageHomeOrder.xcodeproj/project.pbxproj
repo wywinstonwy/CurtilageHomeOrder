@@ -158,6 +158,21 @@
 		15B0117F1B2C7B8700C49B70 /* CKOderResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B0117D1B2C7B8700C49B70 /* CKOderResultCell.xib */; };
 		15B011831B2C8CE200C49B70 /* CKWriteNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B011811B2C8CE200C49B70 /* CKWriteNoteVC.m */; };
 		15B011841B2C8CE200C49B70 /* CKWriteNoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B011821B2C8CE200C49B70 /* CKWriteNoteVC.xib */; };
+		15B011861B2CFB8000C49B70 /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B011851B2CFB8000C49B70 /* time@2x.png */; };
+		15B0118A1B2CFFFD00C49B70 /* CKFoodClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B011881B2CFFFD00C49B70 /* CKFoodClassCell.m */; };
+		15B0118B1B2CFFFD00C49B70 /* CKFoodClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B011891B2CFFFD00C49B70 /* CKFoodClassCell.xib */; };
+		15B0118F1B2D038600C49B70 /* CKAbourtUSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B0118D1B2D038600C49B70 /* CKAbourtUSVC.m */; };
+		15B011901B2D038600C49B70 /* CKAbourtUSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B0118E1B2D038600C49B70 /* CKAbourtUSVC.xib */; };
+		15B011941B2D784F00C49B70 /* CKFeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B011921B2D784F00C49B70 /* CKFeedBackVC.m */; };
+		15B011951B2D784F00C49B70 /* CKFeedBackVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B011931B2D784F00C49B70 /* CKFeedBackVC.xib */; };
+		15B011991B2D7C8100C49B70 /* CKAddressListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B011971B2D7C8100C49B70 /* CKAddressListVC.m */; };
+		15B0119A1B2D7C8100C49B70 /* CKAddressListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B011981B2D7C8100C49B70 /* CKAddressListVC.xib */; };
+		15B011A41B2D7D5C00C49B70 /* CKMyVouchersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B011A21B2D7D5C00C49B70 /* CKMyVouchersVC.m */; };
+		15B011A51B2D7D5C00C49B70 /* CKMyVouchersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B011A31B2D7D5C00C49B70 /* CKMyVouchersVC.xib */; };
+		15B011A91B2D7D8B00C49B70 /* CKMyCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B011A71B2D7D8B00C49B70 /* CKMyCollectionVC.m */; };
+		15B011AA1B2D7D8B00C49B70 /* CKMyCollectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B011A81B2D7D8B00C49B70 /* CKMyCollectionVC.xib */; };
+		15B011AE1B2D7EB100C49B70 /* CKCommentListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B011AC1B2D7EB100C49B70 /* CKCommentListVC.m */; };
+		15B011AF1B2D7EB100C49B70 /* CKCommentListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B011AD1B2D7EB100C49B70 /* CKCommentListVC.xib */; };
 		182347C31B1FAE3800DD04BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C21B1FAE3800DD04BE /* main.m */; };
 		182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C51B1FAE3800DD04BE /* AppDelegate.m */; };
 		182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182347CD1B1FAE3800DD04BE /* Images.xcassets */; };
@@ -192,7 +207,6 @@
 		18AA8F5B1B28F1C700D565A2 /* CKBusinessCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AA8F591B28F1C700D565A2 /* CKBusinessCommentViewController.m */; };
 		18AA8F5C1B28F1C700D565A2 /* CKBusinessCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AA8F5A1B28F1C700D565A2 /* CKBusinessCommentViewController.xib */; };
 		18B2A6D01B26480100F96B79 /* rightArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B2A6CF1B26480100F96B79 /* rightArrow@2x.png */; };
-		18B2A6D31B26545D00F96B79 /* BusinessCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2A6D21B26545D00F96B79 /* BusinessCommentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -443,6 +457,28 @@
 		15B011801B2C8CE200C49B70 /* CKWriteNoteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKWriteNoteVC.h; sourceTree = "<group>"; };
 		15B011811B2C8CE200C49B70 /* CKWriteNoteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKWriteNoteVC.m; sourceTree = "<group>"; };
 		15B011821B2C8CE200C49B70 /* CKWriteNoteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKWriteNoteVC.xib; sourceTree = "<group>"; };
+		15B011851B2CFB8000C49B70 /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
+		15B011871B2CFFFD00C49B70 /* CKFoodClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKFoodClassCell.h; sourceTree = "<group>"; };
+		15B011881B2CFFFD00C49B70 /* CKFoodClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKFoodClassCell.m; sourceTree = "<group>"; };
+		15B011891B2CFFFD00C49B70 /* CKFoodClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKFoodClassCell.xib; sourceTree = "<group>"; };
+		15B0118C1B2D038600C49B70 /* CKAbourtUSVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAbourtUSVC.h; sourceTree = "<group>"; };
+		15B0118D1B2D038600C49B70 /* CKAbourtUSVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAbourtUSVC.m; sourceTree = "<group>"; };
+		15B0118E1B2D038600C49B70 /* CKAbourtUSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKAbourtUSVC.xib; sourceTree = "<group>"; };
+		15B011911B2D784F00C49B70 /* CKFeedBackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKFeedBackVC.h; sourceTree = "<group>"; };
+		15B011921B2D784F00C49B70 /* CKFeedBackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKFeedBackVC.m; sourceTree = "<group>"; };
+		15B011931B2D784F00C49B70 /* CKFeedBackVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKFeedBackVC.xib; sourceTree = "<group>"; };
+		15B011961B2D7C8100C49B70 /* CKAddressListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAddressListVC.h; sourceTree = "<group>"; };
+		15B011971B2D7C8100C49B70 /* CKAddressListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAddressListVC.m; sourceTree = "<group>"; };
+		15B011981B2D7C8100C49B70 /* CKAddressListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKAddressListVC.xib; sourceTree = "<group>"; };
+		15B011A11B2D7D5C00C49B70 /* CKMyVouchersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMyVouchersVC.h; sourceTree = "<group>"; };
+		15B011A21B2D7D5C00C49B70 /* CKMyVouchersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKMyVouchersVC.m; sourceTree = "<group>"; };
+		15B011A31B2D7D5C00C49B70 /* CKMyVouchersVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKMyVouchersVC.xib; sourceTree = "<group>"; };
+		15B011A61B2D7D8B00C49B70 /* CKMyCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMyCollectionVC.h; sourceTree = "<group>"; };
+		15B011A71B2D7D8B00C49B70 /* CKMyCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKMyCollectionVC.m; sourceTree = "<group>"; };
+		15B011A81B2D7D8B00C49B70 /* CKMyCollectionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKMyCollectionVC.xib; sourceTree = "<group>"; };
+		15B011AB1B2D7EB100C49B70 /* CKCommentListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCommentListVC.h; sourceTree = "<group>"; };
+		15B011AC1B2D7EB100C49B70 /* CKCommentListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCommentListVC.m; sourceTree = "<group>"; };
+		15B011AD1B2D7EB100C49B70 /* CKCommentListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKCommentListVC.xib; sourceTree = "<group>"; };
 		182347BD1B1FAE3800DD04BE /* CurtilageHomeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurtilageHomeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182347C11B1FAE3800DD04BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182347C21B1FAE3800DD04BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -495,8 +531,6 @@
 		18AA8F591B28F1C700D565A2 /* CKBusinessCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKBusinessCommentViewController.m; sourceTree = "<group>"; };
 		18AA8F5A1B28F1C700D565A2 /* CKBusinessCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKBusinessCommentViewController.xib; sourceTree = "<group>"; };
 		18B2A6CF1B26480100F96B79 /* rightArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightArrow@2x.png"; sourceTree = "<group>"; };
-		18B2A6D11B26545D00F96B79 /* BusinessCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCommentView.h; sourceTree = "<group>"; };
-		18B2A6D21B26545D00F96B79 /* BusinessCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCommentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -854,6 +888,9 @@
 				15B0117B1B2C7B8700C49B70 /* CKOderResultCell.h */,
 				15B0117C1B2C7B8700C49B70 /* CKOderResultCell.m */,
 				15B0117D1B2C7B8700C49B70 /* CKOderResultCell.xib */,
+				15B011871B2CFFFD00C49B70 /* CKFoodClassCell.h */,
+				15B011881B2CFFFD00C49B70 /* CKFoodClassCell.m */,
+				15B011891B2CFFFD00C49B70 /* CKFoodClassCell.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -891,6 +928,13 @@
 				15B0111C1B2AA75A00C49B70 /* CKFoodListModel.m */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		15B0119B1B2D7C8800C49B70 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 		182347B41B1FAE3800DD04BE = {
@@ -1022,9 +1066,22 @@
 		182347FB1B1FB7BE00DD04BE /* MyVC */ = {
 			isa = PBXGroup;
 			children = (
+				15B0119B1B2D7C8800C49B70 /* views */,
 				182348041B1FB87200DD04BE /* MyViewController.h */,
 				182348051B1FB87200DD04BE /* MyViewController.m */,
 				182348061B1FB87200DD04BE /* MyViewController.xib */,
+				15B011961B2D7C8100C49B70 /* CKAddressListVC.h */,
+				15B011971B2D7C8100C49B70 /* CKAddressListVC.m */,
+				15B011981B2D7C8100C49B70 /* CKAddressListVC.xib */,
+				15B011A11B2D7D5C00C49B70 /* CKMyVouchersVC.h */,
+				15B011A21B2D7D5C00C49B70 /* CKMyVouchersVC.m */,
+				15B011A31B2D7D5C00C49B70 /* CKMyVouchersVC.xib */,
+				15B011A61B2D7D8B00C49B70 /* CKMyCollectionVC.h */,
+				15B011A71B2D7D8B00C49B70 /* CKMyCollectionVC.m */,
+				15B011A81B2D7D8B00C49B70 /* CKMyCollectionVC.xib */,
+				15B011AB1B2D7EB100C49B70 /* CKCommentListVC.h */,
+				15B011AC1B2D7EB100C49B70 /* CKCommentListVC.m */,
+				15B011AD1B2D7EB100C49B70 /* CKCommentListVC.xib */,
 			);
 			path = MyVC;
 			sourceTree = "<group>";
@@ -1039,8 +1096,9 @@
 				1584B0611B2592A100A4E300 /* BusinessDetailsViewController.h */,
 				1584B0621B2592A100A4E300 /* BusinessDetailsViewController.m */,
 				1584B0631B2592A100A4E300 /* BusinessDetailsViewController.xib */,
-				18B2A6D11B26545D00F96B79 /* BusinessCommentView.h */,
-				18B2A6D21B26545D00F96B79 /* BusinessCommentView.m */,
+				18A548081B2A3DDD004EF360 /* CKChooseMealViewController.h */,
+				18A548091B2A3DDD004EF360 /* CKChooseMealViewController.m */,
+				18A5480A1B2A3DDD004EF360 /* CKChooseMealViewController.xib */,
 				1584B07E1B27E69600A4E300 /* CKSearchViewController.h */,
 				1584B07F1B27E69600A4E300 /* CKSearchViewController.m */,
 				1584B0801B27E69600A4E300 /* CKSearchViewController.xib */,
@@ -1050,9 +1108,6 @@
 				18AA8F531B28ED1D00D565A2 /* CKBusinessInfoViewController.h */,
 				18AA8F541B28ED1D00D565A2 /* CKBusinessInfoViewController.m */,
 				18AA8F551B28ED1D00D565A2 /* CKBusinessInfoViewController.xib */,
-				18A548081B2A3DDD004EF360 /* CKChooseMealViewController.h */,
-				18A548091B2A3DDD004EF360 /* CKChooseMealViewController.m */,
-				18A5480A1B2A3DDD004EF360 /* CKChooseMealViewController.xib */,
 				15B011261B2C4BE900C49B70 /* CKCommitOrderVC.h */,
 				15B011271B2C4BE900C49B70 /* CKCommitOrderVC.m */,
 				15B011281B2C4BE900C49B70 /* CKCommitOrderVC.xib */,
@@ -1070,6 +1125,12 @@
 				1823480E1B1FB89A00DD04BE /* SettingViewController.h */,
 				1823480F1B1FB89A00DD04BE /* SettingViewController.m */,
 				182348101B1FB89A00DD04BE /* SettingViewController.xib */,
+				15B0118C1B2D038600C49B70 /* CKAbourtUSVC.h */,
+				15B0118D1B2D038600C49B70 /* CKAbourtUSVC.m */,
+				15B0118E1B2D038600C49B70 /* CKAbourtUSVC.xib */,
+				15B011911B2D784F00C49B70 /* CKFeedBackVC.h */,
+				15B011921B2D784F00C49B70 /* CKFeedBackVC.m */,
+				15B011931B2D784F00C49B70 /* CKFeedBackVC.xib */,
 			);
 			path = SettingVC;
 			sourceTree = "<group>";
@@ -1088,6 +1149,7 @@
 		18A5480D1B2A4576004EF360 /* OrderMealImages */ = {
 			isa = PBXGroup;
 			children = (
+				15B011851B2CFB8000C49B70 /* time@2x.png */,
 				15B011161B2AA57B00C49B70 /* plus@2x.png */,
 				15B011171B2AA57B00C49B70 /* reduce@2x.png */,
 				18A548101B2A5478004EF360 /* storeNotification@2x.png */,
@@ -1181,6 +1243,9 @@
 				1584B0721B26B48B00A4E300 /* naviAddress@2x.png in Resources */,
 				18A548111B2A5478004EF360 /* storeNotification@2x.png in Resources */,
 				1584B0231B24556500A4E300 /* T1@2x.png in Resources */,
+				15B011861B2CFB8000C49B70 /* time@2x.png in Resources */,
+				15B0119A1B2D7C8100C49B70 /* CKAddressListVC.xib in Resources */,
+				15B011901B2D038600C49B70 /* CKAbourtUSVC.xib in Resources */,
 				1584B04C1B258AFC00A4E300 /* Set3.png in Resources */,
 				1584B0581B258D4800A4E300 /* My02.png in Resources */,
 				1584B0441B25752100A4E300 /* BottomArrow@2x.png in Resources */,
@@ -1202,11 +1267,13 @@
 				1584B04D1B258AFC00A4E300 /* Set4.png in Resources */,
 				1584B0391B24994A00A4E300 /* CKSelectListCell.xib in Resources */,
 				1584B02F1B2455E800A4E300 /* TS3@2x.png in Resources */,
+				15B0118B1B2CFFFD00C49B70 /* CKFoodClassCell.xib in Resources */,
 				1584B06A1B268A9A00A4E300 /* CommentCell.xib in Resources */,
 				1584B05B1B258D4800A4E300 /* My12.png in Resources */,
 				15B010351B29650B00C49B70 /* xiaSanjiao@2x.png in Resources */,
 				1584B0101B243AB600A4E300 /* HomeCellOne.xib in Resources */,
 				1584AF8F1B1FEBB000A4E300 /* MBProgressHUD.bundle in Resources */,
+				15B011951B2D784F00C49B70 /* CKFeedBackVC.xib in Resources */,
 				1584B05A1B258D4800A4E300 /* My11.png in Resources */,
 				1584B0701B26968800A4E300 /* Search@2x.png in Resources */,
 				18AA8F5C1B28F1C700D565A2 /* CKBusinessCommentViewController.xib in Resources */,
@@ -1228,6 +1295,7 @@
 				1584B0031B23E49800A4E300 /* zeng.png in Resources */,
 				1584AFD31B2042C500A4E300 /* HomeCell.xib in Resources */,
 				182348031B1FB85F00DD04BE /* OrderMealViewController.xib in Resources */,
+				15B011AA1B2D7D8B00C49B70 /* CKMyCollectionVC.xib in Resources */,
 				1584AFF81B23E23D00A4E300 /* SamllHeart2.png in Resources */,
 				182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */,
 				182348341B1FBA8700DD04BE /* tabbar_normal_background.png in Resources */,
@@ -1251,6 +1319,7 @@
 				18A5480C1B2A3DDD004EF360 /* CKChooseMealViewController.xib in Resources */,
 				18A8D7231B210D0100615933 /* ModifyPdViewController.xib in Resources */,
 				1584B06C1B268D6E00A4E300 /* zan@2x.png in Resources */,
+				15B011A51B2D7D5C00C49B70 /* CKMyVouchersVC.xib in Resources */,
 				1584B06F1B26968800A4E300 /* back2@2x.png in Resources */,
 				1584AFC01B20025200A4E300 /* back@2x.png in Resources */,
 				15B0117A1B2C775500C49B70 /* CKSelectMeaNoteCell.xib in Resources */,
@@ -1260,6 +1329,7 @@
 				1584AFE91B22F38100A4E300 /* CKOrderListCell.xib in Resources */,
 				15B011181B2AA57B00C49B70 /* plus@2x.png in Resources */,
 				1584B05C1B258D4800A4E300 /* My13.png in Resources */,
+				15B011AF1B2D7EB100C49B70 /* CKCommentListVC.xib in Resources */,
 				15B0117F1B2C7B8700C49B70 /* CKOderResultCell.xib in Resources */,
 				1584AFB81B1FF50000A4E300 /* OrderListViewController.xib in Resources */,
 				15B0112A1B2C4BE900C49B70 /* CKCommitOrderVC.xib in Resources */,
@@ -1285,33 +1355,38 @@
 				1584AF861B1FEBB000A4E300 /* MJRefreshGifHeader.m in Sources */,
 				1584AF911B1FEBB000A4E300 /* MKAnnotationView+WebCache.m in Sources */,
 				1584AF8E1B1FEBB000A4E300 /* MBProgressHUD+Add.m in Sources */,
+				15B011A41B2D7D5C00C49B70 /* CKMyVouchersVC.m in Sources */,
 				1584AF7B1B1FEBB000A4E300 /* UIAlertView+AFNetworking.m in Sources */,
 				15B0112E1B2C50DF00C49B70 /* CKAddressCell.m in Sources */,
 				1584AFE81B22F38100A4E300 /* CKOrderListCell.m in Sources */,
 				1584B0641B2592A100A4E300 /* BusinessDetailsViewController.m in Sources */,
 				1584AF841B1FEBB000A4E300 /* MJRefreshFooter.m in Sources */,
 				1584AFED1B22FB9100A4E300 /* OrderDetailViewController.m in Sources */,
+				15B011A91B2D7D8B00C49B70 /* CKMyCollectionVC.m in Sources */,
 				1584AFA21B1FEBB000A4E300 /* SVIndefiniteAnimatedView.m in Sources */,
 				1584AF991B1FEBB000A4E300 /* SDWebImageManager.m in Sources */,
-				18B2A6D31B26545D00F96B79 /* BusinessCommentView.m in Sources */,
 				15B011831B2C8CE200C49B70 /* CKWriteNoteVC.m in Sources */,
 				15B011741B2C6ED900C49B70 /* CKSelectPayCell.m in Sources */,
 				1584AF851B1FEBB000A4E300 /* MJRefreshGifFooter.m in Sources */,
 				1584AF7D1B1FEBB000A4E300 /* UIImageView+AFNetworking.m in Sources */,
 				1584AF961B1FEBB000A4E300 /* SDWebImageDecoder.m in Sources */,
 				1584AFAA1B1FEC9100A4E300 /* UIView+Extend.m in Sources */,
+				15B011AE1B2D7EB100C49B70 /* CKCommentListVC.m in Sources */,
 				1584B07C1B26DA5400A4E300 /* CKFoodCell.m in Sources */,
 				1584AFB71B1FF50000A4E300 /* OrderListViewController.m in Sources */,
 				15B011241B2B2A6500C49B70 /* CKSelectResultCell.m in Sources */,
 				15B0111D1B2AA75A00C49B70 /* CKFoodListModel.m in Sources */,
 				1584AF821B1FEBB000A4E300 /* MJRefreshComponent.m in Sources */,
 				1584AFE31B22F0B100A4E300 /* CKUserManager.m in Sources */,
+				15B0118A1B2CFFFD00C49B70 /* CKFoodClassCell.m in Sources */,
 				1584AF9E1B1FEBB000A4E300 /* UIImage+WebP.m in Sources */,
 				15B0117E1B2C7B8700C49B70 /* CKOderResultCell.m in Sources */,
+				15B011941B2D784F00C49B70 /* CKFeedBackVC.m in Sources */,
 				1584AF7C1B1FEBB000A4E300 /* UIButton+AFNetworking.m in Sources */,
 				1584AF701B1FEBB000A4E300 /* AFHTTPRequestOperation.m in Sources */,
 				18AA8F5B1B28F1C700D565A2 /* CKBusinessCommentViewController.m in Sources */,
 				1584AF8B1B1FEBB000A4E300 /* UIScrollView+MJRefresh.m in Sources */,
+				15B011991B2D7C8100C49B70 /* CKAddressListVC.m in Sources */,
 				1584AFCC1B2041E500A4E300 /* HomeViewController.m in Sources */,
 				1584AF8A1B1FEBB000A4E300 /* UIScrollView+MJExtension.m in Sources */,
 				1584AF6F1B1FEBB000A4E300 /* AFDownloadRequestOperation.m in Sources */,
@@ -1319,6 +1394,7 @@
 				1584AF971B1FEBB000A4E300 /* SDWebImageDownloader.m in Sources */,
 				182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */,
 				1584AF881B1FEBB000A4E300 /* MJRefreshLegendFooter.m in Sources */,
+				15B0118F1B2D038600C49B70 /* CKAbourtUSVC.m in Sources */,
 				1584AF871B1FEBB000A4E300 /* MJRefreshHeader.m in Sources */,
 				1584AF9F1B1FEBB000A4E300 /* UIImageView+HighlightedWebCache.m in Sources */,
 				1584AF931B1FEBB000A4E300 /* NSData+ImageContentType.m in Sources */,

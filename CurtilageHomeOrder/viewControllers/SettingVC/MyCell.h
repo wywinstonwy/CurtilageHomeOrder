@@ -11,4 +11,5 @@
 @interface MyCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UIImageView *imageViewHead;
 @property (nonatomic, weak) IBOutlet UILabel *lbltitle;
+@property (nonatomic, weak) IBOutlet UIImageView *imageVArrow;
 @end

@@ -9,6 +9,10 @@
 #import "MyViewController.h"
 #import "MyCell.h"
 #import "LoginViewController.h"
+#import "CKAddressListVC.h"
+#import "CKMyVouchersVC.h"
+#import "CKMyCollectionVC.h"
+#import "CKCommentListVC.h"
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray *arraySource;
@@ -79,6 +83,56 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSInteger section = [indexPath section];
+    if (section == 0)
+    {
+        switch (indexPath.row) {
+            case 0:
+            {
+                CKAddressListVC *viewFlag = [[CKAddressListVC alloc] init];
+                [self pushToViewController:viewFlag anmation:YES];
+                
+            }break;
+            case 1:
+            {
+                CKMyVouchersVC *viewFlag = [[CKMyVouchersVC alloc] init];
+                [self pushToViewController:viewFlag anmation:YES];
+            }break;
+            case 2:
+            {
+                CKAddressListVC *viewFlag = [[CKAddressListVC alloc] init];
+                [self pushToViewController:viewFlag anmation:YES];
+            }break;
+            default:
+                break;
+        }
+
+        
+    }
+    else
+    {
+        switch (indexPath.row) {
+            case 0:
+            {
+                CKMyCollectionVC *viewFlag = [[CKMyCollectionVC alloc] init];
+                [self pushToViewController:viewFlag anmation:YES];
+                
+            }break;
+            case 1:
+            {
+                CKCommentListVC *viewFlag = [[CKCommentListVC alloc] init];
+                [self pushToViewController:viewFlag anmation:YES];
+            }break;
+            case 2:
+            {
+                CKAddressListVC *viewFlag = [[CKAddressListVC alloc] init];
+                [self pushToViewController:viewFlag anmation:YES];
+            }break;
+            default:
+                break;
+        }
+
+    }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

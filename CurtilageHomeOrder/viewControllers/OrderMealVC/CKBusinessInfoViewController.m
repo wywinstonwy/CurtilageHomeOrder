@@ -9,7 +9,9 @@
 #import "CKBusinessInfoViewController.h"
 #import "MyCell.h"
 @interface CKBusinessInfoViewController ()
-
+{
+    NSMutableArray *arraySource;
+}
 @end
 
 @implementation CKBusinessInfoViewController
@@ -22,16 +24,22 @@
     self.tableview.tableHeaderView = self.viewHeader;
     self.tableview.tableFooterView = [UIView new];
     self.tableview.tableFooterView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    NSArray *arr1 = @[@"10:00-24:00",@"昌平区天通苑站北一区",@"本店欢迎下单，用餐高峰请提前下单，"];
+    NSArray *arr2 = @[@"新客户李减44",@"下单满25元减12元",@"代金券"];
+    arraySource = [[NSMutableArray alloc] initWithCapacity:0];
+    [arraySource addObject:arr1];
+    [arraySource addObject:arr2];
     // Do any additional setup after loading the view from its nib.
 }
 #pragma mark tableViewdelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return arraySource.count;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    NSArray *arr = [arraySource objectAtIndex:section];
+    return arr.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
@@ -44,6 +52,23 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell"];
+    cell.imageVArrow.hidden = YES;
+    NSInteger section = [indexPath section];
+    NSArray *arr = [arraySource objectAtIndex:section];
+    cell.lbltitle.width = SCREEN_WIDTH - 60;
+    if (section == 0) {
+        NSArray *arrImages = @[@"time",@"My00",@"storeNotification"];
+        cell.imageViewHead.image = [UIImage imageNamed:[arrImages objectAtIndex:indexPath.row]];
+    }
+    else
+    {
+        NSArray *arrImages = @[@"xin",@"zeng",@"zhe"];
+        cell.imageViewHead.image = [UIImage imageNamed:[arrImages objectAtIndex:indexPath.row]];
+
+  
+    }
+    cell.lbltitle.text = [arr objectAtIndex:indexPath.row];
+
     return cell;
 }
 - (void)didReceiveMemoryWarning {

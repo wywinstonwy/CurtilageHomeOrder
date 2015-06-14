@@ -12,6 +12,8 @@
 #import "CKButton.h"
 #import "CKSelectResultCell.h"
 #import "CKCommitOrderVC.h"
+#import "CKFoodClassCell.h"
+
 @interface CKChooseMealViewController ()
 {
     NSMutableArray *arrayFoodClass;
@@ -27,6 +29,8 @@
     [super viewDidLoad];
     
     [self.tableViewFoodClass registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
+    [self.tableViewFoodClass registerNib:[UINib nibWithNibName:@"CKFoodClassCell" bundle:nil] forCellReuseIdentifier:@"CKFoodClassCell"];
     
     [self.tableViewFoodList registerNib:[UINib nibWithNibName:@"CKFoodCell" bundle:nil] forCellReuseIdentifier:@"CKFoodCell"];
     
@@ -144,8 +148,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView.tag == 1) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-        cell.textLabel.text = [arrayFoodClass objectAtIndex:indexPath.row];
+        CKFoodClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKFoodClassCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.lblName.text = [arrayFoodClass objectAtIndex:indexPath.row];
         return cell;
     }
     else if(tableView.tag == 2)

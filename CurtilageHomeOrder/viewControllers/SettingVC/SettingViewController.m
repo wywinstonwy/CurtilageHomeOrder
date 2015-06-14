@@ -8,9 +8,12 @@
 
 #import "SettingViewController.h"
 #import "MyCell.h"
+#import "CKFeedBackVC.h"
+#import "CKAbourtUSVC.h"
 @interface SettingViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *arraySource;
+    
 }
 @end
 
@@ -50,6 +53,30 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    switch (indexPath.row) {
+        case 0:
+        {
+            CKFeedBackVC *viewFlag = [[CKFeedBackVC alloc] init];
+            [self pushToViewController:viewFlag anmation:YES];
+            
+        }break;
+        case 1:
+        {
+            
+        }break;
+        case 2:
+        {
+            
+        }break;
+        case 3:
+        {
+            CKAbourtUSVC *viewFlag = [[CKAbourtUSVC alloc] init];
+            [self pushToViewController:viewFlag anmation:YES];
+        }break;
+            
+        default:
+            break;
+    }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

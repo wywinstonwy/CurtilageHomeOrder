@@ -18,6 +18,7 @@
     [super viewDidLoad];
     
     [self.tableViewSearch registerNib:[UINib nibWithNibName:@"MyCell" bundle:nil] forCellReuseIdentifier:@"MyCell"];
+    self.tableViewSearch.tableFooterView = [[UIView alloc] init];
     // Do any additional setup after loading the view from its nib.
 }
 

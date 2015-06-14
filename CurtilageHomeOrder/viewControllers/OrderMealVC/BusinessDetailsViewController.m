@@ -7,7 +7,6 @@
 //
 
 #import "BusinessDetailsViewController.h"
-#import "BusinessCommentView.h"
 #import "CKFoodCell.h"
 #import "CKChooseMealViewController.h"
 #import "CKBusinessInfoViewController.h"
