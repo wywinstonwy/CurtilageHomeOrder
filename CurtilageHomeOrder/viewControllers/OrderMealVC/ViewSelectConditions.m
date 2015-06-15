@@ -66,6 +66,7 @@
 {
     CKSelectListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKSelectListCell"];
     cell.textLabel.text = [self.arraySource objectAtIndex:indexPath.row];
+    cell.backgroundColor = [UIColor groupTableViewBackgroundColor];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

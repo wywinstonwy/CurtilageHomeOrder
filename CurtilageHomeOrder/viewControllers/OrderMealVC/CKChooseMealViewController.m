@@ -149,8 +149,20 @@
 {
     if (tableView.tag == 1) {
         CKFoodClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKFoodClassCell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
         cell.lblName.text = [arrayFoodClass objectAtIndex:indexPath.row];
+        if (cell.selected) {
+            cell.backgroundColor = [UIColor whiteColor];
+            cell.lblCurrent.hidden = NO;
+        }
+        else
+        {
+            cell.backgroundColor = [UIColor groupTableViewBackgroundColor];
+            cell.lblCurrent.hidden = YES;
+
+        }
+
+        
         return cell;
     }
     else if(tableView.tag == 2)
@@ -201,7 +213,7 @@
     }
     else if(tableView.tag == 2)
     {
-        [self.tableViewFoodClass selectRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row inSection:0] animated:YES scrollPosition:(UITableViewScrollPositionTop)];
+        [self.tableViewFoodClass selectRowAtIndexPath:[NSIndexPath indexPathForRow:[indexPath section] inSection:0] animated:YES scrollPosition:(UITableViewScrollPositionTop)];
         
     }
    

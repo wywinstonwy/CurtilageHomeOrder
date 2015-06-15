@@ -37,6 +37,8 @@
     tabBarController.selectedIndex = 0;
     [self.navigationController setNavigationBarHidden:YES];
     
+    self.viewSelectCity.bottom = 0;
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

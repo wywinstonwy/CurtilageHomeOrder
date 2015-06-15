@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CurtilageHomeOrder/viewControllers/OrderMealVC/CKChooseMealViewController.m"
-            timestampString = "455934496.178983"
+            timestampString = "456027415.081338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "-clearShopingCar:"
             landmarkType = "5">
          </BreakpointContent>
