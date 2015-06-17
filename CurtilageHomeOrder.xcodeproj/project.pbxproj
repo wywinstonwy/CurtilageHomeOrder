@@ -188,6 +188,7 @@
 		15B011CD1B2E732800C49B70 /* zhongshizhengcan1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B011BE1B2E732800C49B70 /* zhongshizhengcan1@2x.png */; };
 		15B011D01B2E735500C49B70 /* bianlidian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B011CE1B2E735500C49B70 /* bianlidian@2x.png */; };
 		15B011D11B2E735500C49B70 /* bianlidian1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B011CF1B2E735500C49B70 /* bianlidian1@2x.png */; };
+		15B012201B3170B900C49B70 /* CKMerchantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B0121F1B3170B900C49B70 /* CKMerchantModel.m */; };
 		182347C31B1FAE3800DD04BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C21B1FAE3800DD04BE /* main.m */; };
 		182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C51B1FAE3800DD04BE /* AppDelegate.m */; };
 		182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182347CD1B1FAE3800DD04BE /* Images.xcassets */; };
@@ -509,6 +510,8 @@
 		15B011BE1B2E732800C49B70 /* zhongshizhengcan1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhongshizhengcan1@2x.png"; sourceTree = "<group>"; };
 		15B011CE1B2E735500C49B70 /* bianlidian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bianlidian@2x.png"; sourceTree = "<group>"; };
 		15B011CF1B2E735500C49B70 /* bianlidian1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bianlidian1@2x.png"; sourceTree = "<group>"; };
+		15B0121E1B3170B900C49B70 /* CKMerchantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMerchantModel.h; sourceTree = "<group>"; };
+		15B0121F1B3170B900C49B70 /* CKMerchantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKMerchantModel.m; sourceTree = "<group>"; };
 		182347BD1B1FAE3800DD04BE /* CurtilageHomeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurtilageHomeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182347C11B1FAE3800DD04BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182347C21B1FAE3800DD04BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -956,6 +959,8 @@
 			children = (
 				15B0111B1B2AA75A00C49B70 /* CKFoodListModel.h */,
 				15B0111C1B2AA75A00C49B70 /* CKFoodListModel.m */,
+				15B0121E1B3170B900C49B70 /* CKMerchantModel.h */,
+				15B0121F1B3170B900C49B70 /* CKMerchantModel.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -1479,6 +1484,7 @@
 				182348071B1FB87200DD04BE /* MyViewController.m in Sources */,
 				1584AFB11B1FF04400A4E300 /* LoginViewController.m in Sources */,
 				1584AF741B1FEBB000A4E300 /* AFSecurityPolicy.m in Sources */,
+				15B012201B3170B900C49B70 /* CKMerchantModel.m in Sources */,
 				1584AFD21B2042C500A4E300 /* HomeCell.m in Sources */,
 				1584AF9C1B1FEBB000A4E300 /* UIImage+GIF.m in Sources */,
 				1584AFBC1B20002300A4E300 /* BaseNetWork.m in Sources */,
