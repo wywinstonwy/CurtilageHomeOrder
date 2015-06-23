@@ -12,7 +12,7 @@
 #import "CKSelectMeaNoteCell.h"
 #import "CKOderResultCell.h"
 #import "CKWriteNoteVC.h"
-
+#import "CKAddressListVC.h"
 @interface CKCommitOrderVC ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *arraySource;
@@ -119,6 +119,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger section =[indexPath section];
+    if (section == 0) {
+        CKAddressListVC *viewFlag = [[CKAddressListVC alloc] init];
+        [self pushToViewController:viewFlag anmation:YES];
+    }
     if (section == 2 && indexPath.row == 1)
     {
         [self gotoWriteNote];

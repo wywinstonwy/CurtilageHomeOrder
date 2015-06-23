@@ -7,7 +7,8 @@
 //
 
 #import "BaseViewController.h"
-
+typedef void (^selectResultBlock)(id result);
 @interface CKAddressListVC : BaseViewController
 @property (nonatomic,weak) IBOutlet UITableView *tableview;
+@property (nonatomic,strong) selectResultBlock selectBlock;//地址选择回调
 @end

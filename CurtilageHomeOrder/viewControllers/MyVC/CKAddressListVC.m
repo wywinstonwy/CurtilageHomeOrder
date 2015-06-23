@@ -9,6 +9,7 @@
 #import "CKAddressListVC.h"
 #import "CKAdressCell.h"
 #import "CKAddressEditVC.h"
+#import "CKAddressModel.h"
 @interface CKAddressListVC ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *arraySource;
@@ -44,6 +45,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if(self.selectBlock )
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

@@ -212,6 +212,7 @@
 		182348351B1FBA8700DD04BE /* tabbar_normal_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182348211B1FBA8700DD04BE /* tabbar_normal_background@2x.png */; };
 		182348361B1FBA8700DD04BE /* tabbar_selected_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 182348221B1FBA8700DD04BE /* tabbar_selected_background.png */; };
 		182348371B1FBA8700DD04BE /* tabbar_selected_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182348231B1FBA8700DD04BE /* tabbar_selected_background@2x.png */; };
+		185108DD1B3A0EED002EB4D2 /* CKAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185108DC1B3A0EED002EB4D2 /* CKAddressModel.m */; };
 		18A5480B1B2A3DDD004EF360 /* CKChooseMealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A548091B2A3DDD004EF360 /* CKChooseMealViewController.m */; };
 		18A5480C1B2A3DDD004EF360 /* CKChooseMealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A5480A1B2A3DDD004EF360 /* CKChooseMealViewController.xib */; };
 		18A5480F1B2A4576004EF360 /* shoppingCart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A5480E1B2A4576004EF360 /* shoppingCart@2x.png */; };
@@ -553,6 +554,8 @@
 		182348211B1FBA8700DD04BE /* tabbar_normal_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_normal_background@2x.png"; sourceTree = "<group>"; };
 		182348221B1FBA8700DD04BE /* tabbar_selected_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_selected_background.png; sourceTree = "<group>"; };
 		182348231B1FBA8700DD04BE /* tabbar_selected_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_selected_background@2x.png"; sourceTree = "<group>"; };
+		185108DB1B3A0EED002EB4D2 /* CKAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAddressModel.h; sourceTree = "<group>"; };
+		185108DC1B3A0EED002EB4D2 /* CKAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAddressModel.m; sourceTree = "<group>"; };
 		18A548081B2A3DDD004EF360 /* CKChooseMealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKChooseMealViewController.h; sourceTree = "<group>"; };
 		18A548091B2A3DDD004EF360 /* CKChooseMealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKChooseMealViewController.m; sourceTree = "<group>"; };
 		18A5480A1B2A3DDD004EF360 /* CKChooseMealViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKChooseMealViewController.xib; sourceTree = "<group>"; };
@@ -971,6 +974,8 @@
 				15B0111C1B2AA75A00C49B70 /* CKFoodListModel.m */,
 				15B0121E1B3170B900C49B70 /* CKMerchantModel.h */,
 				15B0121F1B3170B900C49B70 /* CKMerchantModel.m */,
+				185108DB1B3A0EED002EB4D2 /* CKAddressModel.h */,
+				185108DC1B3A0EED002EB4D2 /* CKAddressModel.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -1470,6 +1475,7 @@
 				1584AF701B1FEBB000A4E300 /* AFHTTPRequestOperation.m in Sources */,
 				18AA8F5B1B28F1C700D565A2 /* CKBusinessCommentViewController.m in Sources */,
 				1584AF8B1B1FEBB000A4E300 /* UIScrollView+MJRefresh.m in Sources */,
+				185108DD1B3A0EED002EB4D2 /* CKAddressModel.m in Sources */,
 				15B011991B2D7C8100C49B70 /* CKAddressListVC.m in Sources */,
 				1584AFCC1B2041E500A4E300 /* HomeViewController.m in Sources */,
 				1584AF8A1B1FEBB000A4E300 /* UIScrollView+MJExtension.m in Sources */,
