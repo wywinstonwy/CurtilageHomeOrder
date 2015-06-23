@@ -8,8 +8,11 @@
 
 #import "CKSearchViewController.h"
 #import "MyCell.h"
-@interface CKSearchViewController ()<UITableViewDataSource,UITableViewDelegate>
-
+#import "OrderMealViewController.h"
+@interface CKSearchViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
+{
+    NSString *strSearchKey;
+}
 @end
 
 @implementation CKSearchViewController
@@ -19,6 +22,7 @@
     
     [self.tableViewSearch registerNib:[UINib nibWithNibName:@"MyCell" bundle:nil] forCellReuseIdentifier:@"MyCell"];
     self.tableViewSearch.tableFooterView = [[UIView alloc] init];
+    strSearchKey = [[NSString alloc] init];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -29,9 +33,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell"];
-    cell.lbltitle.text = @"";
+    cell.lbltitle.text = strSearchKey;
+    NSArray *array = @[[UIImage imageNamed:@"zhongshizhengcan1"],[UIImage imageNamed:@"kuaican1"],[UIImage imageNamed:@"xindiantuijian1"]];
+    cell.imageViewHead.image = [array objectAtIndex:indexPath.row];
     return cell;
     
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (strSearchKey.length>0) {
+        OrderMealViewController *viewFlag = [OrderMealViewController new];
+        [self pushToViewController:viewFlag anmation:YES];
+    }
+   
+}
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    self.tableViewSearch.hidden = NO;
+}
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    strSearchKey = searchText;
+    [self.tableViewSearch reloadData];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

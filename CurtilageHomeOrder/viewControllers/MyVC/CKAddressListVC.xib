@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CKAddressListVC">
             <connections>
+                <outlet property="tableview" destination="P9m-xK-drA" id="SOc-Op-9ey"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,10 +41,14 @@
                     </subviews>
                     <color key="backgroundColor" red="0.8980392157" green="0.20000000000000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="P9m-xK-drA">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="P9m-xK-drA">
                     <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hpZ-28-L58"/>
+                        <outlet property="delegate" destination="-1" id="GiQ-em-wag"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

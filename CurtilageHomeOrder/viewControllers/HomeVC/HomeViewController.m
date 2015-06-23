@@ -19,7 +19,8 @@
 #import "SettingViewController.h"
 #import "RDVTabBarController.h"
 #import "RDVTabBarItem.h"
-@interface HomeViewController ()<UITextFieldDelegate,CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
+#import "CKSearchViewController.h"
+@interface HomeViewController ()<UITextFieldDelegate,CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 {
     CLLocationManager *locationManager;//地图定位
     RDVTabBarController *tabBarController;//tabbar
@@ -38,6 +39,8 @@
     [self.navigationController setNavigationBarHidden:YES];
     
     self.viewSelectCity.bottom = 0;
+    
+    [self.searchBar1 resignFirstResponder];
     
 }
 - (void)viewDidLoad {
@@ -97,7 +100,13 @@
     [self pushToViewController:tabBarController anmation:YES];
     
 }
-
+#pragma mark UISearchBarDelegate
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    CKSearchViewController *viewFlag = [CKSearchViewController new];
+    [self pushToViewController:viewFlag anmation:YES];
+    [searchBar resignFirstResponder];
+}
 #pragma mark 视图初始化
 - (void)createSubview
 {

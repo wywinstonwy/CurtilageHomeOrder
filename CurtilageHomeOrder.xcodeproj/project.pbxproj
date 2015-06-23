@@ -189,6 +189,10 @@
 		15B011D01B2E735500C49B70 /* bianlidian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B011CE1B2E735500C49B70 /* bianlidian@2x.png */; };
 		15B011D11B2E735500C49B70 /* bianlidian1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B011CF1B2E735500C49B70 /* bianlidian1@2x.png */; };
 		15B012201B3170B900C49B70 /* CKMerchantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B0121F1B3170B900C49B70 /* CKMerchantModel.m */; };
+		15B012831B364BBB00C49B70 /* CKAdressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B012811B364BBB00C49B70 /* CKAdressCell.m */; };
+		15B012841B364BBB00C49B70 /* CKAdressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B012821B364BBB00C49B70 /* CKAdressCell.xib */; };
+		15B012881B364FA500C49B70 /* CKAddressEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B012861B364FA500C49B70 /* CKAddressEditVC.m */; };
+		15B012891B364FA500C49B70 /* CKAddressEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15B012871B364FA500C49B70 /* CKAddressEditVC.xib */; };
 		182347C31B1FAE3800DD04BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C21B1FAE3800DD04BE /* main.m */; };
 		182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182347C51B1FAE3800DD04BE /* AppDelegate.m */; };
 		182347CE1B1FAE3800DD04BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182347CD1B1FAE3800DD04BE /* Images.xcassets */; };
@@ -512,6 +516,12 @@
 		15B011CF1B2E735500C49B70 /* bianlidian1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bianlidian1@2x.png"; sourceTree = "<group>"; };
 		15B0121E1B3170B900C49B70 /* CKMerchantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMerchantModel.h; sourceTree = "<group>"; };
 		15B0121F1B3170B900C49B70 /* CKMerchantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKMerchantModel.m; sourceTree = "<group>"; };
+		15B012801B364BBB00C49B70 /* CKAdressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAdressCell.h; sourceTree = "<group>"; };
+		15B012811B364BBB00C49B70 /* CKAdressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAdressCell.m; sourceTree = "<group>"; };
+		15B012821B364BBB00C49B70 /* CKAdressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKAdressCell.xib; sourceTree = "<group>"; };
+		15B012851B364FA500C49B70 /* CKAddressEditVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAddressEditVC.h; sourceTree = "<group>"; };
+		15B012861B364FA500C49B70 /* CKAddressEditVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAddressEditVC.m; sourceTree = "<group>"; };
+		15B012871B364FA500C49B70 /* CKAddressEditVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKAddressEditVC.xib; sourceTree = "<group>"; };
 		182347BD1B1FAE3800DD04BE /* CurtilageHomeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurtilageHomeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182347C11B1FAE3800DD04BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182347C21B1FAE3800DD04BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -968,6 +978,9 @@
 		15B0119B1B2D7C8800C49B70 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				15B012801B364BBB00C49B70 /* CKAdressCell.h */,
+				15B012811B364BBB00C49B70 /* CKAdressCell.m */,
+				15B012821B364BBB00C49B70 /* CKAdressCell.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -1123,6 +1136,9 @@
 				15B011961B2D7C8100C49B70 /* CKAddressListVC.h */,
 				15B011971B2D7C8100C49B70 /* CKAddressListVC.m */,
 				15B011981B2D7C8100C49B70 /* CKAddressListVC.xib */,
+				15B012851B364FA500C49B70 /* CKAddressEditVC.h */,
+				15B012861B364FA500C49B70 /* CKAddressEditVC.m */,
+				15B012871B364FA500C49B70 /* CKAddressEditVC.xib */,
 				15B011A11B2D7D5C00C49B70 /* CKMyVouchersVC.h */,
 				15B011A21B2D7D5C00C49B70 /* CKMyVouchersVC.m */,
 				15B011A31B2D7D5C00C49B70 /* CKMyVouchersVC.xib */,
@@ -1348,6 +1364,7 @@
 				1584AFCD1B2041E500A4E300 /* HomeViewController.xib in Resources */,
 				1584B0571B258D4800A4E300 /* My01.png in Resources */,
 				1584B0561B258D4800A4E300 /* My00.png in Resources */,
+				15B012891B364FA500C49B70 /* CKAddressEditVC.xib in Resources */,
 				1584B0031B23E49800A4E300 /* zeng.png in Resources */,
 				1584AFD31B2042C500A4E300 /* HomeCell.xib in Resources */,
 				182348031B1FB85F00DD04BE /* OrderMealViewController.xib in Resources */,
@@ -1386,6 +1403,7 @@
 				1584AFC01B20025200A4E300 /* back@2x.png in Resources */,
 				15B0117A1B2C775500C49B70 /* CKSelectMeaNoteCell.xib in Resources */,
 				1584AFA31B1FEBB000A4E300 /* SVProgressHUD.bundle in Resources */,
+				15B012841B364BBB00C49B70 /* CKAdressCell.xib in Resources */,
 				1584B02E1B2455E800A4E300 /* TS2@2x.png in Resources */,
 				15B011251B2B2A6500C49B70 /* CKSelectResultCell.xib in Resources */,
 				1584AFE91B22F38100A4E300 /* CKOrderListCell.xib in Resources */,
@@ -1448,6 +1466,7 @@
 				15B0117E1B2C7B8700C49B70 /* CKOderResultCell.m in Sources */,
 				15B011941B2D784F00C49B70 /* CKFeedBackVC.m in Sources */,
 				1584AF7C1B1FEBB000A4E300 /* UIButton+AFNetworking.m in Sources */,
+				15B012881B364FA500C49B70 /* CKAddressEditVC.m in Sources */,
 				1584AF701B1FEBB000A4E300 /* AFHTTPRequestOperation.m in Sources */,
 				18AA8F5B1B28F1C700D565A2 /* CKBusinessCommentViewController.m in Sources */,
 				1584AF8B1B1FEBB000A4E300 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1481,6 +1500,7 @@
 				1584AF9A1B1FEBB000A4E300 /* SDWebImagePrefetcher.m in Sources */,
 				1584AF731B1FEBB000A4E300 /* AFNetworkReachabilityManager.m in Sources */,
 				1584AF951B1FEBB000A4E300 /* SDWebImageCompat.m in Sources */,
+				15B012831B364BBB00C49B70 /* CKAdressCell.m in Sources */,
 				182348071B1FB87200DD04BE /* MyViewController.m in Sources */,
 				1584AFB11B1FF04400A4E300 /* LoginViewController.m in Sources */,
 				1584AF741B1FEBB000A4E300 /* AFSecurityPolicy.m in Sources */,

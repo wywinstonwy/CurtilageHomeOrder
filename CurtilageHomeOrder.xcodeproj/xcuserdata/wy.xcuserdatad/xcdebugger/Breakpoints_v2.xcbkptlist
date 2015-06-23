@@ -166,7 +166,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CurtilageHomeOrder/viewControllers/OrderMealVC/CKFoodCell.m"
@@ -182,7 +182,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CurtilageHomeOrder/viewControllers/OrderMealVC/CKFoodCell.m"
@@ -198,7 +198,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CurtilageHomeOrder/viewControllers/OrderMealVC/CKFoodCell.m"
@@ -224,6 +224,22 @@
             startingLineNumber = "252"
             endingLineNumber = "252"
             landmarkName = "-clearShopingCar:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CurtilageHomeOrder/viewControllers/HomeVC/HomeViewController.m"
+            timestampString = "456643979.11934"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "-searchBarTextDidBeginEditing:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

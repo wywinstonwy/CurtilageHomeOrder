@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="imageVCity" destination="dii-GF-hwy" id="Ejp-8j-Nnn"/>
                 <outlet property="lblCity" destination="gAr-yf-09b" id="57o-bl-7Z0"/>
+                <outlet property="searchBar1" destination="2Bz-HL-Ymq" id="feg-p0-De2"/>
                 <outlet property="tableview" destination="jOX-qT-mma" id="Xho-2K-nhw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewSelectCity" destination="LgQ-Zv-h25" id="ils-8F-naY"/>
@@ -65,6 +66,9 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="barTintColor" red="0.8980392157" green="0.20000000000000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="Q4a-Ec-45l"/>
+                            </connections>
                         </searchBar>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sv7-X6-5NE">
                             <rect key="frame" x="85" y="4" width="215" height="21"/>

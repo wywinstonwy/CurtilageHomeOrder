@@ -10,4 +10,5 @@
 
 @interface CKSearchViewController : BaseViewController
 @property (nonatomic,weak) IBOutlet UITableView *tableViewSearch;
+@property (nonatomic,weak) IBOutlet UISearchBar *searchBar1;
 @end

@@ -9,10 +9,12 @@
 #import "BaseViewController.h"
 #import "viewSelectList.h"
 @interface HomeViewController : BaseViewController
-@property (nonatomic, strong) UITextField *textSearch;
+//@property (nonatomic, strong) UITextField *textSearch;
 @property (nonatomic, strong) IBOutlet UITableView *tableview;
 //@property (nonatomic, weak) IBOutlet UIButton *btnCitySelect;
 @property (nonatomic, weak) IBOutlet UILabel *lblCity;
 @property (nonatomic, weak) IBOutlet UIImageView *imageVCity;
 @property (nonatomic, weak) IBOutlet viewSelectList *viewSelectCity;
+
+@property (nonatomic,weak) IBOutlet UISearchBar *searchBar1;
 @end

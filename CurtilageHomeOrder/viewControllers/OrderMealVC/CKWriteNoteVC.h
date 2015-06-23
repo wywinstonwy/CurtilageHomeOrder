@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+typedef void (^NotelockResult)(NSString *result);//填写备注
 
 @interface CKWriteNoteVC : BaseViewController
 @property (nonatomic,weak) IBOutlet UITextView *textViewContent;
