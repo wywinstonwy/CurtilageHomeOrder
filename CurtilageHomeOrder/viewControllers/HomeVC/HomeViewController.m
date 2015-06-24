@@ -61,6 +61,16 @@
 }
 
 
+- (void)getData
+{
+    
+    [[BaseNetWork shareManager] postRequestWithBaseURLString:@"" parameters:nil forSucess:^(id result) {
+        
+    } forFail:^(NSError *error) {
+        
+    }];
+}
+
 
 #pragma mark UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

@@ -40,7 +40,7 @@
 #define Font18          [UIFont systemFontOfSize:18]
 
 //接口地址
-#define SERVER_URL @"http://api.qctt.cn/qctt/2/index.php"
+#define SERVER_URL @"http://42.96.167.31:8080/"
 
 //分享默认图片
 #define SERVER_IMAGEURL @"http://www.qctt.cn"

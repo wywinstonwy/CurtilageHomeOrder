@@ -8,7 +8,7 @@
 
 #import "OrderDetailViewController.h"
 
-@interface OrderDetailViewController ()
+@interface OrderDetailViewController ()<UIScrollViewDelegate>
 
 @end
 
@@ -18,6 +18,34 @@
     [super viewDidLoad];
     self.title = @"订单详情";
     // Do any additional setup after loading the view from its nib.
+    [self setContenViewFrame];
+}
+-(void)setContenViewFrame
+{
+    self.mainScrollView.height = SCREEN_HEIGHT - 108;
+    self.tableOrderState.height = self.tableOrderDeßtail.height = self.mainScrollView.height;
+    [self.mainScrollView setContentSize:CGSizeMake(SCREEN_WIDTH*2, SCREEN_HEIGHT-108)];
+}
+-(IBAction)btnClickSelect:(UIButton *)sender;
+{
+    for (int i = 0; i<2; i++) {
+        UIButton *btnSelect = (UIButton *)[self.view viewWithTag:i+10];
+        [btnSelect setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    }
+    
+    [sender setTitleColor:setNaviColor forState:UIControlStateNormal];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.lblLineCurrent.left = sender.left;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    int page = scrollView.contentOffset.x/SCREEN_WIDTH;
+    
 }
 
 - (void)didReceiveMemoryWarning {
