@@ -11,7 +11,7 @@
 @interface OrderDetailViewController : BaseViewController
 @property (nonatomic,weak) IBOutlet UIScrollView *mainScrollView;
 @property (nonatomic,weak) IBOutlet UITableView *tableOrderState;
-@property (nonatomic,weak) IBOutlet UITableView *tableOrderDeßtail;
+@property (nonatomic,weak) IBOutlet UITableView *tableOrderDetail;
 @property (nonatomic,weak) IBOutlet UILabel *lblLineCurrent;
 
 -(IBAction)btnClickSelect:(UIButton *)sender;

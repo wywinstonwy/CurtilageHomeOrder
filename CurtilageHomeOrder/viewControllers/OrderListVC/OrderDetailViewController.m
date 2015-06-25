@@ -7,8 +7,9 @@
 //
 
 #import "OrderDetailViewController.h"
-
-@interface OrderDetailViewController ()<UIScrollViewDelegate>
+#import "CKOrderDetailCell.h"
+#import "CKOrderStateCell.h"
+@interface OrderDetailViewController ()<UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -22,9 +23,13 @@
 }
 -(void)setContenViewFrame
 {
+    [self.tableOrderState registerNib:[UINib nibWithNibName:@"CKOrderStateCell" bundle:nil] forCellReuseIdentifier:@"CKOrderStateCell"];
+    [self.tableOrderDetail registerNib:[UINib nibWithNibName:@"CKOrderDetailCell" bundle:nil] forCellReuseIdentifier:@"CKOrderDetailCell"];
     self.mainScrollView.height = SCREEN_HEIGHT - 108;
-    self.tableOrderState.height = self.tableOrderDeßtail.height = self.mainScrollView.height;
+    self.tableOrderState.height = self.tableOrderDetail.height = self.mainScrollView.height;
     [self.mainScrollView setContentSize:CGSizeMake(SCREEN_WIDTH*2, SCREEN_HEIGHT-108)];
+    self.tableOrderState.left = 0;
+    self.tableOrderDetail.left = SCREEN_WIDTH;
 }
 -(IBAction)btnClickSelect:(UIButton *)sender;
 {
@@ -39,6 +44,29 @@
     } completion:^(BOOL finished) {
         
     }];
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView.tag == 1) {
+        CKOrderStateCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKOrderStateCell"];
+        return cell;
+    }
+    else
+    {
+        CKOrderDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKOrderDetailCell"];
+        return cell;
+    }
+    
+    
+  
 }
 
 

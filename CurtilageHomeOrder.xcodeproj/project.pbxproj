@@ -213,6 +213,10 @@
 		182348361B1FBA8700DD04BE /* tabbar_selected_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 182348221B1FBA8700DD04BE /* tabbar_selected_background.png */; };
 		182348371B1FBA8700DD04BE /* tabbar_selected_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182348231B1FBA8700DD04BE /* tabbar_selected_background@2x.png */; };
 		185108DD1B3A0EED002EB4D2 /* CKAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185108DC1B3A0EED002EB4D2 /* CKAddressModel.m */; };
+		18A051261B3CAE9700C003C7 /* CKOrderDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A051241B3CAE9700C003C7 /* CKOrderDetailCell.m */; };
+		18A051271B3CAE9700C003C7 /* CKOrderDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A051251B3CAE9700C003C7 /* CKOrderDetailCell.xib */; };
+		18A0512B1B3CB09700C003C7 /* CKOrderStateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A051291B3CB09700C003C7 /* CKOrderStateCell.m */; };
+		18A0512C1B3CB09700C003C7 /* CKOrderStateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A0512A1B3CB09700C003C7 /* CKOrderStateCell.xib */; };
 		18A5480B1B2A3DDD004EF360 /* CKChooseMealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A548091B2A3DDD004EF360 /* CKChooseMealViewController.m */; };
 		18A5480C1B2A3DDD004EF360 /* CKChooseMealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A5480A1B2A3DDD004EF360 /* CKChooseMealViewController.xib */; };
 		18A5480F1B2A4576004EF360 /* shoppingCart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A5480E1B2A4576004EF360 /* shoppingCart@2x.png */; };
@@ -556,6 +560,12 @@
 		182348231B1FBA8700DD04BE /* tabbar_selected_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_selected_background@2x.png"; sourceTree = "<group>"; };
 		185108DB1B3A0EED002EB4D2 /* CKAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAddressModel.h; sourceTree = "<group>"; };
 		185108DC1B3A0EED002EB4D2 /* CKAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAddressModel.m; sourceTree = "<group>"; };
+		18A051231B3CAE9700C003C7 /* CKOrderDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKOrderDetailCell.h; sourceTree = "<group>"; };
+		18A051241B3CAE9700C003C7 /* CKOrderDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKOrderDetailCell.m; sourceTree = "<group>"; };
+		18A051251B3CAE9700C003C7 /* CKOrderDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKOrderDetailCell.xib; sourceTree = "<group>"; };
+		18A051281B3CB09700C003C7 /* CKOrderStateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKOrderStateCell.h; sourceTree = "<group>"; };
+		18A051291B3CB09700C003C7 /* CKOrderStateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKOrderStateCell.m; sourceTree = "<group>"; };
+		18A0512A1B3CB09700C003C7 /* CKOrderStateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKOrderStateCell.xib; sourceTree = "<group>"; };
 		18A548081B2A3DDD004EF360 /* CKChooseMealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKChooseMealViewController.h; sourceTree = "<group>"; };
 		18A548091B2A3DDD004EF360 /* CKChooseMealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKChooseMealViewController.m; sourceTree = "<group>"; };
 		18A5480A1B2A3DDD004EF360 /* CKChooseMealViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKChooseMealViewController.xib; sourceTree = "<group>"; };
@@ -889,6 +899,12 @@
 				1584AFE51B22F38100A4E300 /* CKOrderListCell.h */,
 				1584AFE61B22F38100A4E300 /* CKOrderListCell.m */,
 				1584AFE71B22F38100A4E300 /* CKOrderListCell.xib */,
+				18A051231B3CAE9700C003C7 /* CKOrderDetailCell.h */,
+				18A051241B3CAE9700C003C7 /* CKOrderDetailCell.m */,
+				18A051251B3CAE9700C003C7 /* CKOrderDetailCell.xib */,
+				18A051281B3CB09700C003C7 /* CKOrderStateCell.h */,
+				18A051291B3CB09700C003C7 /* CKOrderStateCell.m */,
+				18A0512A1B3CB09700C003C7 /* CKOrderStateCell.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -1351,8 +1367,10 @@
 				15B011951B2D784F00C49B70 /* CKFeedBackVC.xib in Resources */,
 				1584B05A1B258D4800A4E300 /* My11.png in Resources */,
 				1584B0701B26968800A4E300 /* Search@2x.png in Resources */,
+				18A0512C1B3CB09700C003C7 /* CKOrderStateCell.xib in Resources */,
 				18AA8F5C1B28F1C700D565A2 /* CKBusinessCommentViewController.xib in Resources */,
 				182348081B1FB87200DD04BE /* MyViewController.xib in Resources */,
+				18A051271B3CAE9700C003C7 /* CKOrderDetailCell.xib in Resources */,
 				15B011841B2C8CE200C49B70 /* CKWriteNoteVC.xib in Resources */,
 				15B011D11B2E735500C49B70 /* bianlidian1@2x.png in Resources */,
 				1584B0301B2455E800A4E300 /* TS4@2x.png in Resources */,
@@ -1481,6 +1499,7 @@
 				1584AF8A1B1FEBB000A4E300 /* UIScrollView+MJExtension.m in Sources */,
 				1584AF6F1B1FEBB000A4E300 /* AFDownloadRequestOperation.m in Sources */,
 				1584AFA91B1FEC9100A4E300 /* Tools.m in Sources */,
+				18A0512B1B3CB09700C003C7 /* CKOrderStateCell.m in Sources */,
 				1584AF971B1FEBB000A4E300 /* SDWebImageDownloader.m in Sources */,
 				182347C61B1FAE3800DD04BE /* AppDelegate.m in Sources */,
 				1584AF881B1FEBB000A4E300 /* MJRefreshLegendFooter.m in Sources */,
@@ -1501,6 +1520,7 @@
 				18A8D7181B21025000615933 /* RegisterViewController.m in Sources */,
 				1584B0381B24994A00A4E300 /* CKSelectListCell.m in Sources */,
 				1584AF711B1FEBB000A4E300 /* AFHTTPRequestOperationManager.m in Sources */,
+				18A051261B3CAE9700C003C7 /* CKOrderDetailCell.m in Sources */,
 				1584AF9B1B1FEBB000A4E300 /* UIButton+WebCache.m in Sources */,
 				182347C31B1FAE3800DD04BE /* main.m in Sources */,
 				1584AF9A1B1FEBB000A4E300 /* SDWebImagePrefetcher.m in Sources */,
