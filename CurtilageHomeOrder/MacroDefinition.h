@@ -39,11 +39,9 @@
 #define Font13          [UIFont systemFontOfSize:13]
 #define Font18          [UIFont systemFontOfSize:18]
 
-//接口地址
+//接口地址//  http://42.96.167.31:8080/
 #define SERVER_URL @"http://42.96.167.31:8080/"
 
-//分享默认图片
-#define SERVER_IMAGEURL @"http://www.qctt.cn"
 
 
 #define USER_NAME       @"USER_NAME1"//用户名
@@ -54,7 +52,7 @@
 #define USER_PASSWORD   @"USER_PASSWORD"//用户密码
 #define USER_ID         @"USER_ID"//用户id
 
-
+#define NETTIPS         @"网络异常，请稍后重试！"
 
 
 #endif

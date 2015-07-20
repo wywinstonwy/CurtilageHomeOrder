@@ -1,23 +1,21 @@
 //
-//  CKMyCollectionVC.m
+//  CKUserProcolViewController.m
 //  CurtilageHomeOrder
 //
-//  Created by wy on 15/6/14.
+//  Created by wy on 15/7/11.
 //  Copyright (c) 2015年 WangYun. All rights reserved.
 //
 
-#import "CKMyCollectionVC.h"
+#import "CKUserProcolViewController.h"
 
-@interface CKMyCollectionVC ()<UITableViewDataSource,UITableViewDelegate>
-
+@interface CKUserProcolViewController ()
 
 @end
 
-@implementation CKMyCollectionVC
+@implementation CKUserProcolViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的收藏";
     // Do any additional setup after loading the view from its nib.
 }
 

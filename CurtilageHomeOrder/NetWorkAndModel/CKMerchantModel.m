@@ -9,5 +9,8 @@
 #import "CKMerchantModel.h"
 
 @implementation CKMerchantModel
+-(void)setValue:(id)value forUndefinedKey:(NSString *)key;
+{
 
+}
 @end

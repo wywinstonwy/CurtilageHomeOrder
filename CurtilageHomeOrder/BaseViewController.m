@@ -38,6 +38,22 @@
     
     // Do any additional setup after loading the view.
 }
+//设置导航栏颜色和导航栏字体颜色
+- (void)addNavgationBarColor:(UIColor *)color andTitleTextAttributes:(NSDictionary *)dict
+{
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    
+    if ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 7.0) {
+        
+        // self.edgesForExtendedLayout=UIRectEdgeNone;
+        self.navigationController.navigationBar.barTintColor = color;
+        
+    }
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:dict];
+    
+}
 /**
  *  设置导航栏左边按钮功能
  *

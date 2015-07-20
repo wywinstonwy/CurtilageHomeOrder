@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CKOrderStateCell : UITableViewCell
-
+@property (nonatomic,weak) IBOutlet UILabel *lblTitleStatus;
+@property (nonatomic,weak) IBOutlet UILabel *lblTime;
+@property (nonatomic,weak) IBOutlet UILabel *lblOrderID;
 @end

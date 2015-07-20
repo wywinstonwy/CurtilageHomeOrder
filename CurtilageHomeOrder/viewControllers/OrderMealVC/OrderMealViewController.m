@@ -13,10 +13,12 @@
 #import <CoreLocation/CoreLocation.h>
 #import "BusinessDetailsViewController.h"
 #import "CKSearchViewController.h"
+#import "CKMerchantModel.h"
 @interface OrderMealViewController ()<UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate>
 {
     ViewSelectConditions *viewSelectList;
     CLLocationManager *locationManager;
+    NSMutableArray *arrayMerchantList;//商家
 
 }
 @end
@@ -31,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableview registerNib:[UINib nibWithNibName:@"HomeCell" bundle:nil] forCellReuseIdentifier:@"HomeCell"];
+    self.tableview.height = SCREEN_HEIGHT - 108+49;
     [self setLeftBarWithLeftImage:@"back" action:@selector(popBack)];
     self.lblNavititle.text = @"定位中...";
     self.lblNavititle.width = SCREEN_WIDTH- 120;
@@ -52,9 +55,37 @@
     lblLine1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 7, 1, 30)];
     lblLine1.backgroundColor = [UIColor groupTableViewBackgroundColor];
     [self.btnFuLi addSubview:lblLine1];
-
-    // Do any additional setup after loading the view from its nib.
+    arrayMerchantList = [[NSMutableArray alloc] initWithCapacity:0];
+    //加载数据
+    [self getData];
 }
+- (void)getData
+{
+    
+    [[BaseNetWork shareManager] postRequestWithBaseURLString:@"zj/json/getMerchantsList.action" parameters:nil forSucess:^(id result) {
+        NSLog(@"%@",result);
+        NSInteger resultMessage = [[result objectForKey:@"resultMessage"] integerValue];
+        if (resultMessage == 0) {
+            NSArray *arr = [result objectForKey:@"resultList"];
+            
+            if ([arr isKindOfClass:[NSArray class]])
+            {
+                for (NSDictionary *dict in arr)
+                {
+                    CKMerchantModel *dataModel = [[CKMerchantModel alloc] init];
+                    [dataModel setValuesForKeysWithDictionary:dict];
+                    [arrayMerchantList addObject:dataModel];
+                    
+                }
+            }
+        }
+        [self.tableview reloadData];
+        
+    } forFail:^(NSError *error) {
+        
+    }];
+}
+
 #pragma mark UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -62,27 +93,38 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return arrayMerchantList.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  
+    CKMerchantModel *dataModel = [arrayMerchantList objectAtIndex:indexPath.row];
+if(!dataModel.isOpen)
     return 120;
+    else
+        return 220;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
         HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell"];
-        
+    CKMerchantModel *dataModel = [arrayMerchantList objectAtIndex:indexPath.row];
+    [cell setCellContentWithModel:dataModel];
+    cell.btnDiscontDetail.tag = indexPath.row;
+    [cell.btnDiscontDetail addTarget:self action:@selector(btnClickOpenCellWithSender:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
         
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     BusinessDetailsViewController *viewFlag = [BusinessDetailsViewController new];
     [self pushToViewController:viewFlag anmation:YES];
     
+}
+-(void)btnClickOpenCellWithSender:(UIButton *)sender
+{
+    CKMerchantModel *dataModel = [arrayMerchantList objectAtIndex:sender.tag];
+    dataModel.isOpen = !dataModel.isOpen;
+    [self.tableview reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:sender.tag inSection:0]] withRowAnimation:(UITableViewRowAnimationFade)];
 }
 #pragma mark 地图定位
 - (void)startLocation

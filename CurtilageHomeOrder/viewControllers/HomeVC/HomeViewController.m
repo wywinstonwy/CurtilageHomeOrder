@@ -25,6 +25,7 @@
     CLLocationManager *locationManager;//地图定位
     RDVTabBarController *tabBarController;//tabbar
    // viewSelectList *viewCityClist;//城市选择列表
+    NSMutableArray *arraySource;
 }
 @property (nonatomic,strong)UIButton *btnCity;
 @end
@@ -49,7 +50,7 @@
     [self.tableview registerNib:[UINib nibWithNibName:@"HomeCell" bundle:nil] forCellReuseIdentifier:@"HomeCell"];
     [self.tableview registerNib:[UINib nibWithNibName:@"HomeCellOne" bundle:nil] forCellReuseIdentifier:@"HomeCellOne"];
   //  [self setNaviStyle];
-    
+    arraySource = [[NSMutableArray alloc] initWithCapacity:0];
     [self startLocation];
     
     [self setupViewControllers];
@@ -57,6 +58,7 @@
     
     [self createSubview];
  
+   // [self getData];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -64,7 +66,8 @@
 - (void)getData
 {
     
-    [[BaseNetWork shareManager] postRequestWithBaseURLString:@"" parameters:nil forSucess:^(id result) {
+    [[BaseNetWork shareManager] postRequestWithBaseURLString:@"zj/json/getMerchantsList.action" parameters:nil forSucess:^(id result) {
+        NSLog(@"%@",result);
         
     } forFail:^(NSError *error) {
         
@@ -110,12 +113,18 @@
     [self pushToViewController:tabBarController anmation:YES];
     
 }
-#pragma mark UISearchBarDelegate
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+//#pragma mark UISearchBarDelegate
+//- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+//{
+//    CKSearchViewController *viewFlag = [CKSearchViewController new];
+//    [self pushToViewController:viewFlag anmation:YES];
+//    [searchBar resignFirstResponder];
+//}
+-(IBAction)btnClickStartSearch:(UIButton *)sender
 {
     CKSearchViewController *viewFlag = [CKSearchViewController new];
     [self pushToViewController:viewFlag anmation:YES];
-    [searchBar resignFirstResponder];
+
 }
 #pragma mark 视图初始化
 - (void)createSubview

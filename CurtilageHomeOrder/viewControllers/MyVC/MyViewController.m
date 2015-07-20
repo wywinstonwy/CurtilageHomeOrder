@@ -13,6 +13,7 @@
 #import "CKMyVouchersVC.h"
 #import "CKMyCollectionVC.h"
 #import "CKCommentListVC.h"
+#import "ModifyPdViewController.h"
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray *arraySource;
@@ -39,6 +40,12 @@
         self.lblUserName.hidden = YES;
         
     }
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+  
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -83,6 +90,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//    if (![CKUserManager isLogin]) {
+//        [self login];
+//        return;
+//    }
+    
     NSInteger section = [indexPath section];
     if (section == 0)
     {
@@ -125,7 +137,8 @@
             }break;
             case 2:
             {
-                CKAddressListVC *viewFlag = [[CKAddressListVC alloc] init];
+                
+                ModifyPdViewController *viewFlag = [[ModifyPdViewController alloc] init];
                 [self pushToViewController:viewFlag anmation:YES];
             }break;
             default:

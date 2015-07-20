@@ -10,6 +10,9 @@
 #import "RDVTabBarController.h"
 #import "RDVTabBarItem.h"
 @interface BaseViewController : UIViewController
+
+- (void)addNavgationBarColor:(UIColor *)color andTitleTextAttributes:(NSDictionary *)dict;
+
 /**
  *  设置导航栏左边按钮功能
  *

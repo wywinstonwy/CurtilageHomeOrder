@@ -21,6 +21,15 @@
     // Do any additional setup after loading the view from its nib.
     [self setContenViewFrame];
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+}
 -(void)setContenViewFrame
 {
     [self.tableOrderState registerNib:[UINib nibWithNibName:@"CKOrderStateCell" bundle:nil] forCellReuseIdentifier:@"CKOrderStateCell"];
@@ -57,6 +66,7 @@
 {
     if (tableView.tag == 1) {
         CKOrderStateCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKOrderStateCell"];
+        cell.lblTitleStatus.text = @"商家已发货";
         return cell;
     }
     else

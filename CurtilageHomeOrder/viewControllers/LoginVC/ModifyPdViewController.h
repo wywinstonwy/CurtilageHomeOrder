@@ -9,5 +9,8 @@
 #import "BaseViewController.h"
 
 @interface ModifyPdViewController : BaseViewController
+@property(nonatomic,weak) IBOutlet UITextField *textPsd;
+@property(nonatomic,weak) IBOutlet UITextField *textPsdAgain;
+@property(nonatomic,weak) IBOutlet UIButton *btnSubmit;
 
 @end

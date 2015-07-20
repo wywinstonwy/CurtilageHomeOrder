@@ -9,5 +9,9 @@
 #import "BaseViewController.h"
 
 @interface ForgetPdViewController : BaseViewController
-
+@property (nonatomic,weak)  IBOutlet UITextField *textPhone;
+@property (nonatomic,weak)  IBOutlet UITextField *textCode;
+@property (nonatomic,weak)  IBOutlet UITextField *textpsd;
+@property (nonatomic,weak)  IBOutlet UITextField *textpsdAgain;
+@property (nonatomic,weak)  IBOutlet UIButton *btnSubmit;
 @end

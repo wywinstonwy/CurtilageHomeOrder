@@ -12,7 +12,7 @@ typedef void (^loginResultBlock)(id result);
 @property (nonatomic, weak) IBOutlet UITextField *textfieldUserName;
 @property (nonatomic, weak) IBOutlet UITextField *textfieldPassWord;
 @property (nonatomic, weak) IBOutlet UIButton *btnLogin;
-@property (nonatomic, weak) IBOutlet UIButton *btnForgetPd;
+//@property (nonatomic, weak) IBOutlet UIButton *btnForgetPd;
 @property (nonatomic, weak) IBOutlet UIButton *btnRegister;
 @property (nonatomic, weak) loginResultBlock loginresultBlock;
 

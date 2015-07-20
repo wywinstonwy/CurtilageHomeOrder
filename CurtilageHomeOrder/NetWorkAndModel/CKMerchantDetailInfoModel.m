@@ -1,17 +1,16 @@
 //
-//  CKFoodListModel.m
+//  CKMerchantDetailInfoModel.m
 //  CurtilageHomeOrder
 //
-//  Created by wy on 15/6/12.
+//  Created by wy on 15/7/19.
 //  Copyright (c) 2015年 WangYun. All rights reserved.
 //
 
-#import "CKFoodListModel.h"
+#import "CKMerchantDetailInfoModel.h"
 
-@implementation CKFoodListModel
+@implementation CKMerchantDetailInfoModel
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key;
 {
-    
 
 }
 @end

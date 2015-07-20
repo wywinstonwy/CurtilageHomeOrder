@@ -26,10 +26,11 @@
     [self setLeftBarWithLeftImage:@"back" action:@selector(popBack)];
     
     self.btnRegister.top = SCREEN_HEIGHT - 128;
-    
-    
+    [self addNavgationBarColor:setNaviColor andTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+
     // Do any additional setup after loading the view from its nib.
 }
+
 - (void)popBack
 {
     [self.navigationController dismissViewControllerAnimated:YES completion:^{
@@ -39,10 +40,31 @@
 
 - (IBAction)btnClickLogin:(id)sender
 {
-    [[BaseNetWork shareManager] postRequestWithBaseURLString:@"" parameters:nil forSucess:^(id result) {
+    if ([Tools isEmptyOrNull:self.textfieldUserName.text]) {
+        [SVProgressHUD showErrorWithStatus:@"请输入账号"];
+        return;
+    }
+    if ([Tools isEmptyOrNull:self.textfieldPassWord.text]) {
+        [SVProgressHUD showErrorWithStatus:@"请输入密码"];
+        return;
+    }
+    
+    NSDictionary *param = [[NSDictionary alloc] initWithObjectsAndKeys:self.textfieldUserName.text,@"mobile",self.textfieldPassWord.text,@"password",@"0",@"userType", nil];
+    [[BaseNetWork shareManager] postRequestWithBaseURLString:@"zj/json/loginForUser.action" parameters:param forSucess:^(id result) {
+        
+        NSInteger statuascode = [[result objectForKey:@"resultNumber"] integerValue];
+        if (statuascode == 0) {
+            [SVProgressHUD showSuccessWithStatus:@"注册成功"];
+            [self.navigationController dismissViewControllerAnimated:YES completion:^{
+                
+            }];
+        }
+        else
+            [SVProgressHUD showErrorWithStatus:[result objectForKey:@"resultMessage"]];
+        
         
     } forFail:^(NSError *error) {
-        
+        [SVProgressHUD showErrorWithStatus:NETTIPS];
     }];
 }
 - (IBAction)btnClickforgetPd:(id)sender

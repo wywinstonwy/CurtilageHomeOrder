@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"地址管理";
     // Do any additional setup after loading the view from its nib.
 }
 
