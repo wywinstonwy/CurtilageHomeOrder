@@ -50,11 +50,14 @@
     }
     
     NSDictionary *param = [[NSDictionary alloc] initWithObjectsAndKeys:self.textfieldUserName.text,@"mobile",self.textfieldPassWord.text,@"password",@"0",@"userType", nil];
+    [SVProgressHUD showWithStatus:@"登录中..."];
     [[BaseNetWork shareManager] postRequestWithBaseURLString:@"zj/json/loginForUser.action" parameters:param forSucess:^(id result) {
         
         NSInteger statuascode = [[result objectForKey:@"resultNumber"] integerValue];
         if (statuascode == 0) {
-            [SVProgressHUD showSuccessWithStatus:@"注册成功"];
+            [CKUserManager saveValue:[result objectForKey:@"userToken"] ForKey:USER_ID];
+            
+            [SVProgressHUD showSuccessWithStatus:@"登录成功"];
             [self.navigationController dismissViewControllerAnimated:YES completion:^{
                 
             }];

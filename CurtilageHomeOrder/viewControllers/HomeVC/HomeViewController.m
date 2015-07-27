@@ -53,7 +53,6 @@
     arraySource = [[NSMutableArray alloc] initWithCapacity:0];
     [self startLocation];
     
-    [self setupViewControllers];
     
     
     [self createSubview];
@@ -110,6 +109,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (tabBarController == nil)
+    {
+        [self setupViewControllers];
+    }
     [self pushToViewController:tabBarController anmation:YES];
     
 }

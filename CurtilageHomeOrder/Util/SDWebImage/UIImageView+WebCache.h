@@ -71,6 +71,13 @@
  * @see sd_setImageWithURL:placeholderImage:options:
  */
 - (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder;
+/**
+ *  直接传url字符串就ok
+ *
+ *  @param urlString   <#urlString description#>
+ *  @param placeholder <#placeholder description#>
+ */
+- (void)sd_setImageWithURLString:(NSString *)urlString placeholderImage:(UIImage *)placeholder;
 
 /**
  * Set the imageView `image` with an `url`, placeholder and custom options.

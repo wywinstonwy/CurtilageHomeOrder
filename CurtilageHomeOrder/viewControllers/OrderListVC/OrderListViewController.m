@@ -10,9 +10,13 @@
 #import "LoginViewController.h"
 #import "CKOrderListCell.h"
 #import "OrderDetailViewController.h"
-
+#import "CKOrderListModel.h"
+#import "MJRefresh.h"
 @interface OrderListViewController ()<UITableViewDataSource,UITableViewDelegate>
-
+{
+    NSInteger page;
+    NSMutableArray *arraySource;
+}
 @end
 
 @implementation OrderListViewController
@@ -25,16 +29,16 @@
     {
         self.tableview.hidden = NO;
         self.viewLogin.hidden = YES;
-        [CKUserManager saveValue:@"" ForKey:USER_ID];
+       // [CKUserManager saveValue:@"" ForKey:USER_ID];
     }
     else
     {
         self.tableview.hidden = YES;
         self.viewLogin.hidden = NO;
-        [CKUserManager saveValue:@"1" ForKey:USER_ID];
+       // [CKUserManager saveValue:@"1" ForKey:USER_ID];
 
     }
-
+    [self getMyOrderList];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,19 +49,59 @@
     self.btnLogin.layer.cornerRadius = 5.0f;
     [self.tableview registerNib:[UINib nibWithNibName:@"CKOrderListCell" bundle:nil] forCellReuseIdentifier:@"CKOrderListCell"];
     [self setLeftBarWithLeftImage:@"back" action:@selector(popBack)];
+    arraySource = [[NSMutableArray alloc] initWithCapacity:0];
 
 }
+
+-(void)getMyOrderList
+{
+    NSDictionary *param = [[NSDictionary alloc] initWithObjectsAndKeys:[CKUserManager getValueForKey:USER_ID],@"userToken",@(page),@"pageIndex",@(20),@"pageSize",@"",@"timeStamp", nil];
+    [[BaseNetWork shareManager] postRequestWithBaseURLString:@"zj/json/getMyOrderList.action" parameters:param forSucess:^(id result) {
+        NSLog(@"我的订单列表：%@",result);
+        NSInteger resultMessage = [[result objectForKey:@"resultMessage"] integerValue];
+        if (resultMessage == 0)
+        {
+            NSArray *arr = [result objectForKey:@"resultList"];
+            
+            if ([arr isKindOfClass:[NSArray class]])
+            {
+                for (NSDictionary *dict in arr)
+                {
+                    CKOrderListModel *dataModel = [[CKOrderListModel alloc] init];
+                    [dataModel setValuesForKeysWithDictionary:dict];
+                    [arraySource addObject:dataModel];
+                    
+                }
+            }
+        }
+        else
+            [SVProgressHUD showErrorWithStatus:[result objectForKey:@"resultMessage"]];
+        [self.tableview reloadData];
+        [self.tableview.legendFooter endRefreshing];
+        [self.tableview.legendHeader endRefreshing];
+        
+    } forFail:^(NSError *error) {
+        [self.tableview.legendFooter endRefreshing];
+        [self.tableview.legendHeader endRefreshing];
+    }];
+    
+
+}
+#pragma mark uitableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return arraySource.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CKOrderListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKOrderListCell"];
+    CKOrderListModel *dataModel = [arraySource objectAtIndex:indexPath.row];
+    [cell setCellContentWithModel:dataModel];
+    
 //    NSInteger section = [indexPath section];
     
    // cell.lbltitle.text = [arr objectAtIndex:indexPath.row];

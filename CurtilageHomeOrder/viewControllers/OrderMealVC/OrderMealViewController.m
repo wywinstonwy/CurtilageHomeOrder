@@ -14,11 +14,15 @@
 #import "BusinessDetailsViewController.h"
 #import "CKSearchViewController.h"
 #import "CKMerchantModel.h"
+#import "CKMerchantClassModel.h"
+#import "MJRefresh.h"
 @interface OrderMealViewController ()<UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate>
 {
     ViewSelectConditions *viewSelectList;
     CLLocationManager *locationManager;
     NSMutableArray *arrayMerchantList;//商家
+    
+    NSMutableArray *arrayMerchantClass;//商家分类列表
 
 }
 @end
@@ -33,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableview registerNib:[UINib nibWithNibName:@"HomeCell" bundle:nil] forCellReuseIdentifier:@"HomeCell"];
-    self.tableview.height = SCREEN_HEIGHT - 108+49;
+    self.tableview.height = SCREEN_HEIGHT - 108-49;
     [self setLeftBarWithLeftImage:@"back" action:@selector(popBack)];
     self.lblNavititle.text = @"定位中...";
     self.lblNavititle.width = SCREEN_WIDTH- 120;
@@ -56,8 +60,13 @@
     lblLine1.backgroundColor = [UIColor groupTableViewBackgroundColor];
     [self.btnFuLi addSubview:lblLine1];
     arrayMerchantList = [[NSMutableArray alloc] initWithCapacity:0];
+    arrayMerchantClass = [[NSMutableArray alloc] initWithCapacity:0];
+    self.tableview.tableFooterView = [[UIView alloc] init];
+    [self.tableview addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(getData)];
     //加载数据
     [self getData];
+    //商家分类
+    [self getMerchantClassList];
 }
 - (void)getData
 {
@@ -80,6 +89,38 @@
             }
         }
         [self.tableview reloadData];
+        [self.tableview.legendFooter endRefreshing];
+        [self.tableview.legendHeader endRefreshing];
+    } forFail:^(NSError *error) {
+        [self.tableview.legendFooter endRefreshing];
+        [self.tableview.legendHeader endRefreshing];
+        [SVProgressHUD showErrorWithStatus:NETTIPS];
+    }];
+}
+
+#pragma mark 商家分类列表
+-(void)getMerchantClassList
+{
+    [[BaseNetWork shareManager] postRequestWithBaseURLString:@"zj/json/getMerchantGroupList.action" parameters:nil forSucess:^(id result) {
+        NSLog(@"商家分类%@",result);
+        
+        NSInteger resultMessage = [[result objectForKey:@"resultMessage"] integerValue];
+        if (resultMessage == 0) {
+            NSArray *arr = [result objectForKey:@"resultList"];
+            
+            if ([arr isKindOfClass:[NSArray class]])
+            {
+                for (NSDictionary *dict in arr)
+                {
+                    CKMerchantClassModel *dataModel = [[CKMerchantClassModel alloc] init];
+                    [dataModel setValuesForKeysWithDictionary:dict];
+                    [arrayMerchantClass addObject:dataModel];
+                    
+                }
+            }
+        }
+
+        
         
     } forFail:^(NSError *error) {
         
@@ -221,11 +262,39 @@ if(!dataModel.isOpen)
             [weakSelf hiddenSelectList];
         };
     }
-    
-    
+    if (sender.tag == 100) {
+        viewSelectList.arraySource = arrayMerchantClass;
+        
+    }
+    else if (sender.tag == 101)
+    {
+        NSMutableArray *arr = [[NSMutableArray alloc] initWithCapacity:0];
+        NSArray *arrTitle = @[@"默认排序",@"销量最高",@"距离最近",@"评分最高",@"起送价最低",@"送餐速度最快"];
+        for(int i = 0;i<arrTitle.count;i++)
+        {
+            CKMerchantClassModel *dataModel = [[CKMerchantClassModel alloc] init];
+            dataModel.merchantGroupName = [arrTitle objectAtIndex:i];
+            [arr addObject:dataModel];
+        }
+        viewSelectList.arraySource = arr;
+
+    }
+    else if (sender.tag == 102)
+    {
+        NSMutableArray *arr = [[NSMutableArray alloc] initWithCapacity:0];
+        NSArray *arrTitle = @[@"全部福利",@"支持在线支付",@"新用户立减",@"立减优惠",@"支持代金券",@"支持开发票",@"客家派送"];
+        for(int i = 0;i<arrTitle.count;i++)
+        {
+            CKMerchantClassModel *dataModel = [[CKMerchantClassModel alloc] init];
+            dataModel.merchantGroupName = [arrTitle objectAtIndex:i];
+            [arr addObject:dataModel];
+        }
+        viewSelectList.arraySource = arr;
+    }
+    [viewSelectList.tableview reloadData];
     [self showSelectList];
 }
-
+#pragma mark 下拉条件选择列表
 - (void)showSelectList
 {
     viewSelectList.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];

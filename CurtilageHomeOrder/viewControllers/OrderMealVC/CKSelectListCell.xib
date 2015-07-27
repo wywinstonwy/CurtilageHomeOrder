@@ -15,16 +15,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="支持在线支付" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S15-mK-Uzk">
-                        <rect key="frame" x="50" y="11" width="222" height="21"/>
+                        <rect key="frame" x="10" y="11" width="222" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fu.png" translatesAutoresizingMaskIntoConstraints="NO" id="s9G-4b-c5V">
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fu.png" translatesAutoresizingMaskIntoConstraints="NO" id="s9G-4b-c5V">
                         <rect key="frame" x="10" y="7" width="30" height="30"/>
                     </imageView>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="imageV" destination="s9G-4b-c5V" id="7FQ-rO-RGj"/>
+                <outlet property="lblTitle" destination="S15-mK-Uzk" id="Mla-1u-6b4"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

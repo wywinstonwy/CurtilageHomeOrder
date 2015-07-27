@@ -25,7 +25,7 @@
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
     [self addSubview:self.tableview];
-    
+    self.tableview .tableFooterView = [[UIView alloc] init];
     //[self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
     [self.tableview registerNib:[UINib nibWithNibName:@"CKSelectListCell" bundle:nil] forCellReuseIdentifier:@"CKSelectListCell"];
 //    UIView *footerView = [[UIView alloc] init];
@@ -58,14 +58,15 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+//    return 10;
     return self.arraySource.count;
     
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CKSelectListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CKSelectListCell"];
-    cell.textLabel.text = [self.arraySource objectAtIndex:indexPath.row];
+    CKMerchantClassModel *dataModel = [self.arraySource objectAtIndex:indexPath.row];
+    cell.lblTitle.text = dataModel.merchantGroupName;
     cell.backgroundColor = [UIColor groupTableViewBackgroundColor];
     return cell;
 }
